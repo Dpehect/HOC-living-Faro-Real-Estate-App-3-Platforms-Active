@@ -5,7 +5,6 @@ import './map.css';
 import 'leaflet/dist/leaflet.css';
 import Pin from '../pin/Pin';
 
-// Fix default Leaflet marker icons (Vite)
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
@@ -34,19 +33,35 @@ function MapEvents({ expanded, onExpand, onLocationSelect }) {
 	return null;
 }
 
-function ResizeMap({ expanded }) {
+function MapControls({ expanded }) {
 	const map = useMap();
+
 	useEffect(() => {
 		const timer = window.setTimeout(() => {
 			map.invalidateSize();
 		}, 120);
 		return () => window.clearTimeout(timer);
 	}, [expanded, map]);
+
+	// Mouse wheel zoom + dragging — expanded iken kesin aç
+	useEffect(() => {
+		if (expanded) {
+			map.scrollWheelZoom.enable();
+			map.dragging.enable();
+			map.doubleClickZoom.enable();
+			map.boxZoom.enable();
+			map.keyboard.enable();
+		} else {
+			map.scrollWheelZoom.disable();
+			map.doubleClickZoom.disable();
+		}
+	}, [expanded, map]);
+
 	return null;
 }
 
 function Map({
-	items,           // haritada her zaman gösterilecek TÜM ilanlar
+	items,
 	expanded,
 	onExpand,
 	onClose,
@@ -61,7 +76,7 @@ function Map({
 			<div className="map-toolbar">
 				{expanded && !selectedLocation ? (
 					<div>
-						<strong>Choose an area in Faro</strong>
+						<strong>Choose an area</strong>
 						<span>Click anywhere to filter nearby homes</span>
 					</div>
 				) : !expanded ? (
@@ -87,9 +102,9 @@ function Map({
 			<MapContainer
 				center={[37.0194, -7.9304]}
 				zoom={12}
-				scrollWheelZoom={expanded}   // expanded iken mouse wheel zoom açık
+				scrollWheelZoom={false}
 				dragging={true}
-				doubleClickZoom={expanded}
+				doubleClickZoom={false}
 				zoomControl={true}
 				className="map"
 			>
@@ -102,14 +117,12 @@ function Map({
 					onExpand={onExpand}
 					onLocationSelect={onLocationSelect}
 				/>
-				<ResizeMap expanded={expanded} />
+				<MapControls expanded={expanded} />
 
-				{/* Tüm konut pin'leri her zaman haritada görünsün */}
 				{items.map((item) => (
 					<Pin item={item} key={item.id} />
 				))}
 
-				{/* Seçilen bölge: merkez + yarıçap dairesi */}
 				{selectedLocation && (
 					<>
 						<CircleMarker

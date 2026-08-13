@@ -55,32 +55,29 @@ function ListPage() {
 		};
 	}, [isMapExpanded]);
 
-	// Browser Back → haritayı kapat
 	useEffect(() => {
 		if (!isMapExpanded) return;
-
 		window.history.pushState({ mapExpanded: true }, '');
-
 		const handlePopState = () => {
 			setIsMapExpanded(false);
 			setSelectedLocation(null);
 		};
-
 		window.addEventListener('popstate', handlePopState);
 		return () => window.removeEventListener('popstate', handlePopState);
 	}, [isMapExpanded]);
 
-	// Sol listedeki kartlar — filtre + harita bölgesine göre
 	const filteredPosts = useMemo(() => {
 		return postsData.filter((post) => {
 			const searchable = `${post.title} ${post.address} ${post.city}`.toLowerCase();
-			if (filters.query && !searchable.includes(filters.query.toLowerCase().trim())) return false;
+			const q = filters.query.toLowerCase().trim();
+			if (q && !searchable.includes(q)) return false;
 			if (filters.type && post.type !== filters.type) return false;
 			if (filters.property && post.property !== filters.property) return false;
 			if (filters.minPrice && post.price < Number(filters.minPrice)) return false;
 			if (filters.maxPrice && post.price > Number(filters.maxPrice)) return false;
 			if (filters.bedrooms && Number(post.bedroom || 0) < Number(filters.bedrooms)) return false;
 
+			// Harita pin filtresi sadece konum seçildiyse
 			if (selectedLocation) {
 				const dist = distanceInKm(selectedLocation, post);
 				if (dist > Number(filters.radius || 5)) return false;
@@ -96,11 +93,19 @@ function ListPage() {
 
 	const handleCloseMap = () => {
 		setIsMapExpanded(false);
-		// selectedLocation kalır → liste filtresi aktif kalsın
 	};
 
 	const handleLocationSelect = (location) => {
 		setSelectedLocation(location);
+	};
+
+	// Search'e yazınca map pin filtresini temizle — konum araması bozulmasın
+	const handleFilterChange = (next: ListingFilters) => {
+		const queryChanged = next.query !== filters.query;
+		setFilters(next);
+		if (queryChanged && next.query.trim()) {
+			setSelectedLocation(null);
+		}
 	};
 
 	return (
@@ -154,7 +159,7 @@ function ListPage() {
 					<div className={`${isFilterOpen ? 'block' : 'hidden'} md:block`}>
 						<Filter
 							filters={filters}
-							onChange={setFilters}
+							onChange={handleFilterChange}
 							onReset={resetFilters}
 							resultCount={filteredPosts.length}
 							hasMapLocation={Boolean(selectedLocation)}
@@ -180,7 +185,7 @@ function ListPage() {
 							<div className="mt-6 rounded-2xl border border-dashed border-gray-300 bg-white px-6 py-16 text-center">
 								<h2 className="text-lg font-bold text-gray-900">No properties match these filters</h2>
 								<p className="mt-2 text-sm text-gray-500">
-									Try a larger map radius or clear some filters.
+									Try a larger map radius, search a city name, or clear filters.
 								</p>
 								<button
 									type="button"
@@ -196,7 +201,6 @@ function ListPage() {
 
 				<div className="h-[620px] xl:sticky xl:top-6">
 					<Suspense fallback={<p>Loading map…</p>}>
-						{/* Haritada HER ZAMAN tüm ilan pin'leri görünsün */}
 						<Map
 							items={postsData}
 							expanded={isMapExpanded}
