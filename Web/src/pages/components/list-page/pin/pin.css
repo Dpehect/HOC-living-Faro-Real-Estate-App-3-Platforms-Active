@@ -37,7 +37,28 @@
 	margin-top: 2px;
 }
 
-.popupContainer .textContainer a {
+.popup-details-btn {
 	margin-top: 6px;
-	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	background: #059669;
+	padding: 6px 10px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #ffffff !important;
+	text-decoration: none !important;
+}
+
+.popup-details-btn:hover {
+	background: #10b981;
+	color: #ffffff !important;
+}
+
+/* Leaflet popup links often inherit dark color — force white */
+.leaflet-popup-content a.popup-details-btn,
+.leaflet-popup-content a.popup-details-btn:link,
+.leaflet-popup-content a.popup-details-btn:visited {
+	color: #ffffff !important;
 }

@@ -116,6 +116,7 @@ function Map({
 	onLocationSelect,
 	radiusKm = 5,
 	simple = false,
+	showAreaHint = true,
 }) {
 	const radiusMeters = Number(radiusKm) * 1000;
 	const isSimple = simple || expanded === undefined;
@@ -139,10 +140,15 @@ function Map({
 		>
 			{!isSimple && (
 				<div className="map-toolbar">
-					{expanded && !selectedLocation ? (
+					{expanded && showAreaHint && !selectedLocation ? (
 						<div>
 							<strong>Choose an area</strong>
 							<span>Zoom in & click a pin to open a property</span>
+						</div>
+					) : expanded && !showAreaHint ? (
+						<div>
+							<strong>Explore nearby</strong>
+							<span>Click a pin · View details to open a listing</span>
 						</div>
 					) : !expanded ? (
 						<div>

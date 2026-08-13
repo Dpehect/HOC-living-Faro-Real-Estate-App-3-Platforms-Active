@@ -287,10 +287,11 @@ function SinglePage() {
 							</div>
 							<div className="h-[320px]">
 								<Map
-									items={[post]}
+									items={isMapExpanded ? posts : [post]}
 									expanded={isMapExpanded}
 									onExpand={() => setIsMapExpanded(true)}
 									onClose={() => setIsMapExpanded(false)}
+									showAreaHint={false}
 								/>
 							</div>
 						</motion.section>

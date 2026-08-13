@@ -27,7 +27,7 @@ function Pin({ item }) {
 						<b>{price}</b>
 						<Link
 							to={`/details/${item.id}`}
-							className="mt-2 inline-flex items-center justify-center rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-white hover:bg-accentHover"
+							className="popup-details-btn"
 							onClick={(e) => e.stopPropagation()}
 						>
 							View details →
