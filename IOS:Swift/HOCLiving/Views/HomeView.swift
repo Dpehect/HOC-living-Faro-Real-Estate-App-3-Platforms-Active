@@ -1,11 +1,15 @@
 import SwiftUI
 
 struct HomeView: View {
-    var onBrowse: () -> Void
+    var onBrowse: (_ country: String, _ query: String) -> Void
     var onProperty: (Property) -> Void
 
     @State private var featured: [Property] = []
     @State private var loading = true
+    @State private var query = ""
+    @State private var suggestions: [SearchSuggestion] = []
+    @State private var showSuggestions = false
+    @State private var suggestTask: Task<Void, Never>?
 
     var body: some View {
         ScrollView {
@@ -15,13 +19,61 @@ struct HomeView: View {
                         .font(.title.bold())
                     Text("Search 300,000 live listings across 30 European countries")
                         .foregroundStyle(.secondary)
-                    Button(action: onBrowse) {
-                        Text("Browse all listings")
+
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundStyle(.secondary)
+                        TextField("Search city or country (e.g. Reykjavik)", text: $query)
+                            .textInputAutocapitalization(.never)
+                            .autocorrectionDisabled()
+                            .onChange(of: query) { _, newValue in
+                                scheduleSuggest(newValue)
+                            }
+                            .onSubmit { goSearch(nil) }
+                    }
+                    .padding(12)
+                    .background(Color(.systemBackground))
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+
+                    if showSuggestions && !suggestions.isEmpty {
+                        VStack(spacing: 0) {
+                            ForEach(suggestions, id: \.self) { s in
+                                Button {
+                                    goSearch(s)
+                                } label: {
+                                    HStack {
+                                        Text(s.label).fontWeight(.medium)
+                                        Spacer()
+                                        Text(s.kind)
+                                            .font(.caption)
+                                            .foregroundStyle(.secondary)
+                                    }
+                                    .padding(.horizontal, 14)
+                                    .padding(.vertical, 12)
+                                }
+                                .buttonStyle(.plain)
+                                Divider()
+                            }
+                        }
+                        .background(Color(.systemBackground))
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .shadow(radius: 2)
+                    }
+
+                    Button {
+                        goSearch(nil)
+                    } label: {
+                        Text("Search")
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 12)
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(AppTheme.primary)
+
+                    Button("Browse all listings") {
+                        onBrowse("Germany", "")
+                    }
+                    .frame(maxWidth: .infinity)
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -37,7 +89,7 @@ struct HomeView: View {
                 HStack {
                     Text("Featured properties").font(.title3.bold())
                     Spacer()
-                    Button("See all", action: onBrowse)
+                    Button("See all") { onBrowse("Germany", "") }
                 }
                 .padding(.horizontal)
 
@@ -70,6 +122,52 @@ struct HomeView: View {
                 featured = Array(list.prefix(6))
             } catch {
                 featured = Array(SampleData.properties.prefix(6))
+            }
+        }
+    }
+
+    private func scheduleSuggest(_ text: String) {
+        suggestTask?.cancel()
+        guard !text.trimmingCharacters(in: .whitespaces).isEmpty else {
+            suggestions = []
+            showSuggestions = false
+            return
+        }
+        suggestTask = Task {
+            try? await Task.sleep(nanoseconds: 200_000_000)
+            if Task.isCancelled { return }
+            let hits = await ListingsRepository.shared.suggestions(query: text)
+            await MainActor.run {
+                suggestions = hits
+                showSuggestions = !hits.isEmpty
+            }
+        }
+    }
+
+    private func goSearch(_ s: SearchSuggestion?) {
+        showSuggestions = false
+        if let s {
+            switch s {
+            case .country(let name):
+                onBrowse(name, "")
+            case .city(let city, let country):
+                onBrowse(country, city)
+            }
+            return
+        }
+        let q = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        if q.isEmpty {
+            onBrowse("Germany", "")
+            return
+        }
+        Task {
+            let hits = await ListingsRepository.shared.suggestions(query: q, limit: 1)
+            await MainActor.run {
+                if let h = hits.first {
+                    goSearch(h)
+                } else {
+                    onBrowse("Germany", q)
+                }
             }
         }
     }

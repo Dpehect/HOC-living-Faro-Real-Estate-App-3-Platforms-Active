@@ -42,13 +42,7 @@ fun DetailScreen(
     LaunchedEffect(propertyId) {
         loading = true
         // Search offline sample first, then try Germany cache (most common)
-        property = SampleData.properties.find { it.id == propertyId }
-        if (property == null) {
-            try {
-                val list = ListingsRepository.loadCountry("Germany")
-                property = list.find { it.id == propertyId }
-            } catch (_: Exception) { }
-        }
+        property = ListingsRepository.findByLocalId(propertyId)
         loading = false
     }
 

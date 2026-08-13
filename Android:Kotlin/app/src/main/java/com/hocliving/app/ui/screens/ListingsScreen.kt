@@ -21,6 +21,8 @@ import com.hocliving.app.ui.theme.TealPrimary
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ListingsScreen(
+    initialCountry: String = "Germany",
+    initialQuery: String = "",
     onBack: () -> Unit,
     onPropertyClick: (Int) -> Unit
 ) {
@@ -28,8 +30,9 @@ fun ListingsScreen(
     var propertyFilter by remember { mutableStateOf("all") }
     var bedroomsFilter by remember { mutableStateOf(0) }
     var showFilters by remember { mutableStateOf(false) }
-    var countries by remember { mutableStateOf(listOf("Germany")) }
-    var activeCountry by remember { mutableStateOf("Germany") }
+    var countries by remember { mutableStateOf(listOf(initialCountry)) }
+    var activeCountry by remember { mutableStateOf(initialCountry) }
+    var query by remember { mutableStateOf(initialQuery) }
     var posts by remember { mutableStateOf<List<Property>>(emptyList()) }
     var loading by remember { mutableStateOf(true) }
     var error by remember { mutableStateOf<String?>(null) }
@@ -38,31 +41,36 @@ fun ListingsScreen(
     LaunchedEffect(Unit) {
         try {
             countries = ListingsRepository.countryNames().ifEmpty { listOf("Germany") }
-            if (activeCountry !in countries) activeCountry = countries.first()
+            if (activeCountry !in countries) {
+                // keep as-is if still loading names
+            }
         } catch (_: Exception) {
             countries = listOf("Germany")
         }
     }
 
+    // Reload when country changes — critical: filter uses posts after load (same fix as Web)
     LaunchedEffect(activeCountry) {
         loading = true
         error = null
         try {
             posts = ListingsRepository.loadCountry(activeCountry)
         } catch (_: Exception) {
-            error = "Could not load $activeCountry — showing offline sample"
+            error = "Could not load $activeCountry — offline sample"
             posts = ListingsRepository.fallbackSample()
         } finally {
             loading = false
         }
     }
 
-    val filtered = remember(posts, typeFilter, propertyFilter, bedroomsFilter) {
-        posts.filter { p ->
-            (typeFilter == "all" || p.type == typeFilter) &&
-            (propertyFilter == "all" || p.property == propertyFilter) &&
-            (bedroomsFilter == 0 || p.bedroom >= bedroomsFilter)
-        }
+    val filtered = remember(posts, query, typeFilter, propertyFilter, bedroomsFilter) {
+        ListingsRepository.filterProperties(
+            posts = posts,
+            query = query,
+            type = typeFilter,
+            property = propertyFilter,
+            minBedrooms = bedroomsFilter
+        )
     }
 
     Scaffold(
@@ -112,12 +120,22 @@ fun ListingsScreen(
                                     text = { Text(c) },
                                     onClick = {
                                         activeCountry = c
+                                        // clear city query when switching country unless still relevant
                                         countryExpanded = false
                                     }
                                 )
                             }
                         }
                     }
+                    Spacer(Modifier.height(8.dp))
+                    OutlinedTextField(
+                        value = query,
+                        onValueChange = { query = it },
+                        placeholder = { Text("Filter by city (e.g. Reykjavik)") },
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(10.dp),
+                        singleLine = true
+                    )
                     Text(
                         "Same catalog as Web · Europe-wide",
                         style = MaterialTheme.typography.bodySmall,
@@ -179,7 +197,8 @@ fun ListingsScreen(
                         )
                     }
                     Text(
-                        "${filtered.size} properties found · $activeCountry",
+                        "${filtered.size} properties found · $activeCountry" +
+                            if (query.isNotBlank()) " · \"$query\"" else "",
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)

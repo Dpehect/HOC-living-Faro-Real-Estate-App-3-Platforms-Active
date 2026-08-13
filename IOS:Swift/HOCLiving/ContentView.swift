@@ -1,7 +1,7 @@
 import SwiftUI
 
 enum AppRoute: Hashable {
-    case listings
+    case listings(country: String, query: String)
     case detail(Property)
 }
 
@@ -11,13 +11,17 @@ struct ContentView: View {
     var body: some View {
         NavigationStack(path: $path) {
             HomeView(
-                onBrowse: { path.append(AppRoute.listings) },
-                onProperty: { property in path.append(AppRoute.detail(property)) }
+                onBrowse: { country, q in
+                    path.append(AppRoute.listings(country: country, query: q))
+                },
+                onProperty: { property in
+                    path.append(AppRoute.detail(property))
+                }
             )
             .navigationDestination(for: AppRoute.self) { route in
                 switch route {
-                case .listings:
-                    ListingsView { property in
+                case .listings(let country, let query):
+                    ListingsView(initialCountry: country, initialQuery: query) { property in
                         path.append(AppRoute.detail(property))
                     }
                 case .detail(let property):

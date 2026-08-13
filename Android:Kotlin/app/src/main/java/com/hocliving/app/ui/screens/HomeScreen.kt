@@ -1,6 +1,7 @@
 package com.hocliving.app.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -22,28 +23,74 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.hocliving.app.data.ListingsRepository
 import com.hocliving.app.data.Property
+import com.hocliving.app.data.SearchSuggestion
 import com.hocliving.app.ui.components.PropertyCard
 import com.hocliving.app.ui.theme.TealContainer
 import com.hocliving.app.ui.theme.TealPrimary
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
-    onBrowseListings: () -> Unit,
+    onBrowseListings: (country: String, q: String) -> Unit,
     onPropertyClick: (Int) -> Unit
 ) {
     var featured by remember { mutableStateOf<List<Property>>(emptyList()) }
     var loading by remember { mutableStateOf(true) }
+    var query by remember { mutableStateOf("") }
+    var suggestions by remember { mutableStateOf<List<SearchSuggestion>>(emptyList()) }
+    var showSuggestions by remember { mutableStateOf(false) }
+    val scope = rememberCoroutineScope()
+    var suggestJob by remember { mutableStateOf<Job?>(null) }
 
     LaunchedEffect(Unit) {
         loading = true
         try {
-            val list = ListingsRepository.loadCountry("Germany")
-            featured = list.take(6)
+            featured = ListingsRepository.loadCountry("Germany").take(6)
         } catch (_: Exception) {
             featured = ListingsRepository.fallbackSample().take(6)
         } finally {
             loading = false
+        }
+    }
+
+    fun onQueryChange(text: String) {
+        query = text
+        suggestJob?.cancel()
+        if (text.isBlank()) {
+            suggestions = emptyList()
+            showSuggestions = false
+            return
+        }
+        suggestJob = scope.launch {
+            delay(200)
+            suggestions = ListingsRepository.suggestions(text)
+            showSuggestions = suggestions.isNotEmpty()
+        }
+    }
+
+    fun goSearch(s: SearchSuggestion? = null) {
+        showSuggestions = false
+        when (s) {
+            is SearchSuggestion.Country -> onBrowseListings(s.name, "")
+            is SearchSuggestion.City -> onBrowseListings(s.country, s.city)
+            null -> {
+                val q = query.trim()
+                if (q.isEmpty()) {
+                    onBrowseListings("Germany", "")
+                    return
+                }
+                scope.launch {
+                    val hits = ListingsRepository.suggestions(q, 1)
+                    when (val h = hits.firstOrNull()) {
+                        is SearchSuggestion.Country -> onBrowseListings(h.name, "")
+                        is SearchSuggestion.City -> onBrowseListings(h.country, h.city)
+                        null -> onBrowseListings("Germany", q)
+                    }
+                }
+            }
         }
     }
 
@@ -79,23 +126,59 @@ fun HomeScreen(
                     )
                     Spacer(Modifier.height(16.dp))
                     OutlinedTextField(
-                        value = "",
-                        onValueChange = {},
-                        placeholder = { Text("Search properties in your city") },
+                        value = query,
+                        onValueChange = { onQueryChange(it) },
+                        placeholder = { Text("Search city or country (e.g. Reykjavik)") },
                         leadingIcon = { Icon(Icons.Default.Search, null) },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
-                        singleLine = true,
-                        readOnly = true
+                        singleLine = true
                     )
+                    if (showSuggestions && suggestions.isNotEmpty()) {
+                        Card(
+                            modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
+                            shape = RoundedCornerShape(12.dp),
+                            elevation = CardDefaults.cardElevation(4.dp)
+                        ) {
+                            Column {
+                                suggestions.forEach { s ->
+                                    val label = when (s) {
+                                        is SearchSuggestion.Country -> s.name
+                                        is SearchSuggestion.City -> "${s.city}, ${s.country}"
+                                    }
+                                    val kind = when (s) {
+                                        is SearchSuggestion.Country -> "Country"
+                                        is SearchSuggestion.City -> "City"
+                                    }
+                                    Row(
+                                        Modifier
+                                            .fillMaxWidth()
+                                            .clickable { goSearch(s) }
+                                            .padding(horizontal = 14.dp, vertical = 12.dp),
+                                        horizontalArrangement = Arrangement.SpaceBetween
+                                    ) {
+                                        Text(label, fontWeight = FontWeight.Medium)
+                                        Text(kind, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                    }
+                                    HorizontalDivider()
+                                }
+                            }
+                        }
+                    }
                     Spacer(Modifier.height(12.dp))
                     Button(
-                        onClick = onBrowseListings,
+                        onClick = { goSearch(null) },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
                         colors = ButtonDefaults.buttonColors(containerColor = TealPrimary)
                     ) {
-                        Text("Browse all listings", modifier = Modifier.padding(vertical = 4.dp))
+                        Text("Search", modifier = Modifier.padding(vertical = 4.dp))
+                    }
+                    TextButton(
+                        onClick = { onBrowseListings("Germany", "") },
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text("Browse all listings")
                     }
                 }
             }
@@ -116,7 +199,7 @@ fun HomeScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text("Featured properties", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.SemiBold)
-                    TextButton(onClick = onBrowseListings) { Text("See all") }
+                    TextButton(onClick = { onBrowseListings("Germany", "") }) { Text("See all") }
                 }
             }
             if (loading) {

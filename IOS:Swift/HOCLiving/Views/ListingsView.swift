@@ -1,10 +1,13 @@
 import SwiftUI
 
 struct ListingsView: View {
+    var initialCountry: String = "Germany"
+    var initialQuery: String = ""
     var onProperty: (Property) -> Void
 
     @State private var countries: [String] = ["Germany"]
-    @State private var activeCountry = "Germany"
+    @State private var activeCountry: String
+    @State private var query: String
     @State private var posts: [Property] = []
     @State private var loading = true
     @State private var error: String?
@@ -13,23 +16,39 @@ struct ListingsView: View {
     @State private var bedroomsFilter = 0
     @State private var showFilters = false
 
+    init(initialCountry: String = "Germany", initialQuery: String = "", onProperty: @escaping (Property) -> Void) {
+        self.initialCountry = initialCountry
+        self.initialQuery = initialQuery
+        self.onProperty = onProperty
+        _activeCountry = State(initialValue: initialCountry)
+        _query = State(initialValue: initialQuery)
+    }
+
     private var filtered: [Property] {
-        posts.filter { p in
-            (typeFilter == "all" || p.type == typeFilter) &&
-            (propertyFilter == "all" || p.property == propertyFilter) &&
-            (bedroomsFilter == 0 || p.bedroom >= bedroomsFilter)
-        }
+        // Recomputed when posts updates — same fix as Web postsData dependency
+        ListingsRepository.filter(
+            posts: posts,
+            query: query,
+            type: typeFilter,
+            property: propertyFilter,
+            minBedrooms: bedroomsFilter
+        )
     }
 
     var body: some View {
         VStack(spacing: 0) {
-            // Country picker
-            VStack(alignment: .leading, spacing: 6) {
+            VStack(alignment: .leading, spacing: 8) {
                 Text("Country").font(.subheadline.bold())
                 Picker("Country", selection: $activeCountry) {
                     ForEach(countries, id: \.self) { Text($0).tag($0) }
                 }
                 .pickerStyle(.menu)
+
+                TextField("Filter by city (e.g. Reykjavik)", text: $query)
+                    .textFieldStyle(.roundedBorder)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+
                 Text("Same catalog as Web · Europe-wide")
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -75,7 +94,7 @@ struct ListingsView: View {
                 if let error {
                     Text(error).font(.caption).foregroundStyle(.red).padding(.horizontal)
                 }
-                Text("\(filtered.count) properties found · \(activeCountry)")
+                Text("\(filtered.count) properties found · \(activeCountry)" + (query.isEmpty ? "" : " · \"\(query)\""))
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                     .frame(maxWidth: .infinity, alignment: .leading)
