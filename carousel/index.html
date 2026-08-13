@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights Carousel — 3D Cylinder Cards</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="page">
+  <div class="carousel-wrap" id="carouselWrap">
+
+    <div class="carousel-stage" id="stage" role="group" aria-roledescription="carousel" aria-label="Music discovery carousel" tabindex="0">
+
+      <!-- label above active card -->
+      <div class="label-cylinder" id="labelCylinder"></div>
+
+      <!-- 3D card cylinder -->
+      <div class="cylinder" id="cylinder"></div>
+
+      <!-- nav zones (click left/right half of stage) -->
+      <button type="button" class="nav-zone nav-zone-left" data-nav="prev" aria-label="Previous"></button>
+      <button type="button" class="nav-zone nav-zone-right" data-nav="next" aria-label="Next"></button>
+
+      <!-- arrows -->
+      <button type="button" class="nav-arrow nav-arrow-left" data-nav="prev" aria-label="Previous card">
+        <svg viewBox="0 0 24 24"><path d="M15 4l-8 8 8 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" class="nav-arrow nav-arrow-right" data-nav="next" aria-label="Next card">
+        <svg viewBox="0 0 24 24"><path d="M9 4l8 8-8 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <!-- dots -->
+    <nav class="dots" id="dots" aria-label="Carousel navigation"></nav>
+  </div>
+</div>
+
+<!-- inline sprite icons -->
+<svg style="display:none">
+  <symbol id="icon-play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></symbol>
+  <symbol id="icon-share" viewBox="0 0 24 24"><path d="M12 3v12M12 3l4 4M12 3L8 7M5 13v6a2 2 0 002 2h10a2 2 0 002-2v-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="icon-shazam" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M9 7c-1.5 0-2.5 1-2.5 2.2 0 3.3 5.5 2.3 5.5 4.6 0 .8-.7 1.4-1.8 1.4-.9 0-1.6-.4-2.1-1.1l-1.3 1c.8 1.1 2 1.7 3.4 1.7 2 0 3.3-1.1 3.3-2.8 0-3.3-5.5-2.3-5.5-4.6 0-.7.6-1.3 1.6-1.3.8 0 1.4.3 1.9.9l1.3-1C12.6 7.5 11.5 7 9 7z" fill="#0c0f0f"/></symbol>
+</svg>
+
+<script src="js/data.js"></script>
+<script src="js/carousel.js"></script>
+</body>
+</html>
