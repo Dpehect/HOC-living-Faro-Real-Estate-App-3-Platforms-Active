@@ -1,370 +1,310 @@
 [
 	{
 		"id": 1,
-		"title": "Spacious Apartment in Downtown",
-		"price": 1500,
+		"title": "Modern apartment fully furnished — Faro",
+		"price": 1950,
 		"images": [
-			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
-			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
 		],
-		"address": "Rua de Santo António",
+		"address": "Rua do Mar",
 		"city": "Faro",
-		"bedroom": 2,
-		"bathroom": 1,
-		"latitude": "37.0194",
-		"longitude": "-7.9304",
+		"bedroom": 4,
+		"bathroom": 4,
+		"latitude": "37.02649",
+		"longitude": "-7.92510",
 		"type": "rent",
 		"property": "apartment",
 		"postDetail": {
-			"desc": "A beautifully renovated apartment in the heart of Faro, close to the marina, shops and public transport.",
-			"utilities": "Water and electricity included",
+			"desc": "Attractive apartment located in Faro. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
 			"pet": "Allowed",
 			"income": "Verification required",
-			"size": 1000,
-			"school": 8,
-			"bus": 5,
-			"restaurant": 10
+			"size": 600
 		}
 	},
 	{
 		"id": 2,
-		"title": "Cozy Condo with Stunning Views",
-		"price": 250000,
+		"title": "Spacious house for families — Faro",
+		"price": 5460,
 		"images": [
 			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
-			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
 		],
-		"address": "Avenida 5 de Outubro",
+		"address": "Travessa da Praia",
 		"city": "Faro",
-		"bedroom": 1,
-		"bathroom": 1,
-		"latitude": "37.0360",
-		"longitude": "-7.9660",
-		"type": "buy",
-		"property": "condo",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.02588",
+		"longitude": "-7.92436",
+		"type": "rent",
+		"property": "house",
 		"postDetail": {
-			"desc": "Enjoy breathtaking views from this charming condo situated in a prime location.",
+			"desc": "Attractive house located in Faro. Ideal for renters looking for a place in the region.",
 			"utilities": "Not included",
-			"pet": "Not allowed",
-			"income": "N/A",
-			"size": 800,
-			"school": 7,
-			"bus": 10,
-			"restaurant": 5
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 1000
 		}
 	},
 	{
 		"id": 3,
-		"title": "Luxury Apartment in Historic Building",
-		"price": 3000,
+		"title": "Modern apartment fully furnished — Olhão",
+		"price": 2340,
 		"images": [
 			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
-			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
 		],
-		"address": "Rua do Alportel",
-		"city": "Faro",
-		"bedroom": 2,
-		"bathroom": 2,
-		"latitude": "37.0430",
-		"longitude": "-7.9720",
+		"address": "Rua Nova",
+		"city": "Olhão",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "37.01746",
+		"longitude": "-7.83310",
 		"type": "rent",
 		"property": "apartment",
 		"postDetail": {
-			"desc": "An elegant apartment near Faro's historic centre.",
-			"utilities": "Included",
-			"pet": "Allowed with restrictions",
+			"desc": "Attractive apartment located in Olhão. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
 			"income": "Verification required",
-			"size": 1500,
-			"school": 8,
-			"bus": 5,
-			"restaurant": 15
+			"size": 1000
 		}
 	},
 	{
 		"id": 4,
-		"title": "Modern House with Pool",
-		"price": 3500,
+		"title": "Corner condo with parking — Loulé",
+		"price": 220000,
 		"images": [
 			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
-			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
 		],
-		"address": "Praia de Faro",
-		"city": "Faro",
-		"bedroom": 3,
-		"bathroom": 2,
-		"latitude": "37.0080",
-		"longitude": "-7.9940",
-		"type": "rent",
-		"property": "house",
+		"address": "Calle da Praia",
+		"city": "Loulé",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.12436",
+		"longitude": "-8.02620",
+		"type": "buy",
+		"property": "condo",
 		"postDetail": {
-			"desc": "Stunning modern house with a spacious backyard and swimming pool.",
-			"utilities": "Not included",
-			"pet": "Allowed with deposit",
-			"income": "Verification required",
-			"size": 2000,
-			"school": 9,
-			"bus": 15,
-			"restaurant": 20
+			"desc": "Attractive condo located in Loulé. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 600
 		}
 	},
 	{
 		"id": 5,
-		"title": "Vacant Land for Development",
-		"price": 500000,
+		"title": "Corner house with parking — Quarteira",
+		"price": 220000,
 		"images": [
-			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
-			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
 		],
-		"address": "Estoi",
-		"city": "Faro",
-		"bedroom": 0,
-		"bathroom": 0,
-		"latitude": "37.0950",
-		"longitude": "-7.8950",
+		"address": "Calle do Sol",
+		"city": "Quarteira",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.05934",
+		"longitude": "-8.09693",
 		"type": "buy",
-		"property": "land",
+		"property": "house",
 		"postDetail": {
-			"desc": "Rare opportunity to own a prime piece of land in a developing area.",
-			"utilities": "Not applicable",
-			"pet": "Not applicable",
-			"income": "Not applicable",
-			"size": 0.5
+			"desc": "Attractive house located in Quarteira. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 800
 		}
 	},
 	{
 		"id": 6,
-		"title": "Beachfront Villa Albufeira",
-		"price": 4500,
+		"title": "Spacious condo for families — Almancil",
+		"price": 5460,
 		"images": [
 			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
 			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
 		],
-		"address": "Praia da Oura",
-		"city": "Albufeira",
-		"bedroom": 4,
-		"bathroom": 3,
-		"latitude": "37.0890",
-		"longitude": "-8.2450",
+		"address": "Avenida das Flores",
+		"city": "Almancil",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.07690",
+		"longitude": "-8.03362",
 		"type": "rent",
-		"property": "house",
+		"property": "condo",
 		"postDetail": {
-			"desc": "Luxury beachfront villa with private pool and sea views in Albufeira.",
-			"utilities": "Not included",
+			"desc": "Attractive condo located in Almancil. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
 			"pet": "Allowed",
 			"income": "Verification required",
-			"size": 2800
+			"size": 2200
 		}
 	},
 	{
 		"id": 7,
-		"title": "Marina Apartment Lagos",
-		"price": 320000,
+		"title": "Sea-view apartment — Vilamoura",
+		"price": 350000,
 		"images": [
-			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
-			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
 		],
-		"address": "Marina de Lagos",
-		"city": "Lagos",
-		"bedroom": 2,
-		"bathroom": 2,
-		"latitude": "37.1020",
-		"longitude": "-8.6730",
+		"address": "Travessa do Sol",
+		"city": "Vilamoura",
+		"bedroom": 3,
+		"bathroom": 3,
+		"latitude": "37.06738",
+		"longitude": "-8.11702",
 		"type": "buy",
 		"property": "apartment",
 		"postDetail": {
-			"desc": "Modern apartment overlooking Lagos marina, walking distance to old town.",
+			"desc": "Attractive apartment located in Vilamoura. Ideal for buyers looking for a place in the region.",
 			"utilities": "Not included",
-			"pet": "Not allowed",
+			"pet": "Allowed",
 			"income": "N/A",
-			"size": 1100
+			"size": 800
 		}
 	},
 	{
 		"id": 8,
-		"title": "Historic Townhouse Tavira",
-		"price": 2800,
+		"title": "Family condo in prime location — Vilamoura",
+		"price": 350000,
 		"images": [
-			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
-			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
 		],
-		"address": "Rua da Liberdade",
-		"city": "Tavira",
+		"address": "Rua Nova",
+		"city": "Vilamoura",
 		"bedroom": 3,
 		"bathroom": 2,
-		"latitude": "37.1260",
-		"longitude": "-7.6490",
-		"type": "rent",
-		"property": "house",
+		"latitude": "37.07629",
+		"longitude": "-8.12927",
+		"type": "buy",
+		"property": "condo",
 		"postDetail": {
-			"desc": "Charming renovated townhouse in the heart of Tavira near the Gilão river.",
+			"desc": "Attractive condo located in Vilamoura. Ideal for buyers looking for a place in the region.",
 			"utilities": "Included",
-			"pet": "Allowed",
-			"income": "Verification required",
-			"size": 1600
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 800
 		}
 	},
 	{
 		"id": 9,
-		"title": "Sea View Condo Portimão",
-		"price": 195000,
+		"title": "Luxury land for sale — Albufeira",
+		"price": 400000,
 		"images": [
-			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
-			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
 		],
-		"address": "Praia da Rocha",
-		"city": "Portimão",
-		"bedroom": 2,
-		"bathroom": 1,
-		"latitude": "37.1180",
-		"longitude": "-8.5370",
+		"address": "Travessa Central",
+		"city": "Albufeira",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.08554",
+		"longitude": "-8.24212",
 		"type": "buy",
-		"property": "condo",
+		"property": "land",
 		"postDetail": {
-			"desc": "Bright condo steps from Praia da Rocha beach.",
-			"utilities": "Not included",
-			"pet": "Not allowed",
+			"desc": "Attractive land located in Albufeira. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
 			"income": "N/A",
-			"size": 900
+			"size": 0
 		}
 	},
 	{
 		"id": 10,
-		"title": "Golf Resort Villa Quarteira",
-		"price": 5500,
+		"title": "Corner apartment with parking — Albufeira",
+		"price": 450000,
 		"images": [
-			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
-			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
 		],
-		"address": "Vilamoura",
-		"city": "Quarteira",
+		"address": "Calle do Sol",
+		"city": "Albufeira",
 		"bedroom": 4,
 		"bathroom": 3,
-		"latitude": "37.0760",
-		"longitude": "-8.1170",
-		"type": "rent",
-		"property": "house",
+		"latitude": "37.07874",
+		"longitude": "-8.25990",
+		"type": "buy",
+		"property": "apartment",
 		"postDetail": {
-			"desc": "Spacious villa near Vilamoura golf courses and marina.",
-			"utilities": "Not included",
-			"pet": "Allowed with deposit",
-			"income": "Verification required",
-			"size": 3200
+			"desc": "Attractive apartment located in Albufeira. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 2200
 		}
 	},
 	{
 		"id": 11,
-		"title": "Chiado Design Apartment",
-		"price": 2200,
+		"title": "Cozy condo near the center — Armação de Pêra",
+		"price": 1300,
 		"images": [
-			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
-			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
 		],
-		"address": "Rua Garrett",
-		"city": "Lisbon",
-		"bedroom": 1,
+		"address": "Rua das Flores",
+		"city": "Armação de Pêra",
+		"bedroom": 2,
 		"bathroom": 1,
-		"latitude": "38.7109",
-		"longitude": "-9.1427",
+		"latitude": "37.10497",
+		"longitude": "-8.35834",
 		"type": "rent",
-		"property": "apartment",
+		"property": "condo",
 		"postDetail": {
-			"desc": "Stylish studio in Chiado, Lisbon's cultural heart.",
-			"utilities": "Included",
-			"pet": "Not allowed",
+			"desc": "Attractive condo located in Armação de Pêra. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
 			"income": "Verification required",
-			"size": 550
+			"size": 600
 		}
 	},
 	{
 		"id": 12,
-		"title": "Alfama Riverside Flat",
-		"price": 380000,
+		"title": "Modern house fully furnished — Carvoeiro",
+		"price": 1100,
 		"images": [
-			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
-			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
 		],
-		"address": "Rua de São Pedro",
-		"city": "Lisbon",
-		"bedroom": 2,
+		"address": "Avenida Central",
+		"city": "Carvoeiro",
+		"bedroom": 1,
 		"bathroom": 1,
-		"latitude": "38.7120",
-		"longitude": "-9.1300",
-		"type": "buy",
-		"property": "apartment",
+		"latitude": "37.08585",
+		"longitude": "-8.47174",
+		"type": "rent",
+		"property": "house",
 		"postDetail": {
-			"desc": "Traditional Alfama flat with Tagus river glimpses.",
-			"utilities": "Not included",
-			"pet": "Allowed",
-			"income": "N/A",
-			"size": 850
+			"desc": "Attractive house located in Carvoeiro. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 1200
 		}
 	},
 	{
 		"id": 13,
-		"title": "Belém Family House",
-		"price": 4200,
+		"title": "Renovated house with city views — Lagoa",
+		"price": 2860,
 		"images": [
-			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
-			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
 		],
-		"address": "Rua de Belém",
-		"city": "Lisbon",
-		"bedroom": 3,
-		"bathroom": 2,
-		"latitude": "38.6970",
-		"longitude": "-9.2060",
+		"address": "Avenida da Praia",
+		"city": "Lagoa",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "37.14699",
+		"longitude": "-8.45446",
 		"type": "rent",
 		"property": "house",
 		"postDetail": {
-			"desc": "Quiet family house near Jerónimos Monastery and Belém tower.",
-			"utilities": "Not included",
-			"pet": "Allowed",
-			"income": "Verification required",
-			"size": 1800
-		}
-	},
-	{
-		"id": 14,
-		"title": "Cascais Ocean Condo",
-		"price": 650000,
-		"images": [
-			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
-			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
-		],
-		"address": "Avenida Dom Carlos I",
-		"city": "Cascais",
-		"bedroom": 3,
-		"bathroom": 2,
-		"latitude": "38.6970",
-		"longitude": "-9.4210",
-		"type": "buy",
-		"property": "condo",
-		"postDetail": {
-			"desc": "Premium condo with ocean view in Cascais bay.",
-			"utilities": "Not included",
-			"pet": "Not allowed",
-			"income": "N/A",
-			"size": 1400
-		}
-	},
-	{
-		"id": 15,
-		"title": "Ribeira Loft Porto",
-		"price": 1800,
-		"images": [
-			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
-			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
-		],
-		"address": "Rua de São João",
-		"city": "Porto",
-		"bedroom": 1,
-		"bathroom": 1,
-		"latitude": "41.1405",
-		"longitude": "-8.6130",
-		"type": "rent",
-		"property": "apartment",
-		"postDetail": {
-			"desc": "Converted loft in Porto's historic Ribeira district.",
+			"desc": "Attractive house located in Lagoa. Ideal for renters looking for a place in the region.",
 			"utilities": "Included",
 			"pet": "Not allowed",
 			"income": "Verification required",
@@ -372,215 +312,1031 @@
 		}
 	},
 	{
-		"id": 16,
-		"title": "Foz do Douro Villa",
-		"price": 890000,
-		"images": [
-			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
-			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
-		],
-		"address": "Avenida do Brasil",
-		"city": "Porto",
-		"bedroom": 4,
-		"bathroom": 3,
-		"latitude": "41.1500",
-		"longitude": "-8.6750",
-		"type": "buy",
-		"property": "house",
-		"postDetail": {
-			"desc": "Elegant villa near Foz do Douro beach and gardens.",
-			"utilities": "Not included",
-			"pet": "Allowed",
-			"income": "N/A",
-			"size": 3000
-		}
-	},
-	{
-		"id": 17,
-		"title": "University District Flat Coimbra",
-		"price": 950,
-		"images": [
-			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
-			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
-		],
-		"address": "Rua da Sofia",
-		"city": "Coimbra",
-		"bedroom": 2,
-		"bathroom": 1,
-		"latitude": "40.2090",
-		"longitude": "-8.4190",
-		"type": "rent",
-		"property": "apartment",
-		"postDetail": {
-			"desc": "Practical flat near Coimbra University and Baixa.",
-			"utilities": "Included",
-			"pet": "Not allowed",
-			"income": "Verification required",
-			"size": 750
-		}
-	},
-	{
-		"id": 18,
-		"title": "Historic Center Home Braga",
-		"price": 275000,
+		"id": 14,
+		"title": "Spacious house for families — Portimão",
+		"price": 900,
 		"images": [
 			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
-			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
-		],
-		"address": "Rua do Souto",
-		"city": "Braga",
-		"bedroom": 3,
-		"bathroom": 2,
-		"latitude": "41.5510",
-		"longitude": "-8.4270",
-		"type": "buy",
-		"property": "house",
-		"postDetail": {
-			"desc": "Renovated home in Braga's pedestrian historic center.",
-			"utilities": "Not included",
-			"pet": "Allowed",
-			"income": "N/A",
-			"size": 1500
-		}
-	},
-	{
-		"id": 19,
-		"title": "Aveiro Canal Apartment",
-		"price": 1400,
-		"images": [
-			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
 			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
 		],
-		"address": "Canal de São Roque",
-		"city": "Aveiro",
-		"bedroom": 2,
+		"address": "Calle Nova",
+		"city": "Portimão",
+		"bedroom": 1,
 		"bathroom": 1,
-		"latitude": "40.6410",
-		"longitude": "-8.6540",
+		"latitude": "37.12502",
+		"longitude": "-8.55206",
 		"type": "rent",
-		"property": "apartment",
+		"property": "house",
 		"postDetail": {
-			"desc": "Bright apartment beside Aveiro's famous canals.",
-			"utilities": "Included",
-			"pet": "Allowed",
-			"income": "Verification required",
-			"size": 900
-		}
-	},
-	{
-		"id": 20,
-		"title": "Évora Historic Flat",
-		"price": 210000,
-		"images": [
-			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
-			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
-		],
-		"address": "Praça do Giraldo",
-		"city": "Évora",
-		"bedroom": 2,
-		"bathroom": 1,
-		"latitude": "38.5710",
-		"longitude": "-7.9090",
-		"type": "buy",
-		"property": "apartment",
-		"postDetail": {
-			"desc": "Apartment inside UNESCO-listed Évora city walls.",
-			"utilities": "Not included",
-			"pet": "Not allowed",
-			"income": "N/A",
-			"size": 950
-		}
-	},
-	{
-		"id": 21,
-		"title": "Setúbal Bay View",
-		"price": 1600,
-		"images": [
-			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
-			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
-		],
-		"address": "Avenida Luísa Todi",
-		"city": "Setúbal",
-		"bedroom": 2,
-		"bathroom": 1,
-		"latitude": "38.5240",
-		"longitude": "-8.8930",
-		"type": "rent",
-		"property": "apartment",
-		"postDetail": {
-			"desc": "Apartment with views over Setúbal bay and Arrábida.",
-			"utilities": "Included",
+			"desc": "Attractive house located in Portimão. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
 			"pet": "Allowed",
 			"income": "Verification required",
 			"size": 1000
 		}
 	},
 	{
-		"id": 22,
-		"title": "Sintra Mountain House",
-		"price": 720000,
+		"id": 15,
+		"title": "Family land in prime location — Portimão",
+		"price": 120000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Travessa da Praia",
+		"city": "Portimão",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.14470",
+		"longitude": "-8.52653",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Portimão. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 16,
+		"title": "Stylish house close to beach — Praia da Rocha",
+		"price": 2200,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua Nova",
+		"city": "Praia da Rocha",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.11533",
+		"longitude": "-8.52608",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Praia da Rocha. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1800
+		}
+	},
+	{
+		"id": 17,
+		"title": "Renovated condo with city views — Ferragudo",
+		"price": 4200,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Travessa da Praia",
+		"city": "Ferragudo",
+		"bedroom": 2,
+		"bathroom": 2,
+		"latitude": "37.11321",
+		"longitude": "-8.52950",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Ferragudo. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 2200
+		}
+	},
+	{
+		"id": 18,
+		"title": "Bright apartment with balcony — Lagos",
+		"price": 1170,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Avenida do Mar",
+		"city": "Lagos",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "37.11479",
+		"longitude": "-8.66254",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Lagos. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 19,
+		"title": "Family land in prime location — Lagos",
+		"price": 80000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Calle Real",
+		"city": "Lagos",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.09837",
+		"longitude": "-8.65844",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Lagos. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 20,
+		"title": "Newly built land — Luz",
+		"price": 120000,
 		"images": [
 			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
 			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
 		],
-		"address": "Rua Barbosa du Bocage",
-		"city": "Sintra",
-		"bedroom": 4,
-		"bathroom": 3,
-		"latitude": "38.8020",
-		"longitude": "-9.3810",
+		"address": "Rua das Flores",
+		"city": "Luz",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.08190",
+		"longitude": "-8.71394",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Luz. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 21,
+		"title": "Family land in prime location — Burgau",
+		"price": 400000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Avenida Nova",
+		"city": "Burgau",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.05971",
+		"longitude": "-8.77477",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Burgau. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 22,
+		"title": "Investment house opportunity — Sagres",
+		"price": 350000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Calle Central",
+		"city": "Sagres",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.01158",
+		"longitude": "-8.94542",
 		"type": "buy",
 		"property": "house",
 		"postDetail": {
-			"desc": "Romantic house near Sintra palace and forest paths.",
-			"utilities": "Not included",
-			"pet": "Allowed",
+			"desc": "Attractive house located in Sagres. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed with deposit",
 			"income": "N/A",
-			"size": 2500
+			"size": 1800
 		}
 	},
 	{
 		"id": 23,
-		"title": "Madrid Centro Studio",
-		"price": 1350,
+		"title": "Renovated condo with city views — Aljezur",
+		"price": 1800,
 		"images": [
-			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
-			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
 		],
-		"address": "Calle de Preciados",
-		"city": "Madrid",
-		"bedroom": 1,
+		"address": "Rua Principal",
+		"city": "Aljezur",
+		"bedroom": 2,
 		"bathroom": 1,
-		"latitude": "40.4170",
-		"longitude": "-3.7040",
+		"latitude": "37.30949",
+		"longitude": "-8.79544",
 		"type": "rent",
-		"property": "apartment",
+		"property": "condo",
 		"postDetail": {
-			"desc": "Compact studio steps from Puerta del Sol.",
-			"utilities": "Included",
-			"pet": "Not allowed",
+			"desc": "Attractive condo located in Aljezur. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
 			"income": "Verification required",
-			"size": 450
+			"size": 1500
 		}
 	},
 	{
 		"id": 24,
-		"title": "Salamanca District Flat Madrid",
-		"price": 485000,
+		"title": "Modern apartment fully furnished — Monchique",
+		"price": 2340,
 		"images": [
-			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
 			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
 		],
-		"address": "Calle de Serrano",
-		"city": "Madrid",
-		"bedroom": 2,
-		"bathroom": 2,
-		"latitude": "40.4300",
-		"longitude": "-3.6870",
-		"type": "buy",
+		"address": "Avenida das Flores",
+		"city": "Monchique",
+		"bedroom": 3,
+		"bathroom": 3,
+		"latitude": "37.33100",
+		"longitude": "-8.54357",
+		"type": "rent",
 		"property": "apartment",
 		"postDetail": {
-			"desc": "Elegant flat in Madrid's exclusive Salamanca district.",
+			"desc": "Attractive apartment located in Monchique. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1200
+		}
+	},
+	{
+		"id": 25,
+		"title": "Bright condo with balcony — Silves",
+		"price": 2340,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua Nova",
+		"city": "Silves",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "37.20217",
+		"longitude": "-8.44897",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Silves. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 26,
+		"title": "Newly built condo — São Brás de Alportel",
+		"price": 580000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Travessa Central",
+		"city": "São Brás de Alportel",
+		"bedroom": 3,
+		"bathroom": 3,
+		"latitude": "37.15862",
+		"longitude": "-7.87741",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in São Brás de Alportel. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 27,
+		"title": "Investment land opportunity — Tavira",
+		"price": 180000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Calle do Sol",
+		"city": "Tavira",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.11111",
+		"longitude": "-7.64087",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Tavira. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 28,
+		"title": "Investment land opportunity — Tavira",
+		"price": 400000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Avenida Principal",
+		"city": "Tavira",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.11436",
+		"longitude": "-7.63565",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Tavira. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 29,
+		"title": "Investment house opportunity — Cabanas de Tavira",
+		"price": 580000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Avenida Nova",
+		"city": "Cabanas de Tavira",
+		"bedroom": 2,
+		"bathroom": 2,
+		"latitude": "37.14797",
+		"longitude": "-7.61170",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Cabanas de Tavira. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 2200
+		}
+	},
+	{
+		"id": 30,
+		"title": "Family land in prime location — Castro Marim",
+		"price": 400000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Avenida do Sol",
+		"city": "Castro Marim",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.23077",
+		"longitude": "-7.44990",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Castro Marim. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 31,
+		"title": "Classic house with potential — Vila Real de Santo António",
+		"price": 350000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Travessa Principal",
+		"city": "Vila Real de Santo António",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.18478",
+		"longitude": "-7.40996",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Vila Real de Santo António. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 800
+		}
+	},
+	{
+		"id": 32,
+		"title": "Classic land with potential — Monte Gordo",
+		"price": 180000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Avenida Principal",
+		"city": "Monte Gordo",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.18962",
+		"longitude": "-7.43886",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Monte Gordo. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 33,
+		"title": "Classic land with potential — Fuseta",
+		"price": 180000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Calle das Flores",
+		"city": "Fuseta",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.06493",
+		"longitude": "-7.72999",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Fuseta. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 34,
+		"title": "Sea-view land — Santa Luzia",
+		"price": 400000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Calle do Sol",
+		"city": "Santa Luzia",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.11618",
+		"longitude": "-7.67354",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Santa Luzia. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 35,
+		"title": "Stylish apartment close to beach — Estoi",
+		"price": 2860,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Travessa da Praia",
+		"city": "Estoi",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.09819",
+		"longitude": "-7.89466",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Estoi. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1800
+		}
+	},
+	{
+		"id": 36,
+		"title": "Newly built land — Pechão",
+		"price": 80000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Calle das Flores",
+		"city": "Pechão",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.04093",
+		"longitude": "-7.88290",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Pechão. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 37,
+		"title": "Classic condo with potential — Boliqueime",
+		"price": 720000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Travessa do Sol",
+		"city": "Boliqueime",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "37.13363",
+		"longitude": "-8.16724",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Boliqueime. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1000
+		}
+	},
+	{
+		"id": 38,
+		"title": "Investment land opportunity — Paderne",
+		"price": 400000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Calle Real",
+		"city": "Paderne",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.16912",
+		"longitude": "-8.20869",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Paderne. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 39,
+		"title": "Classic house with potential — Guia",
+		"price": 220000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Calle Nova",
+		"city": "Guia",
+		"bedroom": 4,
+		"bathroom": 4,
+		"latitude": "37.12846",
+		"longitude": "-8.29601",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Guia. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1000
+		}
+	},
+	{
+		"id": 40,
+		"title": "Renovated house with city views — Porches",
+		"price": 1500,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Travessa do Mar",
+		"city": "Porches",
+		"bedroom": 2,
+		"bathroom": 2,
+		"latitude": "37.12934",
+		"longitude": "-8.39195",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Porches. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 41,
+		"title": "Corner land with parking — Mexilhoeira Grande",
+		"price": 250000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Rua Nova",
+		"city": "Mexilhoeira Grande",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.14732",
+		"longitude": "-8.60532",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Mexilhoeira Grande. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 42,
+		"title": "Premium house near amenities — Alvor",
+		"price": 220000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Calle Real",
+		"city": "Alvor",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.11900",
+		"longitude": "-8.59406",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Alvor. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1500
+		}
+	},
+	{
+		"id": 43,
+		"title": "Premium land near amenities — Lisbon",
+		"price": 400000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Travessa Real",
+		"city": "Lisbon",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "38.73422",
+		"longitude": "-9.13199",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Lisbon. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 44,
+		"title": "Luxury condo for sale — Lisbon",
+		"price": 950000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Calle das Flores",
+		"city": "Lisbon",
+		"bedroom": 4,
+		"bathroom": 4,
+		"latitude": "38.72871",
+		"longitude": "-9.14727",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Lisbon. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 800
+		}
+	},
+	{
+		"id": 45,
+		"title": "Bright house with balcony — Cascais",
+		"price": 1950,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Travessa do Mar",
+		"city": "Cascais",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "38.69445",
+		"longitude": "-9.42607",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Cascais. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 2200
+		}
+	},
+	{
+		"id": 46,
+		"title": "Investment land opportunity — Sintra",
+		"price": 250000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Travessa Real",
+		"city": "Sintra",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "38.81360",
+		"longitude": "-9.37373",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Sintra. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 47,
+		"title": "Premium condo near amenities — Oeiras",
+		"price": 350000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Rua do Mar",
+		"city": "Oeiras",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "38.68258",
+		"longitude": "-9.31292",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Oeiras. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 48,
+		"title": "Premium land near amenities — Amadora",
+		"price": 120000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Rua do Mar",
+		"city": "Amadora",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "38.77229",
+		"longitude": "-9.21778",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Amadora. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 49,
+		"title": "Modern apartment fully furnished — Almada",
+		"price": 4550,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Avenida Real",
+		"city": "Almada",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "38.66551",
+		"longitude": "-9.15963",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Almada. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 2200
+		}
+	},
+	{
+		"id": 50,
+		"title": "Corner land with parking — Setúbal",
+		"price": 180000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Rua Principal",
+		"city": "Setúbal",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "38.51697",
+		"longitude": "-8.90074",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Setúbal. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 51,
+		"title": "Cozy apartment near the center — Sesimbra",
+		"price": 1500,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Travessa Nova",
+		"city": "Sesimbra",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "38.44764",
+		"longitude": "-9.10884",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Sesimbra. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1200
+		}
+	},
+	{
+		"id": 52,
+		"title": "Family condo in prime location — Palmela",
+		"price": 220000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua Central",
+		"city": "Palmela",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "38.58294",
+		"longitude": "-8.91276",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Palmela. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1200
+		}
+	},
+	{
+		"id": 53,
+		"title": "Luxury land for sale — Porto",
+		"price": 120000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Avenida Nova",
+		"city": "Porto",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "41.16066",
+		"longitude": "-8.61918",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Porto. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 54,
+		"title": "Bright apartment with balcony — Porto",
+		"price": 2200,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Travessa Real",
+		"city": "Porto",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "41.15808",
+		"longitude": "-8.63386",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Porto. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1000
+		}
+	},
+	{
+		"id": 55,
+		"title": "Corner land with parking — Vila Nova de Gaia",
+		"price": 120000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Calle Real",
+		"city": "Vila Nova de Gaia",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "41.11418",
+		"longitude": "-8.61115",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Vila Nova de Gaia. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 56,
+		"title": "Classic condo with potential — Matosinhos",
+		"price": 220000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Travessa do Mar",
+		"city": "Matosinhos",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "41.19345",
+		"longitude": "-8.69668",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Matosinhos. Ideal for buyers looking for a place in the region.",
 			"utilities": "Not included",
 			"pet": "Allowed",
 			"income": "N/A",
@@ -588,47 +1344,2255 @@
 		}
 	},
 	{
-		"id": 25,
-		"title": "Seville Triana House",
-		"price": 1900,
+		"id": 57,
+		"title": "Quiet condo with garden access — Braga",
+		"price": 2340,
 		"images": [
-			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
-			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
 		],
-		"address": "Calle Betis",
-		"city": "Seville",
+		"address": "Calle Principal",
+		"city": "Braga",
 		"bedroom": 3,
-		"bathroom": 2,
-		"latitude": "37.3830",
-		"longitude": "-6.0000",
+		"bathroom": 3,
+		"latitude": "41.53879",
+		"longitude": "-8.42362",
 		"type": "rent",
-		"property": "house",
+		"property": "condo",
 		"postDetail": {
-			"desc": "Traditional house on the Triana riverside in Seville.",
-			"utilities": "Not included",
+			"desc": "Attractive condo located in Braga. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
 			"pet": "Allowed",
 			"income": "Verification required",
-			"size": 1600
+			"size": 600
 		}
 	},
 	{
-		"id": 26,
-		"title": "Barcelona Gothic Quarter Apt",
-		"price": 2100,
+		"id": 58,
+		"title": "Premium house near amenities — Guimarães",
+		"price": 350000,
 		"images": [
-			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua Nova",
+		"city": "Guimarães",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "41.44838",
+		"longitude": "-8.29628",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Guimarães. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1200
+		}
+	},
+	{
+		"id": 59,
+		"title": "Sea-view house — Viana do Castelo",
+		"price": 950000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
 			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
 		],
-		"address": "Carrer del Bisbe",
-		"city": "Barcelona",
+		"address": "Calle das Flores",
+		"city": "Viana do Castelo",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "41.68957",
+		"longitude": "-8.82702",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Viana do Castelo. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 1000
+		}
+	},
+	{
+		"id": 60,
+		"title": "Sea-view condo — Aveiro",
+		"price": 350000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Avenida da Praia",
+		"city": "Aveiro",
 		"bedroom": 2,
+		"bathroom": 2,
+		"latitude": "40.62909",
+		"longitude": "-8.65272",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Aveiro. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1200
+		}
+	},
+	{
+		"id": 61,
+		"title": "Newly built condo — Coimbra",
+		"price": 450000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Avenida Central",
+		"city": "Coimbra",
+		"bedroom": 1,
 		"bathroom": 1,
-		"latitude": "41.3830",
-		"longitude": "2.1760",
+		"latitude": "40.19913",
+		"longitude": "-8.41623",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Coimbra. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1500
+		}
+	},
+	{
+		"id": 62,
+		"title": "Bright condo with balcony — Leiria",
+		"price": 4550,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Travessa Real",
+		"city": "Leiria",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "39.75478",
+		"longitude": "-8.80488",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Leiria. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 63,
+		"title": "Corner apartment with parking — Viseu",
+		"price": 220000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Rua do Sol",
+		"city": "Viseu",
+		"bedroom": 3,
+		"bathroom": 3,
+		"latitude": "40.65635",
+		"longitude": "-7.90989",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Viseu. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1000
+		}
+	},
+	{
+		"id": 64,
+		"title": "Spacious apartment for families — Guarda",
+		"price": 2800,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Travessa Central",
+		"city": "Guarda",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "40.54557",
+		"longitude": "-7.26939",
 		"type": "rent",
 		"property": "apartment",
 		"postDetail": {
-			"desc": "Apartment in the Gothic Quarter near the cathedral.",
+			"desc": "Attractive apartment located in Guarda. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1000
+		}
+	},
+	{
+		"id": 65,
+		"title": "Bright apartment with balcony — Castelo Branco",
+		"price": 1800,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Rua do Sol",
+		"city": "Castelo Branco",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "39.81191",
+		"longitude": "-7.50069",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Castelo Branco. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1200
+		}
+	},
+	{
+		"id": 66,
+		"title": "Investment land opportunity — Santarém",
+		"price": 180000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Travessa Nova",
+		"city": "Santarém",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "39.22814",
+		"longitude": "-8.67879",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Santarém. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 67,
+		"title": "Modern condo fully furnished — Évora",
+		"price": 1950,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua Principal",
+		"city": "Évora",
+		"bedroom": 3,
+		"bathroom": 3,
+		"latitude": "38.58365",
+		"longitude": "-7.90370",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Évora. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1500
+		}
+	},
+	{
+		"id": 68,
+		"title": "Corner condo with parking — Beja",
+		"price": 450000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Travessa Real",
+		"city": "Beja",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "38.02828",
+		"longitude": "-7.86299",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Beja. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 600
+		}
+	},
+	{
+		"id": 69,
+		"title": "Classic land with potential — Portalegre",
+		"price": 180000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Rua Central",
+		"city": "Portalegre",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "39.27958",
+		"longitude": "-7.43933",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Portalegre. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 70,
+		"title": "Family house in prime location — Funchal",
+		"price": 450000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Travessa Nova",
+		"city": "Funchal",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "32.68181",
+		"longitude": "-16.92602",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Funchal. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 1200
+		}
+	},
+	{
+		"id": 71,
+		"title": "Sea-view condo — Ponta Delgada",
+		"price": 280000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Travessa Principal",
+		"city": "Ponta Delgada",
+		"bedroom": 4,
+		"bathroom": 4,
+		"latitude": "37.73855",
+		"longitude": "-25.67574",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Ponta Delgada. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1000
+		}
+	},
+	{
+		"id": 72,
+		"title": "Investment condo opportunity — Figueira da Foz",
+		"price": 720000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Travessa Principal",
+		"city": "Figueira da Foz",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "40.15473",
+		"longitude": "-8.85872",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Figueira da Foz. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1000
+		}
+	},
+	{
+		"id": 73,
+		"title": "Investment land opportunity — Torres Vedras",
+		"price": 250000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Calle Real",
+		"city": "Torres Vedras",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "39.08211",
+		"longitude": "-9.25652",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Torres Vedras. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 74,
+		"title": "Modern apartment fully furnished — Caldas da Rainha",
+		"price": 1950,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Travessa Nova",
+		"city": "Caldas da Rainha",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "39.39732",
+		"longitude": "-9.14959",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Caldas da Rainha. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1200
+		}
+	},
+	{
+		"id": 75,
+		"title": "Charming apartment in historic area — Tomar",
+		"price": 2340,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Travessa da Praia",
+		"city": "Tomar",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "39.59946",
+		"longitude": "-8.40953",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Tomar. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 76,
+		"title": "Family land in prime location — Óbidos",
+		"price": 120000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Travessa das Flores",
+		"city": "Óbidos",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "39.37292",
+		"longitude": "-9.16371",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Óbidos. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 77,
+		"title": "Family apartment in prime location — Nazaré",
+		"price": 950000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Calle do Mar",
+		"city": "Nazaré",
+		"bedroom": 4,
+		"bathroom": 4,
+		"latitude": "39.59940",
+		"longitude": "-9.07147",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Nazaré. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 2200
+		}
+	},
+	{
+		"id": 78,
+		"title": "Cozy house near the center — Peniche",
+		"price": 3640,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Travessa do Mar",
+		"city": "Peniche",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "39.34955",
+		"longitude": "-9.38181",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Peniche. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 79,
+		"title": "Family land in prime location — Chaves",
+		"price": 80000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua Real",
+		"city": "Chaves",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "41.74007",
+		"longitude": "-7.46829",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Chaves. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 80,
+		"title": "Family land in prime location — Bragança",
+		"price": 80000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Avenida Nova",
+		"city": "Bragança",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "41.80330",
+		"longitude": "-6.75236",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Bragança. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 81,
+		"title": "Corner condo with parking — Lamego",
+		"price": 580000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Travessa Principal",
+		"city": "Lamego",
+		"bedroom": 4,
+		"bathroom": 4,
+		"latitude": "41.11162",
+		"longitude": "-7.80520",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Lamego. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 800
+		}
+	},
+	{
+		"id": 82,
+		"title": "Bright condo with balcony — Espinho",
+		"price": 1430,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua Principal",
+		"city": "Espinho",
+		"bedroom": 4,
+		"bathroom": 4,
+		"latitude": "41.00531",
+		"longitude": "-8.63518",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Espinho. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1000
+		}
+	},
+	{
+		"id": 83,
+		"title": "Family condo in prime location — Póvoa de Varzim",
+		"price": 720000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Travessa da Praia",
+		"city": "Póvoa de Varzim",
+		"bedroom": 3,
+		"bathroom": 3,
+		"latitude": "41.37310",
+		"longitude": "-8.77663",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Póvoa de Varzim. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 800
+		}
+	},
+	{
+		"id": 84,
+		"title": "Investment house opportunity — Barcelos",
+		"price": 450000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Calle do Sol",
+		"city": "Barcelos",
+		"bedroom": 4,
+		"bathroom": 4,
+		"latitude": "41.55097",
+		"longitude": "-8.61604",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Barcelos. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 1000
+		}
+	},
+	{
+		"id": 85,
+		"title": "Newly built condo — Covilhã",
+		"price": 450000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua da Praia",
+		"city": "Covilhã",
+		"bedroom": 4,
+		"bathroom": 4,
+		"latitude": "40.29598",
+		"longitude": "-7.49440",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Covilhã. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1000
+		}
+	},
+	{
+		"id": 86,
+		"title": "Classic condo with potential — Abrantes",
+		"price": 720000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Rua Real",
+		"city": "Abrantes",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "39.45124",
+		"longitude": "-8.18605",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Abrantes. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1500
+		}
+	},
+	{
+		"id": 87,
+		"title": "Modern condo fully furnished — Elvas",
+		"price": 2340,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Rua Central",
+		"city": "Elvas",
+		"bedroom": 4,
+		"bathroom": 4,
+		"latitude": "38.88485",
+		"longitude": "-7.15090",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Elvas. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1500
+		}
+	},
+	{
+		"id": 88,
+		"title": "Stylish condo close to beach — Serpa",
+		"price": 2200,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Calle Central",
+		"city": "Serpa",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.93427",
+		"longitude": "-7.60804",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Serpa. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 2200
+		}
+	},
+	{
+		"id": 89,
+		"title": "Sea-view land — Mértola",
+		"price": 180000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Rua do Sol",
+		"city": "Mértola",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.65213",
+		"longitude": "-7.66195",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Mértola. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 90,
+		"title": "Sea-view land — Odemira",
+		"price": 400000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Calle Nova",
+		"city": "Odemira",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.58571",
+		"longitude": "-8.64316",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Odemira. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 91,
+		"title": "Newly built condo — Sines",
+		"price": 220000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Calle da Praia",
+		"city": "Sines",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "37.95514",
+		"longitude": "-8.86641",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Sines. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 92,
+		"title": "Corner land with parking — Santiago do Cacém",
+		"price": 180000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Rua Central",
+		"city": "Santiago do Cacém",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "38.00550",
+		"longitude": "-8.70864",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Santiago do Cacém. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 93,
+		"title": "Quiet apartment with garden access — Madrid",
+		"price": 4550,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Travessa do Sol",
+		"city": "Madrid",
+		"bedroom": 3,
+		"bathroom": 3,
+		"latitude": "40.42191",
+		"longitude": "-3.69651",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Madrid. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 600
+		}
+	},
+	{
+		"id": 94,
+		"title": "Corner land with parking — Madrid",
+		"price": 400000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Calle da Praia",
+		"city": "Madrid",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "40.42997",
+		"longitude": "-3.71041",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Madrid. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 95,
+		"title": "Sea-view house — Barcelona",
+		"price": 580000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Rua Real",
+		"city": "Barcelona",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "41.37422",
+		"longitude": "2.16188",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Barcelona. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 800
+		}
+	},
+	{
+		"id": 96,
+		"title": "Spacious apartment for families — Barcelona",
+		"price": 1300,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Avenida da Praia",
+		"city": "Barcelona",
+		"bedroom": 2,
+		"bathroom": 2,
+		"latitude": "41.37446",
+		"longitude": "2.17655",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Barcelona. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 2200
+		}
+	},
+	{
+		"id": 97,
+		"title": "Modern house fully furnished — Valencia",
+		"price": 1300,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua Principal",
+		"city": "Valencia",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "39.47111",
+		"longitude": "-0.36734",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Valencia. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1000
+		}
+	},
+	{
+		"id": 98,
+		"title": "Family house in prime location — Seville",
+		"price": 150000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Rua Real",
+		"city": "Seville",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.39635",
+		"longitude": "-5.98372",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Seville. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 1500
+		}
+	},
+	{
+		"id": 99,
+		"title": "Classic apartment with potential — Seville",
+		"price": 150000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Rua Real",
+		"city": "Seville",
+		"bedroom": 3,
+		"bathroom": 3,
+		"latitude": "37.38784",
+		"longitude": "-5.97058",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Seville. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 100,
+		"title": "Luxury apartment for sale — Málaga",
+		"price": 220000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Avenida Central",
+		"city": "Málaga",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "36.71596",
+		"longitude": "-4.43195",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Málaga. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1500
+		}
+	},
+	{
+		"id": 101,
+		"title": "Corner condo with parking — Málaga",
+		"price": 950000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Avenida do Mar",
+		"city": "Málaga",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "36.70928",
+		"longitude": "-4.41535",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Málaga. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1200
+		}
+	},
+	{
+		"id": 102,
+		"title": "Sea-view condo — Granada",
+		"price": 220000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Calle do Sol",
+		"city": "Granada",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.17510",
+		"longitude": "-3.59365",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Granada. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 600
+		}
+	},
+	{
+		"id": 103,
+		"title": "Modern apartment fully furnished — Córdoba",
+		"price": 2200,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Calle Nova",
+		"city": "Córdoba",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.88989",
+		"longitude": "-4.77681",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Córdoba. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 2200
+		}
+	},
+	{
+		"id": 104,
+		"title": "Classic land with potential — Cádiz",
+		"price": 80000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Avenida do Sol",
+		"city": "Cádiz",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "36.53011",
+		"longitude": "-6.29305",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Cádiz. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 105,
+		"title": "Bright house with balcony — Huelva",
+		"price": 2200,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Travessa Principal",
+		"city": "Huelva",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.26928",
+		"longitude": "-6.94248",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Huelva. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 2200
+		}
+	},
+	{
+		"id": 106,
+		"title": "Quiet condo with garden access — Algeciras",
+		"price": 1800,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Avenida do Mar",
+		"city": "Algeciras",
+		"bedroom": 2,
+		"bathroom": 2,
+		"latitude": "36.13633",
+		"longitude": "-5.46576",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Algeciras. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1800
+		}
+	},
+	{
+		"id": 107,
+		"title": "Stylish apartment close to beach — Marbella",
+		"price": 3640,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Calle das Flores",
+		"city": "Marbella",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "36.50861",
+		"longitude": "-4.89528",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Marbella. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 600
+		}
+	},
+	{
+		"id": 108,
+		"title": "Bright apartment with balcony — Estepona",
+		"price": 900,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Travessa Real",
+		"city": "Estepona",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "36.42016",
+		"longitude": "-5.14114",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Estepona. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 109,
+		"title": "Classic apartment with potential — Fuengirola",
+		"price": 950000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua Principal",
+		"city": "Fuengirola",
+		"bedroom": 3,
+		"bathroom": 3,
+		"latitude": "36.53036",
+		"longitude": "-4.62814",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Fuengirola. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 800
+		}
+	},
+	{
+		"id": 110,
+		"title": "Premium house near amenities — Torremolinos",
+		"price": 150000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Travessa da Praia",
+		"city": "Torremolinos",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "36.62841",
+		"longitude": "-4.50973",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Torremolinos. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 2200
+		}
+	},
+	{
+		"id": 111,
+		"title": "Stylish condo close to beach — Alicante",
+		"price": 1170,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Calle do Mar",
+		"city": "Alicante",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "38.33076",
+		"longitude": "-0.46837",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Alicante. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1800
+		}
+	},
+	{
+		"id": 112,
+		"title": "Luxury land for sale — Murcia",
+		"price": 180000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Avenida Real",
+		"city": "Murcia",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.98935",
+		"longitude": "-1.11671",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Murcia. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 113,
+		"title": "Luxury apartment for sale — Cartagena",
+		"price": 720000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Calle da Praia",
+		"city": "Cartagena",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.59687",
+		"longitude": "-0.99169",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Cartagena. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 600
+		}
+	},
+	{
+		"id": 114,
+		"title": "Spacious apartment for families — Zaragoza",
+		"price": 1300,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Avenida do Sol",
+		"city": "Zaragoza",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "41.63688",
+		"longitude": "-0.89642",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Zaragoza. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 115,
+		"title": "Premium land near amenities — Bilbao",
+		"price": 250000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Calle das Flores",
+		"city": "Bilbao",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "43.26843",
+		"longitude": "-2.92354",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Bilbao. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 116,
+		"title": "Investment apartment opportunity — San Sebastián",
+		"price": 450000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Travessa Real",
+		"city": "San Sebastián",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "43.31386",
+		"longitude": "-1.99397",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in San Sebastián. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1000
+		}
+	},
+	{
+		"id": 117,
+		"title": "Stylish condo close to beach — Vigo",
+		"price": 1430,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Rua Real",
+		"city": "Vigo",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "42.23948",
+		"longitude": "-8.71907",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Vigo. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 118,
+		"title": "Premium condo near amenities — A Coruña",
+		"price": 150000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Calle Nova",
+		"city": "A Coruña",
+		"bedroom": 3,
+		"bathroom": 3,
+		"latitude": "43.35041",
+		"longitude": "-8.39953",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in A Coruña. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 800
+		}
+	},
+	{
+		"id": 119,
+		"title": "Modern apartment fully furnished — Santiago de Compostela",
+		"price": 4550,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Travessa do Mar",
+		"city": "Santiago de Compostela",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "42.87412",
+		"longitude": "-8.53226",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Santiago de Compostela. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 1500
+		}
+	},
+	{
+		"id": 120,
+		"title": "Classic apartment with potential — Salamanca",
+		"price": 720000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Avenida das Flores",
+		"city": "Salamanca",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "40.96266",
+		"longitude": "-5.65295",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Salamanca. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 121,
+		"title": "Family house in prime location — Toledo",
+		"price": 720000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Calle do Mar",
+		"city": "Toledo",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "39.86565",
+		"longitude": "-4.01416",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Toledo. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 2200
+		}
+	},
+	{
+		"id": 122,
+		"title": "Quiet house with garden access — Badajoz",
+		"price": 5460,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Avenida das Flores",
+		"city": "Badajoz",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "38.86495",
+		"longitude": "-6.97643",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Badajoz. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 123,
+		"title": "Cozy house near the center — Mérida",
+		"price": 1100,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Avenida do Mar",
+		"city": "Mérida",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "38.92086",
+		"longitude": "-6.33171",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Mérida. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 124,
+		"title": "Premium house near amenities — Jerez de la Frontera",
+		"price": 350000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Travessa da Praia",
+		"city": "Jerez de la Frontera",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "36.68832",
+		"longitude": "-6.11843",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Jerez de la Frontera. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1000
+		}
+	},
+	{
+		"id": 125,
+		"title": "Sea-view land — Almería",
+		"price": 120000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Travessa Real",
+		"city": "Almería",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "36.83935",
+		"longitude": "-2.46089",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Almería. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 126,
+		"title": "Newly built land — Jaén",
+		"price": 120000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Calle Principal",
+		"city": "Jaén",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.78804",
+		"longitude": "-3.80085",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Jaén. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 127,
+		"title": "Charming condo in historic area — León",
+		"price": 1430,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Travessa do Sol",
+		"city": "León",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "42.58622",
+		"longitude": "-5.57729",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in León. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 128,
+		"title": "Investment land opportunity — Valladolid",
+		"price": 180000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Calle da Praia",
+		"city": "Valladolid",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "41.64975",
+		"longitude": "-4.72761",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Valladolid. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 129,
+		"title": "Quiet condo with garden access — Pamplona",
+		"price": 1100,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Calle Real",
+		"city": "Pamplona",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "42.82124",
+		"longitude": "-1.65667",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Pamplona. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 2200
+		}
+	},
+	{
+		"id": 130,
+		"title": "Investment land opportunity — Santander",
+		"price": 250000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Avenida do Sol",
+		"city": "Santander",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "43.47448",
+		"longitude": "-3.82443",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Santander. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 131,
+		"title": "Classic land with potential — Gijón",
+		"price": 80000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Avenida do Mar",
+		"city": "Gijón",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "43.52433",
+		"longitude": "-5.67244",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Gijón. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 132,
+		"title": "Luxury land for sale — Oviedo",
+		"price": 80000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Rua da Praia",
+		"city": "Oviedo",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "43.37150",
+		"longitude": "-5.84941",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Oviedo. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 133,
+		"title": "Corner condo with parking — Logroño",
+		"price": 350000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Calle Nova",
+		"city": "Logroño",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "42.45332",
+		"longitude": "-2.43895",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Logroño. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1500
+		}
+	},
+	{
+		"id": 134,
+		"title": "Sea-view apartment — Burgos",
+		"price": 720000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Rua das Flores",
+		"city": "Burgos",
+		"bedroom": 3,
+		"bathroom": 3,
+		"latitude": "42.33651",
+		"longitude": "-3.71141",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Burgos. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 135,
+		"title": "Family apartment in prime location — Castellón de la Plana",
+		"price": 580000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Travessa do Sol",
+		"city": "Castellón de la Plana",
+		"bedroom": 2,
+		"bathroom": 2,
+		"latitude": "39.99631",
+		"longitude": "-0.04576",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Castellón de la Plana. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 136,
+		"title": "Classic land with potential — Tarragona",
+		"price": 80000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua das Flores",
+		"city": "Tarragona",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "41.10995",
+		"longitude": "1.25323",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Tarragona. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 137,
+		"title": "Premium land near amenities — Girona",
+		"price": 400000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Avenida Central",
+		"city": "Girona",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "41.97200",
+		"longitude": "2.82900",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Girona. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 138,
+		"title": "Corner condo with parking — Palma",
+		"price": 720000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Travessa das Flores",
+		"city": "Palma",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "39.57690",
+		"longitude": "2.66204",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Palma. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 139,
+		"title": "Classic land with potential — Las Palmas",
+		"price": 180000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua do Mar",
+		"city": "Las Palmas",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "28.13253",
+		"longitude": "-15.42949",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Las Palmas. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 140,
+		"title": "Classic condo with potential — Santa Cruz de Tenerife",
+		"price": 450000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Avenida Real",
+		"city": "Santa Cruz de Tenerife",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "28.46198",
+		"longitude": "-16.24527",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Santa Cruz de Tenerife. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 600
+		}
+	},
+	{
+		"id": 141,
+		"title": "Luxury condo for sale — Ibiza",
+		"price": 150000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Avenida Principal",
+		"city": "Ibiza",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "38.91184",
+		"longitude": "1.41779",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Ibiza. Ideal for buyers looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 142,
+		"title": "Family land in prime location — Ayamonte",
+		"price": 80000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Calle das Flores",
+		"city": "Ayamonte",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "37.20102",
+		"longitude": "-7.39764",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Ayamonte. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 143,
+		"title": "Quiet apartment with garden access — Isla Cristina",
+		"price": 2860,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Avenida das Flores",
+		"city": "Isla Cristina",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "37.19832",
+		"longitude": "-7.33769",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Isla Cristina. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1800
+		}
+	},
+	{
+		"id": 144,
+		"title": "Renovated condo with city views — Lepe",
+		"price": 1300,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Rua Central",
+		"city": "Lepe",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.25453",
+		"longitude": "-7.19159",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Lepe. Ideal for renters looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 1200
+		}
+	},
+	{
+		"id": 145,
+		"title": "Newly built house — Nerja",
+		"price": 950000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Travessa do Sol",
+		"city": "Nerja",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "36.74668",
+		"longitude": "-3.86442",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Nerja. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 600
+		}
+	},
+	{
+		"id": 146,
+		"title": "Classic condo with potential — Ronda",
+		"price": 450000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Avenida das Flores",
+		"city": "Ronda",
+		"bedroom": 4,
+		"bathroom": 4,
+		"latitude": "36.75254",
+		"longitude": "-5.16065",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Ronda. Ideal for buyers looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 600
+		}
+	},
+	{
+		"id": 147,
+		"title": "Quiet house with garden access — Antequera",
+		"price": 900,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Avenida Nova",
+		"city": "Antequera",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.02062",
+		"longitude": "-4.56393",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Antequera. Ideal for renters looking for a place in the region.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1200
+		}
+	},
+	{
+		"id": 148,
+		"title": "Corner land with parking — Úbeda",
+		"price": 400000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua do Sol",
+		"city": "Úbeda",
+		"bedroom": 0,
+		"bathroom": 0,
+		"latitude": "38.02107",
+		"longitude": "-3.36030",
+		"type": "buy",
+		"property": "land",
+		"postDetail": {
+			"desc": "Attractive land located in Úbeda. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 0
+		}
+	},
+	{
+		"id": 149,
+		"title": "Family apartment in prime location — Baeza",
+		"price": 580000,
+		"images": [
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Avenida do Sol",
+		"city": "Baeza",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "38.00434",
+		"longitude": "-3.45859",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Baeza. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Allowed with deposit",
+			"income": "N/A",
+			"size": 2200
+		}
+	},
+	{
+		"id": 150,
+		"title": "Modern apartment fully furnished — Cáceres",
+		"price": 1690,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Calle Central",
+		"city": "Cáceres",
+		"bedroom": 3,
+		"bathroom": 3,
+		"latitude": "39.46968",
+		"longitude": "-6.36572",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Attractive apartment located in Cáceres. Ideal for renters looking for a place in the region.",
 			"utilities": "Included",
 			"pet": "Not allowed",
 			"income": "Verification required",
@@ -636,99 +3600,1059 @@
 		}
 	},
 	{
-		"id": 27,
-		"title": "Valencia Beach Condo",
-		"price": 340000,
+		"id": 151,
+		"title": "Bright condo with balcony — Trujillo",
+		"price": 5460,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Avenida do Sol",
+		"city": "Trujillo",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "39.46008",
+		"longitude": "-5.89194",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Trujillo. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 1800
+		}
+	},
+	{
+		"id": 152,
+		"title": "Spacious condo for families — Cuenca",
+		"price": 1800,
 		"images": [
 			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
 			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
 		],
-		"address": "Passeig Marítim",
-		"city": "Valencia",
+		"address": "Rua Real",
+		"city": "Cuenca",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "40.07801",
+		"longitude": "-2.13950",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Attractive condo located in Cuenca. Ideal for renters looking for a place in the region.",
+			"utilities": "Partially included",
+			"pet": "Allowed with deposit",
+			"income": "Verification required",
+			"size": 1000
+		}
+	},
+	{
+		"id": 153,
+		"title": "Classic condo with potential — Segovia",
+		"price": 720000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/IMwFvXYelS9htxWGoaWzgBtH2SU.webp"
+		],
+		"address": "Avenida Real",
+		"city": "Segovia",
 		"bedroom": 2,
-		"bathroom": 2,
-		"latitude": "39.4650",
-		"longitude": "-0.3250",
+		"bathroom": 1,
+		"latitude": "40.94661",
+		"longitude": "-4.11334",
 		"type": "buy",
 		"property": "condo",
 		"postDetail": {
-			"desc": "Modern condo facing Malvarrosa beach.",
+			"desc": "Attractive condo located in Segovia. Ideal for buyers looking for a place in the region.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 1200
+		}
+	},
+	{
+		"id": 154,
+		"title": "Sea-view house — Ávila",
+		"price": 580000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Calle Nova",
+		"city": "Ávila",
+		"bedroom": 3,
+		"bathroom": 3,
+		"latitude": "40.67026",
+		"longitude": "-4.69208",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Attractive house located in Ávila. Ideal for buyers looking for a place in the region.",
 			"utilities": "Not included",
 			"pet": "Allowed",
 			"income": "N/A",
-			"size": 1100
+			"size": 1200
 		}
 	},
 	{
-		"id": 28,
-		"title": "Málaga Old Town Flat",
-		"price": 1550,
+		"id": 155,
+		"title": "Faro house for sale",
+		"price": 750000,
 		"images": [
-			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
-			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
 		],
-		"address": "Calle Larios",
-		"city": "Málaga",
+		"address": "Rua do Mar",
+		"city": "Faro",
 		"bedroom": 2,
 		"bathroom": 1,
-		"latitude": "36.7210",
-		"longitude": "-4.4210",
-		"type": "rent",
-		"property": "apartment",
+		"latitude": "37.01298",
+		"longitude": "-7.93543",
+		"type": "buy",
+		"property": "house",
 		"postDetail": {
-			"desc": "Central flat near Málaga cathedral and port.",
-			"utilities": "Included",
+			"desc": "Quality house in Faro, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
 			"pet": "Not allowed",
-			"income": "Verification required",
-			"size": 850
+			"income": "N/A",
+			"size": 1800
 		}
 	},
 	{
-		"id": 29,
-		"title": "Granada Alhambra View",
-		"price": 295000,
+		"id": 156,
+		"title": "Algarve condo in Faro",
+		"price": 2200,
 		"images": [
 			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
 			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
 		],
-		"address": "Cuesta de Gomérez",
-		"city": "Granada",
+		"address": "Rua das Flores",
+		"city": "Faro",
 		"bedroom": 3,
 		"bathroom": 2,
-		"latitude": "37.1760",
-		"longitude": "-3.5890",
-		"type": "buy",
-		"property": "apartment",
+		"latitude": "37.01899",
+		"longitude": "-7.93556",
+		"type": "rent",
+		"property": "condo",
 		"postDetail": {
-			"desc": "Apartment with partial views of the Alhambra.",
-			"utilities": "Not included",
-			"pet": "Allowed",
-			"income": "N/A",
-			"size": 1300
+			"desc": "Quality condo in Faro, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1500
 		}
 	},
 	{
-		"id": 30,
-		"title": "Huelva Coast House",
-		"price": 1250,
+		"id": 157,
+		"title": "Algarve condo in Faro",
+		"price": 2200,
 		"images": [
-			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
 			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
 		],
-		"address": "Punta Umbría",
-		"city": "Huelva",
+		"address": "Rua da Praia",
+		"city": "Faro",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.01521",
+		"longitude": "-7.91300",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Quality condo in Faro, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1500
+		}
+	},
+	{
+		"id": 158,
+		"title": "Olhão house for sale",
+		"price": 450000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Rua da Praia",
+		"city": "Olhão",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.02716",
+		"longitude": "-7.84250",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Quality house in Olhão, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 159,
+		"title": "Olhão apartment for sale",
+		"price": 450000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua Nova",
+		"city": "Olhão",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.02258",
+		"longitude": "-7.84095",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Quality apartment in Olhão, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 160,
+		"title": "Algarve condo in Loulé",
+		"price": 1200,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Rua Principal",
+		"city": "Loulé",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.12747",
+		"longitude": "-8.02053",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Quality condo in Loulé, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 161,
+		"title": "Loulé apartment for sale",
+		"price": 220000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Rua Principal",
+		"city": "Loulé",
 		"bedroom": 3,
 		"bathroom": 2,
-		"latitude": "37.1820",
-		"longitude": "-6.9670",
+		"latitude": "37.14262",
+		"longitude": "-8.01728",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Quality apartment in Loulé, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1000
+		}
+	},
+	{
+		"id": 162,
+		"title": "Quarteira house for sale",
+		"price": 580000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua Principal",
+		"city": "Quarteira",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.07250",
+		"longitude": "-8.10847",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Quality house in Quarteira, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 163,
+		"title": "Algarve condo in Quarteira",
+		"price": 2200,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Rua da Praia",
+		"city": "Quarteira",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.06249",
+		"longitude": "-8.11763",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Quality condo in Quarteira, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1500
+		}
+	},
+	{
+		"id": 164,
+		"title": "Algarve apartment in Almancil",
+		"price": 1800,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua da Praia",
+		"city": "Almancil",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.09241",
+		"longitude": "-8.02404",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Quality apartment in Almancil, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1000
+		}
+	},
+	{
+		"id": 165,
+		"title": "Algarve condo in Vilamoura",
+		"price": 1800,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Rua da Praia",
+		"city": "Vilamoura",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.06622",
+		"longitude": "-8.11035",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Quality condo in Vilamoura, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1500
+		}
+	},
+	{
+		"id": 166,
+		"title": "Vilamoura house for sale",
+		"price": 580000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Rua Nova",
+		"city": "Vilamoura",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.08627",
+		"longitude": "-8.12431",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Quality house in Vilamoura, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 1500
+		}
+	},
+	{
+		"id": 167,
+		"title": "Algarve house in Albufeira",
+		"price": 3500,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua do Mar",
+		"city": "Albufeira",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.08352",
+		"longitude": "-8.24060",
 		"type": "rent",
 		"property": "house",
 		"postDetail": {
-			"desc": "Beach house in Punta Umbría near Huelva.",
+			"desc": "Quality house in Albufeira, Algarve. Close to beaches and local amenities.",
 			"utilities": "Not included",
 			"pet": "Allowed",
 			"income": "Verification required",
-			"size": 1400
+			"size": 1000
+		}
+	},
+	{
+		"id": 168,
+		"title": "Albufeira house for sale",
+		"price": 220000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Rua da Praia",
+		"city": "Albufeira",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.10265",
+		"longitude": "-8.25158",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Quality house in Albufeira, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 1200
+		}
+	},
+	{
+		"id": 169,
+		"title": "Algarve house in Albufeira",
+		"price": 2200,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua das Flores",
+		"city": "Albufeira",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.08763",
+		"longitude": "-8.24181",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Quality house in Albufeira, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1500
+		}
+	},
+	{
+		"id": 170,
+		"title": "Armação de Pêra condo for sale",
+		"price": 580000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Rua do Mar",
+		"city": "Armação de Pêra",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.09874",
+		"longitude": "-8.36405",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Quality condo in Armação de Pêra, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 1000
+		}
+	},
+	{
+		"id": 171,
+		"title": "Algarve condo in Carvoeiro",
+		"price": 1800,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Rua Nova",
+		"city": "Carvoeiro",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "37.10014",
+		"longitude": "-8.46614",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Quality condo in Carvoeiro, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1500
+		}
+	},
+	{
+		"id": 172,
+		"title": "Algarve apartment in Lagoa",
+		"price": 2800,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua Nova",
+		"city": "Lagoa",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.12905",
+		"longitude": "-8.45256",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Quality apartment in Lagoa, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1200
+		}
+	},
+	{
+		"id": 173,
+		"title": "Portimão condo for sale",
+		"price": 750000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Rua das Flores",
+		"city": "Portimão",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.13862",
+		"longitude": "-8.53560",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Quality condo in Portimão, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 800
+		}
+	},
+	{
+		"id": 174,
+		"title": "Portimão apartment for sale",
+		"price": 750000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua da Praia",
+		"city": "Portimão",
+		"bedroom": 1,
+		"bathroom": 1,
+		"latitude": "37.13564",
+		"longitude": "-8.55383",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Quality apartment in Portimão, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 1000
+		}
+	},
+	{
+		"id": 175,
+		"title": "Praia da Rocha apartment for sale",
+		"price": 320000,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Rua Nova",
+		"city": "Praia da Rocha",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.11330",
+		"longitude": "-8.54042",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Quality apartment in Praia da Rocha, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
+			"pet": "Not allowed",
+			"income": "N/A",
+			"size": 1500
+		}
+	},
+	{
+		"id": 176,
+		"title": "Algarve condo in Alvor",
+		"price": 1800,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Rua Principal",
+		"city": "Alvor",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.12415",
+		"longitude": "-8.59374",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Quality condo in Alvor, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1800
+		}
+	},
+	{
+		"id": 177,
+		"title": "Lagos condo for sale",
+		"price": 320000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua Principal",
+		"city": "Lagos",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "37.11161",
+		"longitude": "-8.67237",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Quality condo in Lagos, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1200
+		}
+	},
+	{
+		"id": 178,
+		"title": "Algarve house in Lagos",
+		"price": 3500,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Rua das Flores",
+		"city": "Lagos",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.11467",
+		"longitude": "-8.67861",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Quality house in Lagos, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1800
+		}
+	},
+	{
+		"id": 179,
+		"title": "Luz house for sale",
+		"price": 320000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua Principal",
+		"city": "Luz",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.08072",
+		"longitude": "-8.71960",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Quality house in Luz, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1200
+		}
+	},
+	{
+		"id": 180,
+		"title": "Algarve condo in Sagres",
+		"price": 1800,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Rua Principal",
+		"city": "Sagres",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.00117",
+		"longitude": "-8.94422",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Quality condo in Sagres, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 181,
+		"title": "Algarve house in Monchique",
+		"price": 1800,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Rua Nova",
+		"city": "Monchique",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.32114",
+		"longitude": "-8.56359",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Quality house in Monchique, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1800
+		}
+	},
+	{
+		"id": 182,
+		"title": "Algarve apartment in Silves",
+		"price": 1500,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua do Mar",
+		"city": "Silves",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "37.19550",
+		"longitude": "-8.44500",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Quality apartment in Silves, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1000
+		}
+	},
+	{
+		"id": 183,
+		"title": "Algarve house in São Brás de Alportel",
+		"price": 2800,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Rua da Praia",
+		"city": "São Brás de Alportel",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.15821",
+		"longitude": "-7.88578",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Quality house in São Brás de Alportel, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 1500
+		}
+	},
+	{
+		"id": 184,
+		"title": "Tavira apartment for sale",
+		"price": 220000,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua das Flores",
+		"city": "Tavira",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.11893",
+		"longitude": "-7.64614",
+		"type": "buy",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Quality apartment in Tavira, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1500
+		}
+	},
+	{
+		"id": 185,
+		"title": "Algarve condo in Tavira",
+		"price": 2800,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Rua do Mar",
+		"city": "Tavira",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.12888",
+		"longitude": "-7.64914",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Quality condo in Tavira, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1500
+		}
+	},
+	{
+		"id": 186,
+		"title": "Cabanas de Tavira house for sale",
+		"price": 750000,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Rua da Praia",
+		"city": "Cabanas de Tavira",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.12691",
+		"longitude": "-7.60507",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Quality house in Cabanas de Tavira, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 800
+		}
+	},
+	{
+		"id": 187,
+		"title": "Castro Marim house for sale",
+		"price": 220000,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua do Mar",
+		"city": "Castro Marim",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.21785",
+		"longitude": "-7.43597",
+		"type": "buy",
+		"property": "house",
+		"postDetail": {
+			"desc": "Quality house in Castro Marim, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 188,
+		"title": "Vila Real de Santo António condo for sale",
+		"price": 450000,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Rua Principal",
+		"city": "Vila Real de Santo António",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.20111",
+		"longitude": "-7.40663",
+		"type": "buy",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Quality condo in Vila Real de Santo António, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "N/A",
+			"size": 1800
+		}
+	},
+	{
+		"id": 189,
+		"title": "Algarve apartment in Monte Gordo",
+		"price": 3500,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua Nova",
+		"city": "Monte Gordo",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.17799",
+		"longitude": "-7.44975",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Quality apartment in Monte Gordo, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Not allowed",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 190,
+		"title": "Algarve apartment in Estoi",
+		"price": 1800,
+		"images": [
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp"
+		],
+		"address": "Rua Principal",
+		"city": "Estoi",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "37.08828",
+		"longitude": "-7.89366",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Quality apartment in Estoi, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1000
+		}
+	},
+	{
+		"id": 191,
+		"title": "Algarve apartment in Guia",
+		"price": 1800,
+		"images": [
+			"https://framerusercontent.com/images/TxUBsMONXRW8Zmgf29XgOwyAFBE.webp",
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp"
+		],
+		"address": "Rua Nova",
+		"city": "Guia",
+		"bedroom": 4,
+		"bathroom": 3,
+		"latitude": "37.11923",
+		"longitude": "-8.29240",
+		"type": "rent",
+		"property": "apartment",
+		"postDetail": {
+			"desc": "Quality apartment in Guia, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 192,
+		"title": "Algarve condo in Porches",
+		"price": 2200,
+		"images": [
+			"https://framerusercontent.com/images/bMg91HJevCOwyP5XL8IWnGvE.webp",
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp"
+		],
+		"address": "Rua do Mar",
+		"city": "Porches",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.13474",
+		"longitude": "-8.39047",
+		"type": "rent",
+		"property": "condo",
+		"postDetail": {
+			"desc": "Quality condo in Porches, Algarve. Close to beaches and local amenities.",
+			"utilities": "Included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1200
+		}
+	},
+	{
+		"id": 193,
+		"title": "Algarve house in Ferragudo",
+		"price": 2800,
+		"images": [
+			"https://framerusercontent.com/images/M9TEzS8kEaXgoKgQ3VFPk3ipo.webp",
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512"
+		],
+		"address": "Rua Nova",
+		"city": "Ferragudo",
+		"bedroom": 3,
+		"bathroom": 2,
+		"latitude": "37.11582",
+		"longitude": "-8.51996",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Quality house in Ferragudo, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 800
+		}
+	},
+	{
+		"id": 194,
+		"title": "Algarve house in Boliqueime",
+		"price": 1500,
+		"images": [
+			"https://framerusercontent.com/images/nVpXLvCjUikE6dq1mgsikOWnRtQ.webp?scale-down-to=512",
+			"https://framerusercontent.com/images/ogbmw8amuGTcXhUz7EMeguTj1M.webp?scale-down-to=512"
+		],
+		"address": "Rua Nova",
+		"city": "Boliqueime",
+		"bedroom": 2,
+		"bathroom": 1,
+		"latitude": "37.13151",
+		"longitude": "-8.15005",
+		"type": "rent",
+		"property": "house",
+		"postDetail": {
+			"desc": "Quality house in Boliqueime, Algarve. Close to beaches and local amenities.",
+			"utilities": "Not included",
+			"pet": "Allowed",
+			"income": "Verification required",
+			"size": 1800
 		}
 	}
 ]
