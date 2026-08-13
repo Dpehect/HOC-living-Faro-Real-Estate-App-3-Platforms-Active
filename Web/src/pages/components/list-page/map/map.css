@@ -1,3 +1,4 @@
+
 .map-shell {
   position: relative;
   width: 100%;
@@ -12,15 +13,16 @@
 
 .map-shell--expanded {
   position: fixed;
-  top: 90px;
-  left: 1rem;
-  right: 1rem;
-  bottom: 1rem;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1500;
   height: auto;
   min-height: 0;
-  border-radius: 24px;
-  box-shadow: 0 30px 100px rgba(17, 24, 39, 0.35);
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
 }
 
 .map {
@@ -36,12 +38,12 @@
 
 .map-toolbar {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
-  right: 1rem;
-  z-index: 3000;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  z-index: 5000;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
   pointer-events: none;
@@ -50,13 +52,14 @@
 .map-toolbar > div {
   display: flex;
   flex-direction: column;
-  max-width: 260px;
+  max-width: 280px;
   padding: 0.75rem 1rem;
-  border: 1px solid rgba(229, 231, 235, 0.8);
+  border: 1px solid rgba(229, 231, 235, 0.9);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 12px 35px -22px rgba(17, 24, 39, 0.5);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 35px -18px rgba(17, 24, 39, 0.55);
   backdrop-filter: blur(12px);
+  pointer-events: auto;
 }
 
 .map-toolbar strong {
@@ -80,13 +83,14 @@
   font-weight: 700;
   cursor: pointer;
   pointer-events: auto;
+  flex-shrink: 0;
 }
 
 .map-selection {
   position: absolute;
   left: 50%;
   bottom: 1.25rem;
-  z-index: 3000;
+  z-index: 5000;
   transform: translateX(-50%);
   padding: 0.65rem 1rem;
   border-radius: 999px;
@@ -99,12 +103,12 @@
 }
 
 .leaflet-top {
-  top: 20px;
+  top: 70px !important;
   z-index: 2000 !important;
 }
 
 .leaflet-control-zoom {
-  margin-top: 10px !important;
+  margin-top: 8px !important;
   z-index: 2001 !important;
 }
 
@@ -119,20 +123,19 @@
 
 @media (max-width: 640px) {
   .map-shell--expanded {
-    top: 75px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 0;
+    top: 64px;
   }
   .map-toolbar {
-    top: 0.75rem;
-    left: 0.75rem;
-    right: 0.75rem;
+    top: 8px;
+    left: 8px;
+    right: 8px;
   }
   .map-toolbar > div {
-    max-width: 215px;
-    padding: 0.65rem 0.8rem;
+    max-width: 200px;
+    padding: 0.55rem 0.7rem;
+  }
+  .leaflet-top {
+    top: 90px !important;
   }
 }
 
@@ -149,4 +152,3 @@
   min-height: 280px;
   border-radius: 0;
 }
-

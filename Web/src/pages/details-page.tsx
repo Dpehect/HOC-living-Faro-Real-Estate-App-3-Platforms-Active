@@ -38,10 +38,15 @@ const fadeUp = {
 function SinglePage() {
 	const { id } = useParams();
 	const [post, setPost] = useState<Listing | null | undefined>(undefined);
+	const [date, setDate] = useState<Date>();
+	const [activeImage, setActiveImage] = useState(0);
+	const [formSent, setFormSent] = useState(false);
+	const [isMapExpanded, setIsMapExpanded] = useState(false);
 
 	useEffect(() => {
 		let cancelled = false;
 		setPost(undefined);
+		setActiveImage(0);
 		findListingById(id || '')
 			.then((p) => {
 				if (!cancelled) setPost(p);
@@ -53,18 +58,6 @@ function SinglePage() {
 			cancelled = true;
 		};
 	}, [id]);
-
-	if (post === undefined) {
-		return (
-			<div className="flex min-h-screen items-center justify-center text-gray-500">
-				Loading property…
-			</div>
-		);
-	}
-	const [date, setDate] = useState<Date>();
-	const [activeImage, setActiveImage] = useState(0);
-	const [formSent, setFormSent] = useState(false);
-	const [isMapExpanded, setIsMapExpanded] = useState(false);
 
 	const images = useMemo(() => post?.images?.filter(Boolean) || [], [post]);
 	const detail = post?.postDetail || {};
@@ -83,6 +76,14 @@ function SinglePage() {
 		window.addEventListener('popstate', onPop);
 		return () => window.removeEventListener('popstate', onPop);
 	}, [isMapExpanded]);
+
+	if (post === undefined) {
+		return (
+			<div className="flex min-h-screen items-center justify-center text-gray-500">
+				Loading property…
+			</div>
+		);
+	}
 
 	if (!post) {
 		return (
