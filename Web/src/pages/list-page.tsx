@@ -48,7 +48,6 @@ function ListPage() {
 	const [filters, setFilters] = useState<ListingFilters>(defaultFilters);
 	const links = ['Buy or Rent', 'Sell or List', 'Home Value', 'Franchise'];
 
-	// Prevent body scroll when map is expanded
 	useEffect(() => {
 		document.body.style.overflow = isMapExpanded ? 'hidden' : '';
 		return () => {
@@ -56,7 +55,7 @@ function ListPage() {
 		};
 	}, [isMapExpanded]);
 
-	// Browser Back → sadece haritayı kapat, sayfadan çıkma
+	// Browser Back → haritayı kapat
 	useEffect(() => {
 		if (!isMapExpanded) return;
 
@@ -71,6 +70,7 @@ function ListPage() {
 		return () => window.removeEventListener('popstate', handlePopState);
 	}, [isMapExpanded]);
 
+	// Sol listedeki kartlar — filtre + harita bölgesine göre
 	const filteredPosts = useMemo(() => {
 		return postsData.filter((post) => {
 			const searchable = `${post.title} ${post.address} ${post.city}`.toLowerCase();
@@ -81,7 +81,6 @@ function ListPage() {
 			if (filters.maxPrice && post.price > Number(filters.maxPrice)) return false;
 			if (filters.bedrooms && Number(post.bedroom || 0) < Number(filters.bedrooms)) return false;
 
-			// Haritadan seçilen bölgeye göre filtrele
 			if (selectedLocation) {
 				const dist = distanceInKm(selectedLocation, post);
 				if (dist > Number(filters.radius || 5)) return false;
@@ -97,14 +96,11 @@ function ListPage() {
 
 	const handleCloseMap = () => {
 		setIsMapExpanded(false);
-		// selectedLocation'ı silmiyoruz → filtre aktif kalsın
-		// Temizlemek için "Clear filters" kullanılacak
+		// selectedLocation kalır → liste filtresi aktif kalsın
 	};
 
 	const handleLocationSelect = (location) => {
 		setSelectedLocation(location);
-		// İsteğe bağlı: seçimden sonra haritayı otomatik kapatmak istersen aç:
-		// setIsMapExpanded(false);
 	};
 
 	return (
@@ -200,8 +196,9 @@ function ListPage() {
 
 				<div className="h-[620px] xl:sticky xl:top-6">
 					<Suspense fallback={<p>Loading map…</p>}>
+						{/* Haritada HER ZAMAN tüm ilan pin'leri görünsün */}
 						<Map
-							items={filteredPosts}
+							items={postsData}
 							expanded={isMapExpanded}
 							onExpand={() => setIsMapExpanded(true)}
 							onClose={handleCloseMap}

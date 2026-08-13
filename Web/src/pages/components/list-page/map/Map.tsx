@@ -5,7 +5,7 @@ import './map.css';
 import 'leaflet/dist/leaflet.css';
 import Pin from '../pin/Pin';
 
-// Fix default Leaflet marker icons (Vite / bundler issue)
+// Fix default Leaflet marker icons (Vite)
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
@@ -39,20 +39,26 @@ function ResizeMap({ expanded }) {
 	useEffect(() => {
 		const timer = window.setTimeout(() => {
 			map.invalidateSize();
-		}, 100);
+		}, 120);
 		return () => window.clearTimeout(timer);
 	}, [expanded, map]);
 	return null;
 }
 
-function Map({ items, expanded, onExpand, onClose, selectedLocation, onLocationSelect, radiusKm = 5 }) {
+function Map({
+	items,           // haritada her zaman gösterilecek TÜM ilanlar
+	expanded,
+	onExpand,
+	onClose,
+	selectedLocation,
+	onLocationSelect,
+	radiusKm = 5,
+}) {
 	const radiusMeters = Number(radiusKm) * 1000;
 
 	return (
 		<div className={expanded ? 'map-shell map-shell--expanded' : 'map-shell'}>
-			{/* Toolbar */}
 			<div className="map-toolbar">
-				{/* Sol balon: sadece expanded + konum seçilmemişse */}
 				{expanded && !selectedLocation ? (
 					<div>
 						<strong>Choose an area in Faro</strong>
@@ -64,7 +70,6 @@ function Map({ items, expanded, onExpand, onClose, selectedLocation, onLocationS
 						<span>Click to expand and choose a location</span>
 					</div>
 				) : (
-					/* konum seçildi → sol balon kaybolsun */
 					<div style={{ visibility: 'hidden', width: 1, height: 1 }} />
 				)}
 
@@ -82,7 +87,10 @@ function Map({ items, expanded, onExpand, onClose, selectedLocation, onLocationS
 			<MapContainer
 				center={[37.0194, -7.9304]}
 				zoom={12}
-				scrollWheelZoom={expanded}
+				scrollWheelZoom={expanded}   // expanded iken mouse wheel zoom açık
+				dragging={true}
+				doubleClickZoom={expanded}
+				zoomControl={true}
 				className="map"
 			>
 				<TileLayer
@@ -96,12 +104,12 @@ function Map({ items, expanded, onExpand, onClose, selectedLocation, onLocationS
 				/>
 				<ResizeMap expanded={expanded} />
 
-				{/* İlan pin'leri */}
+				{/* Tüm konut pin'leri her zaman haritada görünsün */}
 				{items.map((item) => (
 					<Pin item={item} key={item.id} />
 				))}
 
-				{/* Seçilen bölge: merkez nokta + yarıçap dairesi */}
+				{/* Seçilen bölge: merkez + yarıçap dairesi */}
 				{selectedLocation && (
 					<>
 						<CircleMarker
@@ -120,7 +128,7 @@ function Map({ items, expanded, onExpand, onClose, selectedLocation, onLocationS
 							pathOptions={{
 								color: '#4f46e5',
 								fillColor: '#6366f1',
-								fillOpacity: 0.12,
+								fillOpacity: 0.15,
 								weight: 2,
 								dashArray: '6 6',
 							}}
@@ -129,7 +137,6 @@ function Map({ items, expanded, onExpand, onClose, selectedLocation, onLocationS
 				)}
 			</MapContainer>
 
-			{/* Alt banner */}
 			{expanded && selectedLocation && (
 				<div className="map-selection">
 					Showing homes within {radiusKm} km of selected area
