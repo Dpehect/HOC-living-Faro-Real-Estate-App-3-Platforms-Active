@@ -39,10 +39,6 @@ function ResizeMap({ expanded }) {
 	useEffect(() => {
 		const timer = window.setTimeout(() => {
 			map.invalidateSize();
-			// Ensure we stay centered on Faro after resize
-			if (!expanded) {
-				map.setView([37.0194, -7.9304], 12);
-			}
 		}, 100);
 		return () => window.clearTimeout(timer);
 	}, [expanded, map]);
@@ -54,25 +50,23 @@ function Map({ items, expanded, onExpand, onClose, selectedLocation, onLocationS
 		<div className={expanded ? 'map-shell map-shell--expanded' : 'map-shell'}>
 			{/* Toolbar */}
 			<div className="map-toolbar">
-				{expanded ? (
-					selectedLocation ? (
-						<div>
-							<strong>Area selected</strong>
-							<span>Showing homes within the selected radius</span>
-						</div>
-					) : (
-						<div>
-							<strong>Choose an area in Faro</strong>
-							<span>Click anywhere to filter nearby homes</span>
-						</div>
-					)
-				) : (
+				{/* Sol taraf: sadece expanded + henüz konum seçilmemişse göster */}
+				{expanded && !selectedLocation ? (
+					<div>
+						<strong>Choose an area in Faro</strong>
+						<span>Click anywhere to filter nearby homes</span>
+					</div>
+				) : !expanded ? (
 					<div>
 						<strong>Explore on the map</strong>
 						<span>Click to expand and choose a location</span>
 					</div>
+				) : (
+					/* expanded + konum seçildi → sol balon tamamen kaybolsun */
+					<div style={{ visibility: 'hidden' }} />
 				)}
 
+				{/* Sağ taraf: her zaman buton */}
 				{expanded ? (
 					<button type="button" onClick={onClose}>
 						Close map
@@ -117,6 +111,7 @@ function Map({ items, expanded, onExpand, onClose, selectedLocation, onLocationS
 				)}
 			</MapContainer>
 
+			{/* Altta mor banner - sadece konum seçildiyse */}
 			{expanded && selectedLocation && (
 				<div className="map-selection">Showing homes within the selected radius</div>
 			)}
