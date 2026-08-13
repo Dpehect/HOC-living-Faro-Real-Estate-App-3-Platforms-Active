@@ -45,7 +45,7 @@ function ListPage() {
 					<div className="flex items-center cursor-pointer">
 						<BuildingIcon className="text-primary h-8 w-8" />
 						<span className="ml-3 text-xl font-bold uppercase tracking-widest text-gray-800">
-							Tru
+							HOC Living Faro
 						</span>
 						<span className="ml-1 text-sm uppercase tracking-widest text-gray-500">
 							Real Estate

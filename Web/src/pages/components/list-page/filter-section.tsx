@@ -2,7 +2,7 @@ export function Filter() {
 	return (
 		<div className="bg-white p-4 rounded-lg shadow-md">
 			<h1 className="text-xl font-bold mb-4">
-				Search results for <span className="text-indigo-600">Los Angeles</span>
+				Search results for <span className="text-indigo-600">Faro, Portugal</span>
 			</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
 				<div className="flex flex-col">
