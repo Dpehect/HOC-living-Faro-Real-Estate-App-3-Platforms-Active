@@ -196,8 +196,8 @@ function Map({
 							center={[selectedLocation.latitude, selectedLocation.longitude]}
 							radius={10}
 							pathOptions={{
-								color: '#4f46e5',
-								fillColor: '#6366f1',
+								color: '#059669',
+								fillColor: '#34d399',
 								fillOpacity: 1,
 								weight: 3,
 							}}
@@ -206,8 +206,8 @@ function Map({
 							center={[selectedLocation.latitude, selectedLocation.longitude]}
 							radius={radiusMeters}
 							pathOptions={{
-								color: '#4f46e5',
-								fillColor: '#6366f1',
+								color: '#059669',
+								fillColor: '#34d399',
 								fillOpacity: 0.15,
 								weight: 2,
 								dashArray: '6 6',

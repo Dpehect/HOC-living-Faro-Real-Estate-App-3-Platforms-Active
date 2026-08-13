@@ -4,9 +4,10 @@ import { motion } from 'framer-motion';
 import Card from './components/list-page/Card';
 import { Filter, type ListingFilters } from './components/list-page/filter-section';
 import Map from './components/list-page/map/Map';
-import { BuildingIcon, HamburgerIcon, FilterIcon } from '@/icons/landing-page-icons';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SiteNavbar from '@/components/SiteNavbar';
+import SiteFooter from '@/components/SiteFooter';
 
 const defaultFilters: ListingFilters = {
 	query: '',
@@ -43,8 +44,6 @@ function distanceInKm(a, b) {
 }
 
 function ListPage() {
-	const [isNavOpen, setIsNavOpen] = useState(false);
-	const [isFilterOpen, setIsFilterOpen] = useState(false);
 	const [isMapExpanded, setIsMapExpanded] = useState(false);
 	const [selectedLocation, setSelectedLocation] = useState(null);
 	const [filters, setFilters] = useState<ListingFilters>(defaultFilters);
@@ -110,49 +109,11 @@ function ListPage() {
 
 	return (
 		<div className="min-h-screen bg-[#f7f8fb]">
-			<nav className="relative z-50 border-b border-gray-200 bg-white px-4 py-4 md:px-10 xl:px-16">
-				<div className="mx-auto flex max-w-[1600px] items-center justify-between">
-					<Link to="/" className="flex items-center">
-						<BuildingIcon className="h-8 w-8 text-primary" />
-						<span className="ml-3 text-lg font-bold uppercase tracking-wider text-gray-900">
-							HOC Living Faro
-						</span>
-						<span className="ml-2 hidden text-xs uppercase tracking-widest text-gray-400 sm:inline">
-							Real Estate
-						</span>
-					</Link>
-
-					<div className="flex items-center gap-4 md:hidden">
-						<button onClick={() => setIsFilterOpen(!isFilterOpen)} aria-label="Toggle filters">
-							<FilterIcon className="h-6 w-6 text-gray-800" />
-						</button>
-						<button onClick={() => setIsNavOpen(!isNavOpen)} aria-label="Toggle navigation">
-							<HamburgerIcon className="h-6 w-6 text-gray-800" />
-						</button>
-					</div>
-
-					<div
-						className={`${
-							isNavOpen ? 'flex' : 'hidden'
-						} absolute left-0 top-16 w-full flex-col gap-3 bg-white p-4 shadow-md md:static md:flex md:w-auto md:flex-row md:gap-6 md:p-0 md:shadow-none`}
-					>
-						{links.map((text) => (
-							<Link to="/listings" className="text-sm text-gray-600 transition hover:text-gray-950" key={text}>
-								{text}
-							</Link>
-						))}
-					</div>
-
-					<div className="hidden gap-2 md:flex">
-						<Button variant="outline">Contact us</Button>
-						<Button className="bg-accent text-white hover:bg-accentHover">Join</Button>
-					</div>
-				</div>
-			</nav>
+			<SiteNavbar />
 
 			<main className="mx-auto grid max-w-[1600px] grid-cols-1 gap-6 px-4 py-6 md:px-10 xl:grid-cols-[minmax(0,1fr)_430px] xl:px-16">
 				<div className="min-w-0">
-					<div className={`${isFilterOpen ? 'block' : 'hidden'} md:block`}>
+					<div className="block">
 						<Filter
 							filters={filters}
 							onChange={handleFilterChange}
@@ -235,6 +196,7 @@ function ListPage() {
 					</Suspense>
 				</div>
 			</main>
+			<SiteFooter />
 		</div>
 	);
 }

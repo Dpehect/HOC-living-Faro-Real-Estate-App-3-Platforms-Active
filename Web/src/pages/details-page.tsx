@@ -22,6 +22,8 @@ import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
 import Map from './components/list-page/map/Map';
+import SiteNavbar from '@/components/SiteNavbar';
+import SiteFooter from '@/components/SiteFooter';
 import posts from './postsData.json';
 
 const fadeUp = {
@@ -66,7 +68,7 @@ function SinglePage() {
 				<p className="text-gray-500">This listing may have been removed.</p>
 				<Link
 					to="/listings"
-					className="rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700"
+					className="rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-accentHover"
 				>
 					Back to listings
 				</Link>
@@ -85,23 +87,7 @@ function SinglePage() {
 
 	return (
 		<div className="min-h-screen bg-[#f7f8fb]">
-			<nav className="sticky top-0 z-40 border-b border-gray-200/80 bg-white/90 backdrop-blur-md">
-				<div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-3 md:px-8">
-					<Link to="/" className="flex items-center gap-2">
-						<BuildingIcon className="h-7 w-7 text-primary" />
-						<span className="text-sm font-bold uppercase tracking-wider text-gray-900">
-							HOC Living Faro
-						</span>
-					</Link>
-					<Link
-						to="/listings"
-						className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-700 transition hover:border-indigo-300 hover:text-indigo-700"
-					>
-						<ChevronLeft className="h-4 w-4" />
-						All listings
-					</Link>
-				</div>
-			</nav>
+			<SiteNavbar />
 
 			<main className="mx-auto max-w-[1400px] px-4 py-6 md:px-8 md:py-10">
 				<div className="grid grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1fr)_380px]">
@@ -163,7 +149,7 @@ function SinglePage() {
 								)}
 
 								<div className="absolute left-4 top-4 flex flex-wrap gap-2">
-									<span className="rounded-full bg-indigo-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow">
+									<span className="rounded-full bg-primary px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow">
 										{isRent ? 'For rent' : 'For sale'}
 									</span>
 									{post.property && (
@@ -184,7 +170,7 @@ function SinglePage() {
 											className={cn(
 												'h-16 w-24 flex-shrink-0 overflow-hidden rounded-xl border-2 transition',
 												i === activeImage
-													? 'border-indigo-600'
+													? 'border-primary'
 													: 'border-transparent opacity-70 hover:opacity-100'
 											)}
 										>
@@ -200,11 +186,11 @@ function SinglePage() {
 								{post.title}
 							</h1>
 							<p className="mt-2 flex items-center gap-1.5 text-gray-500">
-								<MapPin className="h-4 w-4 text-indigo-500" />
+								<MapPin className="h-4 w-4 text-primary" />
 								{post.address}
 								{post.city ? `, ${post.city}` : ''}
 							</p>
-							<p className="mt-4 text-3xl font-bold text-indigo-600">{priceLabel}</p>
+							<p className="mt-4 text-3xl font-bold text-primary">{priceLabel}</p>
 						</motion.div>
 
 						<motion.div
@@ -224,7 +210,7 @@ function SinglePage() {
 									key={label}
 									className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm"
 								>
-									<div className="mb-2 flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+									<div className="mb-2 flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-primary">
 										<Icon className="h-4 w-4" />
 									</div>
 									<p className="text-xs font-medium uppercase tracking-wide text-gray-400">{label}</p>
@@ -262,7 +248,7 @@ function SinglePage() {
 									{ icon: Wallet, title: 'Income', value: detail.income || 'N/A' },
 								].map(({ icon: Icon, title, value }) => (
 									<div key={title} className="flex gap-3 rounded-xl bg-gray-50 p-3">
-										<div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white text-indigo-600 shadow-sm">
+										<div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white text-primary shadow-sm">
 											<Icon className="h-4 w-4" />
 										</div>
 										<div>
@@ -293,7 +279,7 @@ function SinglePage() {
 								<button
 									type="button"
 									onClick={() => setIsMapExpanded(true)}
-									className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 transition hover:border-indigo-300 hover:text-indigo-700"
+									className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 transition hover:border-accent hover:text-primary"
 								>
 									<Maximize2 className="h-3.5 w-3.5" />
 									Expand map
@@ -318,9 +304,9 @@ function SinglePage() {
 						variants={fadeUp}
 						custom={2}
 					>
-						<div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-[0_24px_60px_-35px_rgba(79,70,229,.35)]">
-							<div className="bg-gradient-to-br from-indigo-600 to-violet-600 px-6 py-5 text-white">
-								<p className="text-xs font-semibold uppercase tracking-[0.15em] text-indigo-100">
+						<div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-[0_24px_60px_-35px_rgba(5,150,105,.35)]">
+							<div className="bg-gradient-to-br from-emerald-600 to-green-600 px-6 py-5 text-white">
+								<p className="text-xs font-semibold uppercase tracking-[0.15em] text-emerald-100">
 									{isRent ? 'Monthly rent' : 'Sale price'}
 								</p>
 								<p className="mt-1 text-3xl font-bold">{priceLabel}</p>
@@ -336,7 +322,7 @@ function SinglePage() {
 										<button
 											type="button"
 											onClick={() => setFormSent(false)}
-											className="mt-4 text-sm font-semibold text-indigo-600 hover:underline"
+											className="mt-4 text-sm font-semibold text-primary hover:underline"
 										>
 											Send another request
 										</button>
@@ -375,7 +361,7 @@ function SinglePage() {
 										</Popover>
 										<Button
 											type="submit"
-											className="h-12 w-full rounded-xl bg-indigo-600 text-base font-semibold text-white hover:bg-indigo-700"
+											className="h-12 w-full rounded-xl bg-primary text-base font-semibold text-white hover:bg-accentHover"
 										>
 											Request a tour
 										</Button>
@@ -390,6 +376,7 @@ function SinglePage() {
 					</motion.aside>
 				</div>
 			</main>
+			<SiteFooter />
 		</div>
 	);
 }

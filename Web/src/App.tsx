@@ -10,15 +10,16 @@ import {
 	HamburgerIcon, // Assuming you have a HamburgerIcon component
 } from '@/icons/landing-page-icons';
 import gifimg from './hello.gif';
-import { useState } from 'react';
 import { CountUpCard } from './components/countup-card';
 import FeaturesSection from './sections/features';
 import SellHomeSection from './sections/sell-home';
 import { PropertiesList } from './sections/properties';
 import { CaculatePriceSection } from './sections/calculate-price';
 import TestimonialSection from './sections/testimonial';
-import Footer from './sections/footer';
-import { Link, useNavigate } from 'react-router-dom';
+import SiteFooter from '@/components/SiteFooter';
+import { Link } from 'react-router-dom';
+import SiteNavbar from '@/components/SiteNavbar';
+import SiteFooter from '@/components/SiteFooter';
 
 // Define animation variants
 const containerVariants = {
@@ -61,50 +62,10 @@ const links = [
 	{ text: 'Franchise', href: '/franchise' },
 ];
 export default function App() {
-	const [isNavOpen, setIsNavOpen] = useState(false);
-	const navigate = useNavigate();
 	return (
 		<div className="w-full overflow-x-hidden">
 			<div className="bg-bgColor">
-				<nav className="container px-6 py-4 flex justify-between items-center">
-					<Link to={'/'}>
-						<div className="flex items-center cursor-pointer">
-							<BuildingIcon className="text-primary h-8 w-8" />
-							<span className="ml-3 text-xl font-bold uppercase tracking-widest text-gray-800">
-								HOC Living Faro
-							</span>
-							<span className="ml-1 text-sm uppercase tracking-widest text-gray-500">
-								Real Estate
-							</span>
-						</div>
-					</Link>
-					<div className="md:hidden">
-						<button onClick={() => setIsNavOpen(!isNavOpen)}>
-							<HamburgerIcon className="h-6 w-6 text-gray-800" />
-						</button>
-					</div>
-					<div
-						className={`${
-							isNavOpen ? 'flex flex-col' : 'hidden'
-						} md:flex md:space-x-6 absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none z-10`}
-					>
-						{links.map(({ text, href }) => (
-							<Link
-								to={'/listings'}
-								className="text-gray-600 hover:text-gray-800 block md:inline-block"
-								key={text}
-							>
-								{text}
-							</Link>
-						))}
-					</div>
-					<div className="hidden md:flex gap-2">
-						<Button variant="outline">Contact us</Button>
-						<Button className="bg-accent hover:bg-accentHover text-white">
-							Join
-						</Button>
-					</div>
-				</nav>
+				<SiteNavbar />
 				<motion.div
 					className="container px-6 py-16 flex flex-col lg:flex-row justify-between items-center"
 					initial="hidden"
@@ -166,7 +127,7 @@ export default function App() {
 				<CaculatePriceSection />
 				<SellHomeSection />
 				<TestimonialSection />
-				<Footer />
+				<SiteFooter />
 			</div>
 		</div>
 	);

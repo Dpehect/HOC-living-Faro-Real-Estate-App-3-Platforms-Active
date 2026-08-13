@@ -25,10 +25,10 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				primary: '#6b46c1', // Purple shade for primary
-				accent: '#9f7aea', // Lighter purple shade for accent
-				accentHover: '#805ad5', // Darker purple shade for accent hover
-				bgColor: '#f3e8ff', // Very light purple for background
+				primary: '#059669', // Green shade for primary
+				accent: '#34d399', // Lighter green shade for accent
+				accentHover: '#10b981', // Darker green shade for accent hover
+				bgColor: '#ecfdf5', // Very light green for background
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

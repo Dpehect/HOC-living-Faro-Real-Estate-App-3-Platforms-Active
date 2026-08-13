@@ -20,7 +20,7 @@ export default function Card({ item }) {
 						</div>
 						{item.address}, {item.city}
 					</p>
-					<p className="text-indigo-600 text-lg font-semibold mb-2">
+					<p className="text-primary text-lg font-semibold mb-2">
 						€ {item.price.toLocaleString()}
 					</p>
 					<div className="flex justify-between items-center">
