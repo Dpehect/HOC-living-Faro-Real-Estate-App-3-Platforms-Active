@@ -134,6 +134,22 @@ function ListPage() {
 
 	const handleCloseMap = () => setIsMapExpanded(false);
 
+	const handleRegionSelect = (region: {
+		city: string;
+		country?: string;
+		latitude: number;
+		longitude: number;
+		count?: number;
+	}) => {
+		if (region.country && region.country !== activeCountry) {
+			setActiveCountry(region.country);
+		}
+		setFilters((prev) => ({ ...prev, query: region.city }));
+		setSelectedLocation(null);
+		setPage(1);
+		setIsMapExpanded(false);
+	};
+
 	const handleFilterChange = (next: ListingFilters) => {
 		const queryChanged = next.query !== filters.query;
 		setFilters(next);
@@ -241,6 +257,7 @@ function ListPage() {
 							onClose={handleCloseMap}
 							selectedLocation={selectedLocation}
 							onLocationSelect={setSelectedLocation}
+							onRegionSelect={handleRegionSelect}
 							radiusKm={Number(filters.radius) || 5}
 						/>
 					</Suspense>

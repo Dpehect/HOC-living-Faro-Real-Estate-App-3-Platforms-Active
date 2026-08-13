@@ -3,7 +3,6 @@ import { useEffect, useMemo, useState } from 'react';
 import L from 'leaflet';
 import './map.css';
 import 'leaflet/dist/leaflet.css';
-import Pin from '../pin/Pin';
 
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
@@ -16,8 +15,6 @@ L.Icon.Default.mergeOptions({
 	iconRetinaUrl: markerIcon2x,
 	shadowUrl: markerShadow,
 });
-
-const MAX_MARKERS = 1200;
 
 function MapEvents({ expanded, onExpand, onLocationSelect }) {
 	useMapEvents({
@@ -61,31 +58,18 @@ function MapControls({ expanded }) {
 	return null;
 }
 
-/** One pin per city when zoomed out; individual pins when zoomed in */
-function VisiblePins({ items = [] }) {
+/**
+ * Region-only markers (one per city).
+ * No individual property pins — keeps the map fast.
+ * Clicking a region calls onRegionSelect(city, country).
+ */
+function RegionPins({ items = [], onRegionSelect }) {
 	const map = useMap();
-	const [bounds, setBounds] = useState(null);
-	const [zoom, setZoom] = useState(() => map.getZoom());
-
-	useEffect(() => {
-		const update = () => {
-			setBounds(map.getBounds());
-			setZoom(map.getZoom());
-		};
-		update();
-		map.on('moveend', update);
-		map.on('zoomend', update);
-		return () => {
-			map.off('moveend', update);
-			map.off('zoomend', update);
-		};
-	}, [map]);
 
 	const cityPins = useMemo(() => {
 		const list = Array.isArray(items) ? items : [];
 		if (!list.length) return [];
 
-		// Plain object — do NOT use native Map (shadowed by component name)
 		const byCity = Object.create(null);
 
 		for (let i = 0; i < list.length; i++) {
@@ -123,84 +107,74 @@ function VisiblePins({ items = [] }) {
 		});
 	}, [items]);
 
-	const visible = useMemo(() => {
-		const list = Array.isArray(items) ? items : [];
-		if (!list.length) return { mode: 'none', rows: [] };
-
-		if (zoom < 10) {
-			let rows = cityPins;
-			if (bounds) {
-				rows = cityPins.filter((c) => bounds.contains([c.latitude, c.longitude]));
-			}
-			if (rows.length > 500) rows = rows.slice(0, 500);
-			return { mode: 'city', rows };
-		}
-
-		const limit = zoom < 12 ? 400 : MAX_MARKERS;
-		const inView = [];
-		if (!bounds) {
-			return { mode: 'pin', rows: list.slice(0, Math.min(list.length, 150)) };
-		}
-		for (let i = 0; i < list.length; i++) {
-			const item = list[i];
-			if (!item) continue;
-			const lat = Number(item.latitude);
-			const lng = Number(item.longitude);
-			if (Number.isNaN(lat) || Number.isNaN(lng)) continue;
-			if (bounds.contains([lat, lng])) {
-				inView.push(item);
-				if (inView.length >= limit) break;
-			}
-		}
-		return { mode: 'pin', rows: inView };
-	}, [items, bounds, zoom, cityPins]);
-
-	if (visible.mode === 'city') {
-		return (
-			<>
-				{visible.rows.map((c) => (
-					<CircleMarker
-						key={c.key}
-						center={[c.latitude, c.longitude]}
-						radius={Math.min(8 + Math.log2(c.count + 1) * 3, 22)}
-						pathOptions={{
-							color: '#0F766E',
-							fillColor: '#14B8A6',
-							fillOpacity: 0.85,
-							weight: 2,
-						}}
-						eventHandlers={{
-							click: () => {
-								map.setView([c.latitude, c.longitude], Math.max(zoom, 12), {
-									animate: true,
-								});
-							},
-						}}
-					>
-						<Popup>
-							<div className="popupContainer">
-								<div className="textContainer">
-									<strong>
-										{c.city}
-										{c.country ? `, ${c.country}` : ''}
-									</strong>
-									<span>{c.count.toLocaleString()} properties</span>
-									<span style={{ fontSize: 12, color: '#64748b' }}>
-										Click pin or zoom in to see individual homes
-									</span>
-								</div>
-							</div>
-						</Popup>
-					</CircleMarker>
-				))}
-			</>
-		);
-	}
-
 	return (
 		<>
-			{visible.rows.map((item) => (
-				<Pin item={item} key={item.id} />
+			{cityPins.map((c) => (
+				<CircleMarker
+					key={c.key}
+					center={[c.latitude, c.longitude]}
+					radius={Math.min(10 + Math.log2(c.count + 1) * 2.5, 24)}
+					pathOptions={{
+						color: '#0F766E',
+						fillColor: '#14B8A6',
+						fillOpacity: 0.88,
+						weight: 2,
+					}}
+					eventHandlers={{
+						click: (e) => {
+							// Don't bubble to map click (area select)
+							L.DomEvent.stopPropagation(e);
+							onRegionSelect?.({
+								city: c.city,
+								country: c.country,
+								latitude: c.latitude,
+								longitude: c.longitude,
+								count: c.count,
+							});
+							map.setView([c.latitude, c.longitude], 11, { animate: true });
+						},
+					}}
+				>
+					<Popup>
+						<div className="popupContainer">
+							<div className="textContainer">
+								<strong>
+									{c.city}
+									{c.country ? `, ${c.country}` : ''}
+								</strong>
+								<span>{c.count.toLocaleString()} properties in this area</span>
+								<button
+									type="button"
+									className="popup-details-btn"
+									style={{
+										marginTop: 8,
+										display: 'inline-block',
+										padding: '6px 12px',
+										borderRadius: 999,
+										background: '#0F766E',
+										color: '#fff',
+										border: 'none',
+										fontWeight: 600,
+										cursor: 'pointer',
+									}}
+									onClick={(ev) => {
+										ev.preventDefault();
+										ev.stopPropagation();
+										onRegionSelect?.({
+											city: c.city,
+											country: c.country,
+											latitude: c.latitude,
+											longitude: c.longitude,
+											count: c.count,
+										});
+									}}
+								>
+									Show listings →
+								</button>
+							</div>
+						</div>
+					</Popup>
+				</CircleMarker>
 			))}
 		</>
 	);
@@ -214,6 +188,7 @@ function PropertyMap(props) {
 		onClose,
 		selectedLocation,
 		onLocationSelect,
+		onRegionSelect,
 		radiusKm = 5,
 		simple = false,
 		showAreaHint = true,
@@ -231,7 +206,7 @@ function PropertyMap(props) {
 	}, [safeItems]);
 
 	const zoomLevel =
-		safeItems.length === 1 ? 14 : safeItems.length > 100 ? 6 : 11;
+		safeItems.length === 1 ? 14 : safeItems.length > 50 ? 6 : 11;
 
 	return (
 		<div
@@ -247,13 +222,13 @@ function PropertyMap(props) {
 				<div className="map-toolbar">
 					{expanded && showAreaHint && !selectedLocation ? (
 						<div>
-							<strong>Choose an area</strong>
-							<span>Zoom in & click a pin to open a property</span>
+							<strong>Choose a region</strong>
+							<span>Click a green pin to list homes in that city</span>
 						</div>
 					) : expanded && !showAreaHint ? (
 						<div>
-							<strong>Explore nearby</strong>
-							<span>Click a pin · View details to open a listing</span>
+							<strong>Explore regions</strong>
+							<span>Click a pin to filter listings</span>
 						</div>
 					) : !expanded ? (
 						<div>
@@ -299,7 +274,7 @@ function PropertyMap(props) {
 					/>
 				)}
 				<MapControls expanded={expanded} />
-				<VisiblePins items={safeItems} />
+				<RegionPins items={safeItems} onRegionSelect={onRegionSelect} />
 
 				{selectedLocation && (
 					<>
