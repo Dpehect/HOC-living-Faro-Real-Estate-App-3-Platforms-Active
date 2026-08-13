@@ -1,17 +1,29 @@
 # HOC Living — Web
 
-React + Vite real estate web app for **München & Bayern**.
+React + Vite real estate web app covering **Europe**.
 
-**Brand:** HOC Living (no city in the product name)
+**Brand:** HOC Living  
+**Market:** Europe — **30 countries × 10,000 listings = 300,000** properties
 
-## Stack
+## Data layout (GitHub-friendly)
 
-- React 18 + TypeScript
-- Vite 5
-- Tailwind CSS
-- Leaflet (map search)
-- Framer Motion
-- React Router
+Large catalog is **split by country** (each file ~5 MB, under GitHub’s 100 MB limit):
+
+```
+public/data/
+  index.json                 # manifest
+  countries/
+    Germany.json             # 10,000 listings
+    France.json
+    ...
+src/pages/postsData.json     # small sample (~300) only
+```
+
+Listings load on demand via `src/lib/listings.ts` when a country is selected on `/listings`.
+
+## Coverage
+
+Germany, France, Finland, Sweden, Norway, Denmark, Netherlands, Belgium, Austria, Switzerland, Italy, Spain, Portugal, Poland, Czech Republic, Ireland, United Kingdom, Greece, Hungary, Romania, Croatia, Slovakia, Slovenia, Estonia, Latvia, Lithuania, Luxembourg, Iceland, Bulgaria, Serbia.
 
 ## Scripts
 
@@ -23,4 +35,4 @@ npm run build
 
 ## Deploy
 
-Configured for Vercel (`vercel.json`).
+Vercel (`vercel.json`). Country JSON files are served as static assets from `public/`.

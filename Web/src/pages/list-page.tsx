@@ -1,4 +1,4 @@
-import postsData from './postsData.json';
+import { loadCountry, listCountryNames, type Listing } from '@/lib/listings';
 import { Suspense, useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import Card from './components/list-page/Card';
@@ -48,6 +48,11 @@ function ListPage() {
 	const [selectedLocation, setSelectedLocation] = useState(null);
 	const [filters, setFilters] = useState<ListingFilters>(defaultFilters);
 	const [page, setPage] = useState(1);
+	const [postsData, setPostsData] = useState<Listing[]>([]);
+	const [countries, setCountries] = useState<string[]>([]);
+	const [activeCountry, setActiveCountry] = useState('Germany');
+	const [loading, setLoading] = useState(true);
+	const [loadError, setLoadError] = useState('');
 	const links = ['Buy or Rent', 'Sell or List', 'Home Value', 'Franchise'];
 
 	useEffect(() => {
@@ -68,9 +73,37 @@ function ListPage() {
 		return () => window.removeEventListener('popstate', handlePopState);
 	}, [isMapExpanded]);
 
+
+	useEffect(() => {
+		listCountryNames().then(setCountries).catch(() => setCountries(['Germany']));
+	}, []);
+
+	useEffect(() => {
+		let cancelled = false;
+		setLoading(true);
+		setLoadError('');
+		loadCountry(activeCountry)
+			.then((data) => {
+				if (!cancelled) {
+					setPostsData(data);
+					setLoading(false);
+				}
+			})
+			.catch(() => {
+				if (!cancelled) {
+					setLoadError('Could not load listings for ' + activeCountry);
+					setPostsData([]);
+					setLoading(false);
+				}
+			});
+		return () => {
+			cancelled = true;
+		};
+	}, [activeCountry]);
+
 	const filteredPosts = useMemo(() => {
 		return postsData.filter((post) => {
-			const searchable = `${post.title} ${post.address} ${post.city}`.toLowerCase();
+			const searchable = `${post.title} ${post.address} ${post.city} ${post.country || ''}`.toLowerCase();
 			const q = filters.query.toLowerCase().trim();
 			if (q && !searchable.includes(q)) return false;
 			if (filters.type && post.type !== filters.type) return false;
@@ -113,6 +146,20 @@ function ListPage() {
 
 			<main className="mx-auto grid max-w-[1600px] grid-cols-1 gap-6 px-4 py-6 md:px-10 xl:grid-cols-[minmax(0,1fr)_430px] xl:px-16">
 				<div className="min-w-0">
+					<div className="mb-4 flex flex-wrap items-center gap-3 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+						<label className="text-sm font-semibold text-gray-700">Country</label>
+						<select
+							value={activeCountry}
+							onChange={(e) => setActiveCountry(e.target.value)}
+							className="rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm"
+						>
+							{countries.map((c) => (
+								<option key={c} value={c}>{c}</option>
+							))}
+						</select>
+						<span className="text-xs text-gray-500">10,000 listings per country · Europe-wide catalog</span>
+					</div>
+
 					<div className="block">
 						<Filter
 							filters={filters}
@@ -123,8 +170,11 @@ function ListPage() {
 						/>
 					</div>
 
+					{loading && <p className="p-8 text-gray-500">Loading {activeCountry} listings…</p>}
+					{loadError && <p className="p-8 text-red-600">{loadError}</p>}
+
 					<Suspense fallback={<p className="p-8 text-gray-500">Loading properties…</p>}>
-						{filteredPosts.length ? (
+						{!loading && filteredPosts.length ? (
 							<>
 								<motion.div
 									key={JSON.stringify(filters) + Boolean(selectedLocation) + page}

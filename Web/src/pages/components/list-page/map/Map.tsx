@@ -125,7 +125,7 @@ function Map({
 		if (items.length === 1) {
 			return [Number(items[0].latitude), Number(items[0].longitude)];
 		}
-		return [48.1374, 11.5755];
+		return [50.0, 10.0];
 	}, [items]);
 
 	return (

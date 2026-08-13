@@ -24,7 +24,7 @@ import { cn } from '@/lib/utils';
 import Map from './components/list-page/map/Map';
 import SiteNavbar from '@/components/SiteNavbar';
 import SiteFooter from '@/components/SiteFooter';
-import posts from './postsData.json';
+import { findListingById, type Listing } from '@/lib/listings';
 
 const fadeUp = {
 	hidden: { opacity: 0, y: 24 },
@@ -37,7 +37,30 @@ const fadeUp = {
 
 function SinglePage() {
 	const { id } = useParams();
-	const post = posts.find((e) => String(e.id) === String(id));
+	const [post, setPost] = useState<Listing | null | undefined>(undefined);
+
+	useEffect(() => {
+		let cancelled = false;
+		setPost(undefined);
+		findListingById(id || '')
+			.then((p) => {
+				if (!cancelled) setPost(p);
+			})
+			.catch(() => {
+				if (!cancelled) setPost(null);
+			});
+		return () => {
+			cancelled = true;
+		};
+	}, [id]);
+
+	if (post === undefined) {
+		return (
+			<div className="flex min-h-screen items-center justify-center text-gray-500">
+				Loading property…
+			</div>
+		);
+	}
 	const [date, setDate] = useState<Date>();
 	const [activeImage, setActiveImage] = useState(0);
 	const [formSent, setFormSent] = useState(false);

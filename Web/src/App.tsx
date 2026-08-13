@@ -73,10 +73,10 @@ export default function App() {
 				>
 					<motion.div className="lg:w-1/2 lg:mr-4" variants={leftItemVariants}>
 						<h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6 text-center lg:text-left">
-							Homes across München & Bayern
+							Homes across Europe
 						</h1>
 						<p className="text-gray-600 mb-6 text-center lg:text-left">
-							Search 1,098 live listings in 539 cities — from Schwabing apartments to homes in Maxvorstadt, Bogenhausen and beyond.
+							Search 300,000 live listings across 30 European countries
 						</p>
 						<motion.div
 							className="flex items-center bg-white shadow-md rounded-lg overflow-hidden"
@@ -94,9 +94,9 @@ export default function App() {
 							className="mt-8 grid grid-cols-3 gap-2 md:gap-8 text-center"
 							variants={leftItemVariants}
 						>
-							<CountUpCard icon={BuildingIcon} end={1098} label="Listings" />
-							<CountUpCard icon={UsersIcon} end={539} label="Cities covered" />
-<CountUpCard icon={ThumbsUpIcon} end={482} label="For rent" />
+							<CountUpCard icon={BuildingIcon} end={300000} label="Listings" />
+							<CountUpCard icon={UsersIcon} end={30} label="Countries" />
+<CountUpCard icon={ThumbsUpIcon} end={60000} label="For rent" />
 						</motion.div>
 					</motion.div>
 					<motion.div

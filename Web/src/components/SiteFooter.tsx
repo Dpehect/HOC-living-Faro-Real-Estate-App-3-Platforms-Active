@@ -13,8 +13,8 @@ export default function SiteFooter() {
 						</span>
 					</div>
 					<p className="text-sm leading-relaxed text-gray-400">
-						Premium real estate across München & Bayern. Homes, apartments and investment
-						opportunities in München, Bayern and beyond.
+						Premium real estate across Europe. Homes, apartments and investment
+						opportunities in Europe and beyond.
 					</p>
 				</div>
 

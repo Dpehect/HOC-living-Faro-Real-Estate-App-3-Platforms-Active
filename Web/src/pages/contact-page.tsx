@@ -10,7 +10,7 @@ export default function ContactPage() {
 	return (
 		<PageShell
 			title="Contact us"
-			subtitle="Our München team is ready to help with buying, renting or listing your property across München and Bayern."
+			subtitle="Our München team is ready to help with buying, renting or listing your property across Europe."
 		>
 			<div className="grid gap-8 lg:grid-cols-[1fr_340px]">
 				<div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
@@ -61,7 +61,7 @@ export default function ContactPage() {
 
 				<div className="space-y-4">
 					{[
-						{ icon: MapPin, label: 'Office', value: 'Maximilianstraße 35\n80539 München, Germany' },
+						{ icon: MapPin, label: 'Office', value: 'European network of local offices' },
 						{ icon: Phone, label: 'Phone', value: '+351 289 000 000' },
 						{ icon: Mail, label: 'Email', value: 'hello@hocliving.com' },
 						{ icon: Clock, label: 'Hours', value: 'Mon–Fri 09:00–18:00\nSat 10:00–14:00' },

@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import PageShell from '@/components/PageShell';
 
 const benefits = [
-	{ title: 'Proven brand', text: 'Operate under the HOC Living name with marketing support across München and Bayern.' },
+	{ title: 'Proven brand', text: 'Operate under the HOC Living name with marketing support across Europe.' },
 	{ title: 'Training & tools', text: 'CRM, listing platform and continuous training for your local team.' },
 	{ title: 'Territory protection', text: 'Exclusive catchment areas so you can grow with confidence.' },
 	{ title: 'Lead network', text: 'Shared buyer and seller leads from our national digital campaigns.' },

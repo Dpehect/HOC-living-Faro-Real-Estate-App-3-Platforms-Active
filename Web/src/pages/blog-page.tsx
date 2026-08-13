@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import PageShell from '@/components/PageShell';
 
 const posts = [
-	{ slug: 'muenchen-market-2026', title: 'München property market outlook 2026', date: '12 Mar 2026', excerpt: 'Demand remains strong in Schwabing, Maxvorstadt and surrounding districts as demand for quality housing continues.' },
-	{ slug: 'buying-guide-bayern', title: 'First-time buyer guide: Bayern', date: '28 Feb 2026', excerpt: 'From financing to notary day — the steps every buyer in Bayern should know.' },
-	{ slug: 'rental-yields-muenchen', title: 'Rental yields in greater München', date: '10 Feb 2026', excerpt: 'Where long-term lets perform best between the city centre, Schwabing and the suburbs.' },
-	{ slug: 'energy-certificates', title: 'Energy certificates explained', date: '22 Jan 2026', excerpt: 'What energy certificates mean for sale and rent listings in Germany.' },
+	{ slug: 'muenchen-market-2026', title: 'European property market outlook 2026', date: '12 Mar 2026', excerpt: 'Demand remains strong across major European capitals as cross-border buyers return.' },
+	{ slug: 'buying-guide-bayern', title: 'First-time buyer guide: Europe', date: '28 Feb 2026', excerpt: 'From financing to notary day — the steps every cross-border buyer should know.' },
+	{ slug: 'rental-yields-muenchen', title: 'Rental yields across Northern Europe', date: '10 Feb 2026', excerpt: 'Where long-term lets perform best in Germany, Nordics and France.' },
+	{ slug: 'energy-certificates', title: 'Energy certificates explained', date: '22 Jan 2026', excerpt: 'What energy certificates mean for sale and rent listings across the EU.' },
 ];
 
 export default function BlogPage() {

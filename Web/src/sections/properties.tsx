@@ -15,7 +15,7 @@ export function PropertiesList() {
 				Find your next home at a fair price
 			</h2>
 			<p className="text-center text-gray-600 mb-8 px-4">
-				1,098 properties for sale and rent across München and Bayern
+				1,098 properties for sale and rent across Europe
 			</p>
 			<div className=" flex flex-col  bg-white  items-center justify-center relative overflow-hidden">
 				<InfiniteMovingCards items={images} direction="left" speed="fast" />

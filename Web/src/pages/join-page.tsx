@@ -9,7 +9,7 @@ export default function JoinPage() {
 	return (
 		<PageShell
 			title="Join HOC Living"
-			subtitle="Create an account to save favourites, receive alerts and access exclusive listings across München and Bayern."
+			subtitle="Create an account to save favourites, receive alerts and access exclusive listings across Europe."
 		>
 			<div className="mx-auto max-w-lg rounded-3xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
 				{sent ? (

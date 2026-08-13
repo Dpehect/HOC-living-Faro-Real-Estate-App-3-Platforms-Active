@@ -14,7 +14,7 @@ const SellHomeSection = () => {
 				Ready to sell or let your property?
 			</h2>
 			<p className="text-center text-gray-600 mb-8 max-w-xl mx-auto">
-				Enter your city and request a free consultation. We cover 539 locations across München and Bayern.
+				Enter your city and request a free consultation. We cover 539 locations across Europe.
 			</p>
 			<form
 				className="flex flex-col sm:flex-row justify-center items-center gap-3 md:w-1/2 mx-auto"
@@ -25,7 +25,7 @@ const SellHomeSection = () => {
 			>
 				<Input
 					type="text"
-					placeholder="City (e.g. Schwabing, Maxvorstadt, Bogenhausen)"
+					placeholder="City (e.g. Berlin, Paris, Amsterdam, Stockholm)"
 					value={city}
 					onChange={(e) => setCity(e.target.value)}
 					className="px-4 py-2 w-full sm:w-2/3 border border-gray-300 rounded-md"

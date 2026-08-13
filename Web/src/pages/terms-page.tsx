@@ -6,7 +6,7 @@ export default function TermsPage() {
 			<article className="prose prose-gray max-w-none space-y-6 rounded-3xl border border-gray-200 bg-white p-6 text-sm leading-relaxed text-gray-600 shadow-sm md:p-8">
 				<section>
 					<h2 className="text-lg font-bold text-gray-900">1. About us</h2>
-					<p className="mt-2">HOC Living Real Estate provides online property search and related agency services in München and Bayern. By using this website you agree to these terms.</p>
+					<p className="mt-2">HOC Living Real Estate provides online property search and related agency services in Europe. By using this website you agree to these terms.</p>
 				</section>
 				<section>
 					<h2 className="text-lg font-bold text-gray-900">2. Listings information</h2>
@@ -26,7 +26,7 @@ export default function TermsPage() {
 				</section>
 				<section>
 					<h2 className="text-lg font-bold text-gray-900">6. Contact</h2>
-					<p className="mt-2">For questions about these terms, email hello@hocliving.com or write to our München office.</p>
+					<p className="mt-2">For questions about these terms, email hello@hocliving.com or write to our European offices.</p>
 				</section>
 			</article>
 		</PageShell>

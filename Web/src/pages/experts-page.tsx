@@ -6,7 +6,7 @@ const experts = [
 	{ name: 'Ana Silva', role: 'Bayern Sales Director', focus: 'München, Tavira, Olhão' },
 	{ name: 'João Mendes', role: 'Senior Buyer Agent', focus: 'Lagos, Portimão, Albufeira' },
 	{ name: 'Sofia Costa', role: 'Lettings Manager', focus: 'Long-term & holiday lets' },
-	{ name: 'Miguel Torres', role: 'Bayern Desk', focus: 'München & Oberbayern' },
+	{ name: 'Miguel Torres', role: 'Europe Desk', focus: 'DACH & Nordics' },
 	{ name: 'Laura Pereira', role: 'Valuations', focus: 'Lisbon & Cascais' },
 	{ name: 'Carlos Nunes', role: 'New Homes', focus: 'Off-plan & investment' },
 ];

@@ -42,7 +42,7 @@ export default function TestimonialSection() {
 	return (
 		<section className="testimonial-section" aria-labelledby="testimonial-heading">
 			<div className="testimonial-heading">
-				<p>Trusted across München & Bayern</p>
+				<p>Trusted across Europe</p>
 				<h2 id="testimonial-heading">
 					Over <span>1,098</span> active listings · <span>539</span> cities
 				</h2>
