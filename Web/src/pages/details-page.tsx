@@ -1,8 +1,20 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { format } from 'date-fns';
-import { Calendar as CalendarIcon, ChevronLeft, ChevronRight, MapPin, Bed, Bath, Ruler, PawPrint, Zap, Wallet } from 'lucide-react';
+import {
+	Calendar as CalendarIcon,
+	ChevronLeft,
+	ChevronRight,
+	MapPin,
+	Bed,
+	Bath,
+	Ruler,
+	PawPrint,
+	Zap,
+	Wallet,
+	Maximize2,
+} from 'lucide-react';
 import { BuildingIcon } from '@/icons/landing-page-icons';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -27,9 +39,25 @@ function SinglePage() {
 	const [date, setDate] = useState<Date>();
 	const [activeImage, setActiveImage] = useState(0);
 	const [formSent, setFormSent] = useState(false);
+	const [isMapExpanded, setIsMapExpanded] = useState(false);
 
 	const images = useMemo(() => post?.images?.filter(Boolean) || [], [post]);
 	const detail = post?.postDetail || {};
+
+	useEffect(() => {
+		document.body.style.overflow = isMapExpanded ? 'hidden' : '';
+		return () => {
+			document.body.style.overflow = '';
+		};
+	}, [isMapExpanded]);
+
+	useEffect(() => {
+		if (!isMapExpanded) return;
+		window.history.pushState({ mapExpanded: true }, '');
+		const onPop = () => setIsMapExpanded(false);
+		window.addEventListener('popstate', onPop);
+		return () => window.removeEventListener('popstate', onPop);
+	}, [isMapExpanded]);
 
 	if (!post) {
 		return (
@@ -51,12 +79,12 @@ function SinglePage() {
 		? `€ ${Number(post.price).toLocaleString()} / month`
 		: `€ ${Number(post.price).toLocaleString()}`;
 
-	const nextImage = () => setActiveImage((i) => (i + 1) % images.length);
-	const prevImage = () => setActiveImage((i) => (i - 1 + images.length) % images.length);
+	const nextImage = () => setActiveImage((i) => (i + 1) % Math.max(images.length, 1));
+	const prevImage = () =>
+		setActiveImage((i) => (i - 1 + Math.max(images.length, 1)) % Math.max(images.length, 1));
 
 	return (
 		<div className="min-h-screen bg-[#f7f8fb]">
-			{/* Top nav */}
 			<nav className="sticky top-0 z-40 border-b border-gray-200/80 bg-white/90 backdrop-blur-md">
 				<div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-3 md:px-8">
 					<Link to="/" className="flex items-center gap-2">
@@ -77,7 +105,6 @@ function SinglePage() {
 
 			<main className="mx-auto max-w-[1400px] px-4 py-6 md:px-8 md:py-10">
 				<div className="grid grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1fr)_380px]">
-					{/* LEFT */}
 					<div className="min-w-0 space-y-6">
 						{/* Gallery */}
 						<motion.div
@@ -156,7 +183,9 @@ function SinglePage() {
 											onClick={() => setActiveImage(i)}
 											className={cn(
 												'h-16 w-24 flex-shrink-0 overflow-hidden rounded-xl border-2 transition',
-												i === activeImage ? 'border-indigo-600' : 'border-transparent opacity-70 hover:opacity-100'
+												i === activeImage
+													? 'border-indigo-600'
+													: 'border-transparent opacity-70 hover:opacity-100'
 											)}
 										>
 											<img src={src} alt="" className="h-full w-full object-cover" />
@@ -166,7 +195,6 @@ function SinglePage() {
 							)}
 						</motion.div>
 
-						{/* Title + meta */}
 						<motion.div initial="hidden" animate="visible" variants={fadeUp} custom={1}>
 							<h1 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">
 								{post.title}
@@ -179,7 +207,6 @@ function SinglePage() {
 							<p className="mt-4 text-3xl font-bold text-indigo-600">{priceLabel}</p>
 						</motion.div>
 
-						{/* Stats */}
 						<motion.div
 							className="grid grid-cols-2 gap-3 sm:grid-cols-4"
 							initial="hidden"
@@ -191,11 +218,7 @@ function SinglePage() {
 								{ icon: Bed, label: 'Bedrooms', value: post.bedroom ?? '—' },
 								{ icon: Bath, label: 'Bathrooms', value: post.bathroom ?? '—' },
 								{ icon: Ruler, label: 'Size', value: detail.size ? `${detail.size} sqft` : '—' },
-								{
-									icon: BuildingIcon,
-									label: 'Type',
-									value: post.property || '—',
-								},
+								{ icon: BuildingIcon, label: 'Type', value: post.property || '—' },
 							].map(({ icon: Icon, label, value }) => (
 								<div
 									key={label}
@@ -210,7 +233,6 @@ function SinglePage() {
 							))}
 						</motion.div>
 
-						{/* Description */}
 						<motion.section
 							className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
 							initial="hidden"
@@ -225,7 +247,6 @@ function SinglePage() {
 							</p>
 						</motion.section>
 
-						{/* Policies */}
 						<motion.section
 							className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
 							initial="hidden"
@@ -253,7 +274,7 @@ function SinglePage() {
 							</div>
 						</motion.section>
 
-						{/* Map */}
+						{/* Expandable map */}
 						<motion.section
 							className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
 							initial="hidden"
@@ -261,20 +282,35 @@ function SinglePage() {
 							variants={fadeUp}
 							custom={5}
 						>
-							<div className="border-b border-gray-100 px-6 py-4">
-								<h2 className="text-lg font-bold text-gray-900">Location</h2>
-								<p className="text-sm text-gray-500">
-									{post.address}
-									{post.city ? `, ${post.city}` : ''}
-								</p>
+							<div className="flex items-center justify-between border-b border-gray-100 px-6 py-4">
+								<div>
+									<h2 className="text-lg font-bold text-gray-900">Location</h2>
+									<p className="text-sm text-gray-500">
+										{post.address}
+										{post.city ? `, ${post.city}` : ''}
+									</p>
+								</div>
+								<button
+									type="button"
+									onClick={() => setIsMapExpanded(true)}
+									className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 transition hover:border-indigo-300 hover:text-indigo-700"
+								>
+									<Maximize2 className="h-3.5 w-3.5" />
+									Expand map
+								</button>
 							</div>
 							<div className="h-[320px]">
-								<Map items={[post]} simple />
+								<Map
+									items={[post]}
+									expanded={isMapExpanded}
+									onExpand={() => setIsMapExpanded(true)}
+									onClose={() => setIsMapExpanded(false)}
+								/>
 							</div>
 						</motion.section>
 					</div>
 
-					{/* RIGHT — sticky contact card */}
+					{/* Contact card */}
 					<motion.aside
 						className="xl:sticky xl:top-24 xl:self-start"
 						initial="hidden"
@@ -317,12 +353,7 @@ function SinglePage() {
 											Fill the form and one of our agents will contact you as soon as possible.
 										</p>
 										<Input placeholder="Full name" required className="h-11 rounded-xl" />
-										<Input
-											type="email"
-											placeholder="Email address"
-											required
-											className="h-11 rounded-xl"
-										/>
+										<Input type="email" placeholder="Email address" required className="h-11 rounded-xl" />
 										<Input type="tel" placeholder="Phone number" className="h-11 rounded-xl" />
 										<Popover>
 											<PopoverTrigger asChild>
