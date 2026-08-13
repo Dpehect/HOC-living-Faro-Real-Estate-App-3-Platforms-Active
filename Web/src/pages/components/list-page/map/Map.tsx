@@ -122,16 +122,8 @@ function RegionPins({ items = [], onRegionSelect }) {
 					}}
 					eventHandlers={{
 						click: (e) => {
-							// Don't bubble to map click (area select)
+							// Only open popup — do not filter yet
 							L.DomEvent.stopPropagation(e);
-							onRegionSelect?.({
-								city: c.city,
-								country: c.country,
-								latitude: c.latitude,
-								longitude: c.longitude,
-								count: c.count,
-							});
-							map.setView([c.latitude, c.longitude], 11, { animate: true });
 						},
 					}}
 				>
@@ -142,7 +134,9 @@ function RegionPins({ items = [], onRegionSelect }) {
 									{c.city}
 									{c.country ? `, ${c.country}` : ''}
 								</strong>
-								<span>{c.count.toLocaleString()} properties in this area</span>
+								<span style={{ display: 'block', marginTop: 4 }}>
+									{c.count.toLocaleString()} properties in this area
+								</span>
 								<button
 									type="button"
 									className="popup-details-btn"
