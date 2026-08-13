@@ -17,9 +17,8 @@ import { PropertiesList } from './sections/properties';
 import { CaculatePriceSection } from './sections/calculate-price';
 import TestimonialSection from './sections/testimonial';
 import SiteFooter from '@/components/SiteFooter';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SiteNavbar from '@/components/SiteNavbar';
-import SiteFooter from '@/components/SiteFooter';
 
 // Define animation variants
 const containerVariants = {
@@ -74,11 +73,10 @@ export default function App() {
 				>
 					<motion.div className="lg:w-1/2 lg:mr-4" variants={leftItemVariants}>
 						<h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6 text-center lg:text-left">
-							Explore Some Of The Best Properties In Your Area
+							Homes across Portugal & Spain, starting in Faro
 						</h1>
 						<p className="text-gray-600 mb-6 text-center lg:text-left">
-							Discover premium residences that best suit your needs and
-							lifestyle, from elegance to modern luxury.
+							Search 1,098 live listings in 539 cities — from Algarve apartments to homes in Lisbon, Porto, Madrid and beyond.
 						</p>
 						<motion.div
 							className="flex items-center bg-white shadow-md rounded-lg overflow-hidden"
@@ -96,13 +94,9 @@ export default function App() {
 							className="mt-8 grid grid-cols-3 gap-2 md:gap-8 text-center"
 							variants={leftItemVariants}
 						>
-							<CountUpCard icon={BuildingIcon} end={1500} label="Apartments" />
-							<CountUpCard icon={UsersIcon} end={1000} label="Customers" />
-							<CountUpCard
-								icon={ThumbsUpIcon}
-								end={2500}
-								label="Good reviews"
-							/>
+							<CountUpCard icon={BuildingIcon} end={1098} label="Listings" />
+							<CountUpCard icon={UsersIcon} end={539} label="Cities covered" />
+<CountUpCard icon={ThumbsUpIcon} end={482} label="For rent" />
 						</motion.div>
 					</motion.div>
 					<motion.div

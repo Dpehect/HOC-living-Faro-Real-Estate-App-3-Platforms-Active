@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const FeaturesSection = () => {
 	return (
@@ -12,30 +12,33 @@ const FeaturesSection = () => {
 				<AnimatedCard
 					index={1}
 					imageSrc="https://purplebricks-web.imgix.net/marketing-global/uk/proposition-tiles/dedicated-local-experts-2021.jpg?w=768&auto=format&q=50&ar=407%3A226&fit=crop&ixlib=react-9.2.0"
-					heading="Personalized Service"
-					details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum lorem eu neque dictum, et venenatis nibh tempus."
+					heading="Local experts in every region"
+					details="Our agents know Faro, the wider Algarve, Lisbon, Porto and key Spanish markets. You get neighbourhood-level advice, not generic online estimates."
 					buttonText="Meet your experts"
+					to="/experts"
 				/>
 				<AnimatedCard
 					index={2}
 					imageSrc="https://purplebricks-web.imgix.net/marketing-global/uk/proposition-tiles/fair-fixed-fee-2021.jpg?w=768&auto=format&q=50&ar=407%3A226&fit=crop&ixlib=react-9.2.0"
-					heading="Expert Guidance"
-					details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum lorem eu neque dictum, et venenatis nibh tempus."
-					buttonText="Learn More"
+					heading="Clear fees, no surprises"
+					details="Commission and marketing costs are explained before you sign. Compare our fixed-style packages with traditional high-street rates and keep more of your sale price."
+					buttonText="Get a valuation"
+					to="/home-value"
 				/>
 				<AnimatedCard
 					index={3}
 					imageSrc="https://purplebricks-web.imgix.net/marketing-global/uk/proposition-tiles/better-selling-experience-640@2x.jpg?w=768&auto=format&q=50&ar=407%3A226&fit=crop&ixlib=react-9.2.0"
-					heading="Fast Sales"
-					details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum lorem eu neque dictum, et venenatis nibh tempus."
-					buttonText="See how we do it"
+					heading="Faster path to completion"
+					details="Professional photos, portal exposure and coordinated viewings help serious buyers move quickly. We stay with you from first offer through to notary day."
+					buttonText="List your property"
+					to="/sell"
 				/>
 			</div>
 		</section>
 	);
 };
 
-const AnimatedCard = ({ index, imageSrc, heading, details, buttonText }) => {
+const AnimatedCard = ({ index, imageSrc, heading, details, buttonText, to }) => {
 	const ref = useRef();
 	const { scrollYProgress } = useScroll({
 		target: ref,
@@ -54,13 +57,16 @@ const AnimatedCard = ({ index, imageSrc, heading, details, buttonText }) => {
 			key={index}
 			viewport={{ once: true }}
 		>
-			<img src={imageSrc} alt="Card" className="w-full h-60 object-cover" />
+			<img src={imageSrc} alt="" className="w-full h-60 object-cover" />
 			<div className="p-6">
 				<h3 className="text-xl font-bold text-gray-800 mb-4">{heading}</h3>
 				<p className="text-gray-600 mb-6">{details}</p>
-				<div className="border text-center border-slate-700 p-2">
+				<Link
+					to={to}
+					className="block border border-slate-700 p-2 text-center text-sm font-semibold transition hover:border-primary hover:text-primary"
+				>
 					{buttonText}
-				</div>
+				</Link>
 			</div>
 		</motion.div>
 	);

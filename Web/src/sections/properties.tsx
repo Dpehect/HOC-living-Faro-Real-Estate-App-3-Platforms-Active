@@ -1,8 +1,5 @@
-import { PropertyCard } from '@/components/Property-card';
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
-import { animate, motion, useMotionValue } from 'framer-motion';
-import { useEffect } from 'react';
-import useMeasure from 'react-use-measure';
+
 export function PropertiesList() {
 	var images = [
 		'https://framerusercontent.com/images/Mf2SbSsE4lrNP12Wus9NuA1xVU.webp?scale-down-to=512',
@@ -14,13 +11,15 @@ export function PropertiesList() {
 
 	return (
 		<main className="py-4 overflow-hidden flex flex-col gap-2">
-			<h2 className="text-3xl mx-auto w-full text-center font-bold text-gray-800 mb-8">
-				We Help You find your Dream Property <br></br>At the Best Price
+			<h2 className="text-3xl mx-auto w-full text-center font-bold text-gray-800 mb-2">
+				Find your next home at a fair price
 			</h2>
+			<p className="text-center text-gray-600 mb-8 px-4">
+				1,098 properties for sale and rent across Portugal and Spain
+			</p>
 			<div className=" flex flex-col  bg-white  items-center justify-center relative overflow-hidden">
 				<InfiniteMovingCards items={images} direction="left" speed="fast" />
 			</div>
-
 			<div className=" flex flex-col  bg-white  items-center justify-center relative overflow-hidden">
 				<InfiniteMovingCards items={images} direction="right" speed="fast" />
 			</div>

@@ -1,23 +1,44 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SellHomeSection = () => {
+	const [city, setCity] = useState('');
+	const navigate = useNavigate();
+
 	return (
-		<div className=" w-full  py-12 bg-bgColor px-4">
-			<h2 className="text-3xl mx-auto w-full text-center font-bold text-gray-800 mb-8">
-				Ready to sell your home for free?
+		<div className="w-full py-12 bg-bgColor px-4">
+			<h2 className="text-3xl mx-auto w-full text-center font-bold text-gray-800 mb-3">
+				Ready to sell or let your property?
 			</h2>
-			<div className="flex justify-center items-center md:w-1/2 mx-auto">
+			<p className="text-center text-gray-600 mb-8 max-w-xl mx-auto">
+				Enter your city and request a free consultation. We cover 539 locations across Portugal and Spain.
+			</p>
+			<form
+				className="flex flex-col sm:flex-row justify-center items-center gap-3 md:w-1/2 mx-auto"
+				onSubmit={(e) => {
+					e.preventDefault();
+					navigate(city.trim() ? `/sell?city=${encodeURIComponent(city.trim())}` : '/sell');
+				}}
+			>
 				<Input
 					type="text"
-					placeholder="Enter your postcode"
-					className="px-4 py-2 w-2/4 border border-gray-300 rounded-l-md focus:outline-none focus:ring focus:ring-blue-300"
+					placeholder="City (e.g. Faro, Lisbon, Marbella)"
+					value={city}
+					onChange={(e) => setCity(e.target.value)}
+					className="px-4 py-2 w-full sm:w-2/3 border border-gray-300 rounded-md"
 				/>
-				<Button className="ml-4 px-6 py-3  text-white font-semibold rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">
-					Get Started
+				<Button type="submit" className="px-6 py-3 text-white font-semibold rounded-md shadow-md bg-primary hover:bg-accentHover w-full sm:w-auto">
+					Get started
 				</Button>
-			</div>
+			</form>
+			<p className="text-center mt-4 text-sm">
+				<Link to="/home-value" className="text-primary font-semibold hover:underline">
+					Or get an instant home value estimate →
+				</Link>
+			</p>
 		</div>
 	);
 };
