@@ -18,10 +18,12 @@ function ResizeMap({ expanded }) {
 function Map({ items, expanded, onExpand, onClose, selectedLocation, onLocationSelect }) {
 	return (
 		<div className={expanded ? 'map-shell map-shell--expanded' : 'map-shell'}>
-			<div className="map-toolbar">
-				<div><strong>{expanded ? 'Choose an area in Faro' : 'Explore on the map'}</strong><span>{expanded ? 'Click anywhere to filter nearby homes' : 'Click to expand and choose a location'}</span></div>
-				{expanded ? <button type="button" onClick={onClose}>Close map</button> : <button type="button" onClick={onExpand}>Expand</button>}
-			</div>
+			{expanded && (
+				<div className="map-toolbar">
+					<div><strong>Choose an area in Faro</strong><span>Click anywhere to filter nearby homes</span></div>
+					<button type="button" onClick={onClose}>Close map</button>
+				</div>
+			)}
 			<MapContainer center={[37.0194, -7.9304]} zoom={12} scrollWheelZoom={expanded} className="map">
 				<TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 				<MapEvents expanded={expanded} onExpand={onExpand} onLocationSelect={onLocationSelect} />

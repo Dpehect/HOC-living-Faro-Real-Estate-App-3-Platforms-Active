@@ -67,7 +67,7 @@ function ListPage() {
 						{filteredPosts.length ? <motion.div key={JSON.stringify(filters) + Boolean(selectedLocation)} initial="hidden" animate="visible" variants={containerVariants} className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">{filteredPosts.map(post => <motion.div key={post.id} variants={cardVariants}><Card item={post} /></motion.div>)}</motion.div> : <div className="mt-6 rounded-2xl border border-dashed border-gray-300 bg-white px-6 py-16 text-center"><h2 className="text-lg font-bold text-gray-900">No properties match these filters</h2><p className="mt-2 text-sm text-gray-500">Try a larger map radius or clear some filters.</p><button type="button" onClick={resetFilters} className="mt-5 rounded-xl bg-gray-900 px-4 py-2 text-sm font-semibold text-white">Reset search</button></div>}
 					</Suspense>
 				</div>
-				<div className="h-[620px] xl:sticky xl:top-6"><Suspense fallback={<p>Loading map…</p>}><Map items={filteredPosts} expanded={isMapExpanded} onExpand={() => setIsMapExpanded(true)} onClose={() => setIsMapExpanded(false)} selectedLocation={selectedLocation} onLocationSelect={setSelectedLocation} /></Suspense></div>
+				<div className="h-[620px] xl:sticky xl:top-6"><Suspense fallback={<p>Loading map…</p>}><Map items={filteredPosts} expanded={isMapExpanded} onExpand={() => setIsMapExpanded(true)} onClose={() => { setIsMapExpanded(false); setSelectedLocation(null); }} selectedLocation={selectedLocation} onLocationSelect={setSelectedLocation} /></Suspense></div>
 			</main>
 		</div>
 	);
