@@ -24,23 +24,33 @@ export default function SiteFooter() {
 					</h3>
 					<ul className="space-y-2 text-sm">
 						<li>
-							<Link to="/listings" className="hover:text-accent">
-								Buy a property
-							</Link>
-						</li>
-						<li>
-							<Link to="/listings" className="hover:text-accent">
-								Rent a property
-							</Link>
-						</li>
-						<li>
-							<Link to="/listings" className="hover:text-accent">
+							<Link to="/sell" className="transition hover:text-accent">
 								Sell a property
 							</Link>
 						</li>
 						<li>
-							<Link to="/listings" className="hover:text-accent">
+							<Link to="/listings" className="transition hover:text-accent">
+								Buy a property
+							</Link>
+						</li>
+						<li>
+							<Link to="/sell" className="transition hover:text-accent">
+								Let a property
+							</Link>
+						</li>
+						<li>
+							<Link to="/listings" className="transition hover:text-accent">
+								Rent a property
+							</Link>
+						</li>
+						<li>
+							<Link to="/listings" className="transition hover:text-accent">
 								Property search
+							</Link>
+						</li>
+						<li>
+							<Link to="/home-value" className="transition hover:text-accent">
+								Home value
 							</Link>
 						</li>
 					</ul>
@@ -51,10 +61,31 @@ export default function SiteFooter() {
 						Help & Contact
 					</h3>
 					<ul className="space-y-2 text-sm">
-						<li className="hover:text-accent">Contact us</li>
-						<li className="hover:text-accent">FAQs</li>
-						<li className="hover:text-accent">Terms & conditions</li>
-						<li className="hover:text-accent">Privacy</li>
+						<li>
+							<Link to="/contact" className="transition hover:text-accent">
+								Contact us
+							</Link>
+						</li>
+						<li>
+							<Link to="/join" className="transition hover:text-accent">
+								Login / Join
+							</Link>
+						</li>
+						<li>
+							<Link to="/terms" className="transition hover:text-accent">
+								Terms & conditions
+							</Link>
+						</li>
+						<li>
+							<Link to="/faq" className="transition hover:text-accent">
+								FAQs
+							</Link>
+						</li>
+						<li>
+							<Link to="/privacy" className="transition hover:text-accent">
+								Privacy
+							</Link>
+						</li>
 					</ul>
 				</div>
 
@@ -63,10 +94,26 @@ export default function SiteFooter() {
 						Useful links
 					</h3>
 					<ul className="space-y-2 text-sm">
-						<li className="hover:text-accent">Meet our experts</li>
-						<li className="hover:text-accent">Blog</li>
-						<li className="hover:text-accent">Franchise</li>
-						<li className="hover:text-accent">Sitemap</li>
+						<li>
+							<Link to="/experts" className="transition hover:text-accent">
+								Meet our experts
+							</Link>
+						</li>
+						<li>
+							<Link to="/blog" className="transition hover:text-accent">
+								Blog
+							</Link>
+						</li>
+						<li>
+							<Link to="/sitemap" className="transition hover:text-accent">
+								Sitemap
+							</Link>
+						</li>
+						<li>
+							<Link to="/franchise" className="transition hover:text-accent">
+								Franchise
+							</Link>
+						</li>
 					</ul>
 				</div>
 			</div>

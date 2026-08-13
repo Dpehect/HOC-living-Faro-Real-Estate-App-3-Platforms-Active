@@ -5,9 +5,9 @@ import { Button } from '@/components/ui/button';
 
 const links = [
 	{ text: 'Buy or Rent', href: '/listings' },
-	{ text: 'Sell or List', href: '/listings' },
-	{ text: 'Home Value', href: '/listings' },
-	{ text: 'Franchise', href: '/listings' },
+	{ text: 'Sell or List', href: '/sell' },
+	{ text: 'Home Value', href: '/home-value' },
+	{ text: 'Franchise', href: '/franchise' },
 ];
 
 export default function SiteNavbar() {
@@ -16,7 +16,7 @@ export default function SiteNavbar() {
 	return (
 		<nav className="relative z-50 border-b border-gray-200 bg-white px-4 py-4 md:px-10 xl:px-16">
 			<div className="mx-auto flex max-w-[1600px] items-center justify-between">
-				<Link to="/" className="flex items-center">
+				<Link to="/" className="flex items-center" onClick={() => setIsNavOpen(false)}>
 					<BuildingIcon className="h-8 w-8 text-primary" />
 					<span className="ml-3 text-lg font-bold uppercase tracking-wider text-gray-900">
 						HOC Living Faro
@@ -47,11 +47,29 @@ export default function SiteNavbar() {
 							{text}
 						</Link>
 					))}
+					<Link
+						to="/contact"
+						className="text-sm text-gray-600 transition hover:text-primary md:hidden"
+						onClick={() => setIsNavOpen(false)}
+					>
+						Contact us
+					</Link>
+					<Link
+						to="/join"
+						className="text-sm font-semibold text-primary md:hidden"
+						onClick={() => setIsNavOpen(false)}
+					>
+						Join
+					</Link>
 				</div>
 
 				<div className="hidden gap-2 md:flex">
-					<Button variant="outline">Contact us</Button>
-					<Button className="bg-accent text-white hover:bg-accentHover">Join</Button>
+					<Button variant="outline" asChild>
+						<Link to="/contact">Contact us</Link>
+					</Button>
+					<Button className="bg-accent text-white hover:bg-accentHover" asChild>
+						<Link to="/join">Join</Link>
+					</Button>
 				</div>
 			</div>
 		</nav>
