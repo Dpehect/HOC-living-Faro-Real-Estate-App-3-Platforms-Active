@@ -1,1 +1,185 @@
-{"total": 300000, "countries": [{"country": "Germany", "file": "data/countries/Germany.json", "count": 10000}, {"country": "France", "file": "data/countries/France.json", "count": 10000}, {"country": "Finland", "file": "data/countries/Finland.json", "count": 10000}, {"country": "Sweden", "file": "data/countries/Sweden.json", "count": 10000}, {"country": "Norway", "file": "data/countries/Norway.json", "count": 10000}, {"country": "Denmark", "file": "data/countries/Denmark.json", "count": 10000}, {"country": "Netherlands", "file": "data/countries/Netherlands.json", "count": 10000}, {"country": "Belgium", "file": "data/countries/Belgium.json", "count": 10000}, {"country": "Austria", "file": "data/countries/Austria.json", "count": 10000}, {"country": "Switzerland", "file": "data/countries/Switzerland.json", "count": 10000}, {"country": "Italy", "file": "data/countries/Italy.json", "count": 10000}, {"country": "Spain", "file": "data/countries/Spain.json", "count": 10000}, {"country": "Portugal", "file": "data/countries/Portugal.json", "count": 10000}, {"country": "Poland", "file": "data/countries/Poland.json", "count": 10000}, {"country": "Czech Republic", "file": "data/countries/Czech_Republic.json", "count": 10000}, {"country": "Ireland", "file": "data/countries/Ireland.json", "count": 10000}, {"country": "United Kingdom", "file": "data/countries/United_Kingdom.json", "count": 10000}, {"country": "Greece", "file": "data/countries/Greece.json", "count": 10000}, {"country": "Hungary", "file": "data/countries/Hungary.json", "count": 10000}, {"country": "Romania", "file": "data/countries/Romania.json", "count": 10000}, {"country": "Croatia", "file": "data/countries/Croatia.json", "count": 10000}, {"country": "Slovakia", "file": "data/countries/Slovakia.json", "count": 10000}, {"country": "Slovenia", "file": "data/countries/Slovenia.json", "count": 10000}, {"country": "Estonia", "file": "data/countries/Estonia.json", "count": 10000}, {"country": "Latvia", "file": "data/countries/Latvia.json", "count": 10000}, {"country": "Lithuania", "file": "data/countries/Lithuania.json", "count": 10000}, {"country": "Luxembourg", "file": "data/countries/Luxembourg.json", "count": 10000}, {"country": "Iceland", "file": "data/countries/Iceland.json", "count": 10000}, {"country": "Bulgaria", "file": "data/countries/Bulgaria.json", "count": 10000}, {"country": "Serbia", "file": "data/countries/Serbia.json", "count": 10000}]}
+{
+  "total": 195000,
+  "countries": [
+    {
+      "country": "Austria",
+      "file": "data/countries/Austria.json",
+      "count": 6000,
+      "cities": 6
+    },
+    {
+      "country": "Belgium",
+      "file": "data/countries/Belgium.json",
+      "count": 6000,
+      "cities": 6
+    },
+    {
+      "country": "Bulgaria",
+      "file": "data/countries/Bulgaria.json",
+      "count": 5000,
+      "cities": 5
+    },
+    {
+      "country": "Croatia",
+      "file": "data/countries/Croatia.json",
+      "count": 5000,
+      "cities": 5
+    },
+    {
+      "country": "Czech Republic",
+      "file": "data/countries/Czech_Republic.json",
+      "count": 5000,
+      "cities": 5
+    },
+    {
+      "country": "Denmark",
+      "file": "data/countries/Denmark.json",
+      "count": 5000,
+      "cities": 5
+    },
+    {
+      "country": "Estonia",
+      "file": "data/countries/Estonia.json",
+      "count": 4000,
+      "cities": 4
+    },
+    {
+      "country": "Finland",
+      "file": "data/countries/Finland.json",
+      "count": 6000,
+      "cities": 6
+    },
+    {
+      "country": "France",
+      "file": "data/countries/France.json",
+      "count": 12000,
+      "cities": 12
+    },
+    {
+      "country": "Germany",
+      "file": "data/countries/Germany.json",
+      "count": 15000,
+      "cities": 15
+    },
+    {
+      "country": "Greece",
+      "file": "data/countries/Greece.json",
+      "count": 6000,
+      "cities": 6
+    },
+    {
+      "country": "Hungary",
+      "file": "data/countries/Hungary.json",
+      "count": 5000,
+      "cities": 5
+    },
+    {
+      "country": "Iceland",
+      "file": "data/countries/Iceland.json",
+      "count": 4000,
+      "cities": 4
+    },
+    {
+      "country": "Ireland",
+      "file": "data/countries/Ireland.json",
+      "count": 5000,
+      "cities": 5
+    },
+    {
+      "country": "Italy",
+      "file": "data/countries/Italy.json",
+      "count": 12000,
+      "cities": 12
+    },
+    {
+      "country": "Latvia",
+      "file": "data/countries/Latvia.json",
+      "count": 4000,
+      "cities": 4
+    },
+    {
+      "country": "Lithuania",
+      "file": "data/countries/Lithuania.json",
+      "count": 4000,
+      "cities": 4
+    },
+    {
+      "country": "Luxembourg",
+      "file": "data/countries/Luxembourg.json",
+      "count": 3000,
+      "cities": 3
+    },
+    {
+      "country": "Netherlands",
+      "file": "data/countries/Netherlands.json",
+      "count": 8000,
+      "cities": 8
+    },
+    {
+      "country": "Norway",
+      "file": "data/countries/Norway.json",
+      "count": 6000,
+      "cities": 6
+    },
+    {
+      "country": "Poland",
+      "file": "data/countries/Poland.json",
+      "count": 8000,
+      "cities": 8
+    },
+    {
+      "country": "Portugal",
+      "file": "data/countries/Portugal.json",
+      "count": 6000,
+      "cities": 6
+    },
+    {
+      "country": "Romania",
+      "file": "data/countries/Romania.json",
+      "count": 6000,
+      "cities": 6
+    },
+    {
+      "country": "Serbia",
+      "file": "data/countries/Serbia.json",
+      "count": 5000,
+      "cities": 5
+    },
+    {
+      "country": "Slovakia",
+      "file": "data/countries/Slovakia.json",
+      "count": 4000,
+      "cities": 4
+    },
+    {
+      "country": "Slovenia",
+      "file": "data/countries/Slovenia.json",
+      "count": 4000,
+      "cities": 4
+    },
+    {
+      "country": "Spain",
+      "file": "data/countries/Spain.json",
+      "count": 12000,
+      "cities": 12
+    },
+    {
+      "country": "Sweden",
+      "file": "data/countries/Sweden.json",
+      "count": 6000,
+      "cities": 6
+    },
+    {
+      "country": "Switzerland",
+      "file": "data/countries/Switzerland.json",
+      "count": 6000,
+      "cities": 6
+    },
+    {
+      "country": "United Kingdom",
+      "file": "data/countries/United_Kingdom.json",
+      "count": 12000,
+      "cities": 12
+    }
+  ]
+}
