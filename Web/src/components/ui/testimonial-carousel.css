@@ -1,5 +1,5 @@
 .testimonial-section { --testimonial-ink: #111827; --testimonial-purple: #6b46c1; margin-top: 1rem; overflow: hidden; padding: 3rem 0 2.5rem; background: #fff; }
-.testimonial-heading { position: relative; z-index: 30; margin: 0 auto 1.5rem; padding: 0 1.5rem; text-align: center; }
+.testimonial-heading { position: relative; z-index: 30; margin: 0 auto 2.75rem; padding: 0 1.5rem; text-align: center; }
 .testimonial-heading p { margin: 0 0 .65rem; color: #746b83; font-size: .75rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .testimonial-heading h2 { max-width: 480px; margin: 0 auto; color: var(--testimonial-ink); font-size: clamp(1.65rem, 2.8vw, 2.75rem); font-weight: 750; letter-spacing: -.04em; line-height: 1; }
 .testimonial-heading h2 span { color: var(--testimonial-purple); }
@@ -23,8 +23,8 @@
 .testimonial-arrow:hover { transform: scale(1.08); background: #fff; }
 .testimonial-arrow--left { left: 1rem; }
 .testimonial-arrow--right { right: 1rem; }
-.testimonial-dots { display: flex; justify-content: center; align-items: center; gap: .5rem; margin-top: .35rem; }
+.testimonial-dots { display: flex; justify-content: center; align-items: center; gap: .5rem; margin-top: 1.25rem; }
 .testimonial-dots button { width: .44rem; height: .44rem; padding: 0; border: 0; border-radius: 999px; background: #d9cbed; transition: background .2s ease, transform .2s ease; }
 .testimonial-dots button[aria-selected='true'] { background: var(--testimonial-purple); transform: scale(1.25); }
-@media (max-width: 720px) { .testimonial-section { padding: 2.75rem 0 2.25rem; } .testimonial-carousel { --testimonial-card-width: 190px; --testimonial-card-height: 260px; --testimonial-radius: 205px; } .testimonial-card { padding: 1.2rem 1.05rem; border-radius: 16px; } .testimonial-quote { font-size: .82rem; } .testimonial-author img { width: 2.4rem; height: 2.4rem; } .testimonial-arrow { display: none; } }
+@media (max-width: 720px) { .testimonial-section { padding: 2.75rem 0 2.25rem; } .testimonial-heading { margin-bottom: 2.1rem; } .testimonial-carousel { --testimonial-card-width: 190px; --testimonial-card-height: 260px; --testimonial-radius: 205px; } .testimonial-card { padding: 1.2rem 1.05rem; border-radius: 16px; } .testimonial-quote { font-size: .82rem; } .testimonial-author img { width: 2.4rem; height: 2.4rem; } .testimonial-arrow { display: none; } .testimonial-dots { margin-top: .9rem; } }
 @media (prefers-reduced-motion: reduce) { .testimonial-slot, .testimonial-dots button, .testimonial-arrow { transition-duration: .01ms; } }
