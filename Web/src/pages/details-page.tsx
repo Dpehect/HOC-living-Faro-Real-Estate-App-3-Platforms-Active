@@ -310,7 +310,7 @@ function SinglePage() {
 							</div>
 							<div className="h-[320px]">
 								<Map
-									items={isMapExpanded ? posts : [post]}
+									items={post ? [post] : []}
 									expanded={isMapExpanded}
 									onExpand={() => setIsMapExpanded(true)}
 									onClose={() => setIsMapExpanded(false)}

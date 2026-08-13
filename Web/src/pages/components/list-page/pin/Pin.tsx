@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './pin.css';
 
 function Pin({ item }) {
+	if (!item) return null;
 	const lat = Number(item.latitude);
 	const lng = Number(item.longitude);
 	if (Number.isNaN(lat) || Number.isNaN(lng)) return null;

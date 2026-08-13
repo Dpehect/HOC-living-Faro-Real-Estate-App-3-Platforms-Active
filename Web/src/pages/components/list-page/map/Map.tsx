@@ -20,7 +20,7 @@ L.Icon.Default.mergeOptions({
 const MAX_MARKERS = 1200;
 
 /** One pin per city when zoomed out; individual pins when zoomed in */
-function VisiblePins({ items }) {
+function VisiblePins({ items = [] }) {
 	const map = useMap();
 	const [bounds, setBounds] = useState(null);
 	const [zoom, setZoom] = useState(map.getZoom());
@@ -198,22 +198,23 @@ function MapControls({ expanded }) {
 	return null;
 }
 
-function Map({
-	items = [],
-	expanded,
-	onExpand,
-	onClose,
-	selectedLocation,
-	onLocationSelect,
-	radiusKm = 5,
-	simple = false,
-	showAreaHint = true,
-}) {
+function Map(props) {
+	const {
+		items = [],
+		expanded,
+		onExpand,
+		onClose,
+		selectedLocation,
+		onLocationSelect,
+		radiusKm = 5,
+		simple = false,
+		showAreaHint = true,
+	} = props || {};
 	const radiusMeters = Number(radiusKm) * 1000;
 	const isSimple = simple || expanded === undefined;
 
 	const center = useMemo(() => {
-		if (items.length === 1) {
+		if (items && items.length === 1) {
 			return [Number(items[0].latitude), Number(items[0].longitude)];
 		}
 		return [50.0, 10.0];
@@ -266,7 +267,7 @@ function Map({
 
 			<MapContainer
 				center={center}
-				zoom={items.length === 1 ? 14 : items.length > 100 ? 6 : 11}
+				zoom={(items?.length || 0) === 1 ? 14 : (items?.length || 0) > 100 ? 6 : 11}
 				scrollWheelZoom={isSimple || !!expanded}
 				dragging={true}
 				doubleClickZoom={isSimple || !!expanded}
