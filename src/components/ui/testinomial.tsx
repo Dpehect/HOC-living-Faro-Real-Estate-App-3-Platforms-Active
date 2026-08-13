@@ -63,8 +63,8 @@ export const TestimonialCarousel = ({ items, initialIndex = 0 }: { items: Testim
 								onClick={() => !isActive && goTo(index)}
 							>
 								<blockquote className="testimonial-card">
-									<div className="testimonial-stars" aria-label="5 out of 5 stars">
-										{Array.from({ length: 5 }).map((_, starIndex) => <Star key={starIndex} />)}
+									<div className="testimonial-stars" aria-label="3 out of 3 stars">
+										{Array.from({ length: 3 }).map((_, starIndex) => <Star key={starIndex} />)}
 									</div>
 									<p className="testimonial-quote">“{item.text}”</p>
 									<footer className="testimonial-author">
