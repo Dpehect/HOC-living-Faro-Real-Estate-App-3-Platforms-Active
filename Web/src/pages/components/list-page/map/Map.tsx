@@ -1,4 +1,4 @@
-import { CircleMarker, MapContainer, TileLayer, useMap, useMapEvents } from 'react-leaflet';
+import { Circle, CircleMarker, MapContainer, TileLayer, useMap, useMapEvents } from 'react-leaflet';
 import { useEffect } from 'react';
 import L from 'leaflet';
 import './map.css';
@@ -45,12 +45,14 @@ function ResizeMap({ expanded }) {
 	return null;
 }
 
-function Map({ items, expanded, onExpand, onClose, selectedLocation, onLocationSelect }) {
+function Map({ items, expanded, onExpand, onClose, selectedLocation, onLocationSelect, radiusKm = 5 }) {
+	const radiusMeters = Number(radiusKm) * 1000;
+
 	return (
 		<div className={expanded ? 'map-shell map-shell--expanded' : 'map-shell'}>
 			{/* Toolbar */}
 			<div className="map-toolbar">
-				{/* Sol taraf: sadece expanded + henüz konum seçilmemişse göster */}
+				{/* Sol balon: sadece expanded + konum seçilmemişse */}
 				{expanded && !selectedLocation ? (
 					<div>
 						<strong>Choose an area in Faro</strong>
@@ -62,11 +64,10 @@ function Map({ items, expanded, onExpand, onClose, selectedLocation, onLocationS
 						<span>Click to expand and choose a location</span>
 					</div>
 				) : (
-					/* expanded + konum seçildi → sol balon tamamen kaybolsun */
-					<div style={{ visibility: 'hidden' }} />
+					/* konum seçildi → sol balon kaybolsun */
+					<div style={{ visibility: 'hidden', width: 1, height: 1 }} />
 				)}
 
-				{/* Sağ taraf: her zaman buton */}
 				{expanded ? (
 					<button type="button" onClick={onClose}>
 						Close map
@@ -94,26 +95,45 @@ function Map({ items, expanded, onExpand, onClose, selectedLocation, onLocationS
 					onLocationSelect={onLocationSelect}
 				/>
 				<ResizeMap expanded={expanded} />
+
+				{/* İlan pin'leri */}
 				{items.map((item) => (
 					<Pin item={item} key={item.id} />
 				))}
+
+				{/* Seçilen bölge: merkez nokta + yarıçap dairesi */}
 				{selectedLocation && (
-					<CircleMarker
-						center={[selectedLocation.latitude, selectedLocation.longitude]}
-						radius={12}
-						pathOptions={{
-							color: '#4f46e5',
-							fillColor: '#6366f1',
-							fillOpacity: 0.9,
-							weight: 4,
-						}}
-					/>
+					<>
+						<CircleMarker
+							center={[selectedLocation.latitude, selectedLocation.longitude]}
+							radius={10}
+							pathOptions={{
+								color: '#4f46e5',
+								fillColor: '#6366f1',
+								fillOpacity: 1,
+								weight: 3,
+							}}
+						/>
+						<Circle
+							center={[selectedLocation.latitude, selectedLocation.longitude]}
+							radius={radiusMeters}
+							pathOptions={{
+								color: '#4f46e5',
+								fillColor: '#6366f1',
+								fillOpacity: 0.12,
+								weight: 2,
+								dashArray: '6 6',
+							}}
+						/>
+					</>
 				)}
 			</MapContainer>
 
-			{/* Altta mor banner - sadece konum seçildiyse */}
+			{/* Alt banner */}
 			{expanded && selectedLocation && (
-				<div className="map-selection">Showing homes within the selected radius</div>
+				<div className="map-selection">
+					Showing homes within {radiusKm} km of selected area
+				</div>
 			)}
 		</div>
 	);

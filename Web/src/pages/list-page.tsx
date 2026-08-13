@@ -56,7 +56,7 @@ function ListPage() {
 		};
 	}, [isMapExpanded]);
 
-	// Browser Back button closes the expanded map instead of leaving the page
+	// Browser Back → sadece haritayı kapat, sayfadan çıkma
 	useEffect(() => {
 		if (!isMapExpanded) return;
 
@@ -80,7 +80,12 @@ function ListPage() {
 			if (filters.minPrice && post.price < Number(filters.minPrice)) return false;
 			if (filters.maxPrice && post.price > Number(filters.maxPrice)) return false;
 			if (filters.bedrooms && Number(post.bedroom || 0) < Number(filters.bedrooms)) return false;
-			if (selectedLocation && distanceInKm(selectedLocation, post) > Number(filters.radius)) return false;
+
+			// Haritadan seçilen bölgeye göre filtrele
+			if (selectedLocation) {
+				const dist = distanceInKm(selectedLocation, post);
+				if (dist > Number(filters.radius || 5)) return false;
+			}
 			return true;
 		});
 	}, [filters, selectedLocation]);
@@ -92,7 +97,14 @@ function ListPage() {
 
 	const handleCloseMap = () => {
 		setIsMapExpanded(false);
-		setSelectedLocation(null);
+		// selectedLocation'ı silmiyoruz → filtre aktif kalsın
+		// Temizlemek için "Clear filters" kullanılacak
+	};
+
+	const handleLocationSelect = (location) => {
+		setSelectedLocation(location);
+		// İsteğe bağlı: seçimden sonra haritayı otomatik kapatmak istersen aç:
+		// setIsMapExpanded(false);
 	};
 
 	return (
@@ -194,7 +206,8 @@ function ListPage() {
 							onExpand={() => setIsMapExpanded(true)}
 							onClose={handleCloseMap}
 							selectedLocation={selectedLocation}
-							onLocationSelect={setSelectedLocation}
+							onLocationSelect={handleLocationSelect}
+							radiusKm={Number(filters.radius) || 5}
 						/>
 					</Suspense>
 				</div>
