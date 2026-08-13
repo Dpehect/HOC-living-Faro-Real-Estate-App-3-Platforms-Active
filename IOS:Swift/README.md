@@ -2,6 +2,17 @@
 
 iOS version of the [HOC Living Faro Real Estate web app](https://github.com/Dpehect/HOC-living-Faro-Real-Estate-WEB-App).
 
+## Screenshots
+
+| Home | Listings | Detail |
+|------|----------|--------|
+| Hero, stats, featured properties | Filters (type / property / bedrooms) | Gallery, specs, description, CTA |
+
+Place PNG screenshots in `screenshots/`:
+- `home.png` — Home screen  
+- `listings.png` — Listings + filters  
+- `detail.png` — Property detail  
+
 ## Features
 
 - **Home** — Hero, stats, featured properties, “Why us”
@@ -28,9 +39,9 @@ If signing is required for a physical device, set your **Team** under Signing & 
 
 ```
 HOCLivingFaro/
-├── HOCLivingFaroApp.swift      # @main entry
-├── ContentView.swift           # Navigation root
-├── Data/SampleData.swift       # Models + sample listings
+├── HOCLivingFaroApp.swift
+├── ContentView.swift
+├── Data/SampleData.swift
 ├── Theme/Theme.swift
 ├── Components/PropertyCardView.swift
 └── Views/

@@ -2,6 +2,17 @@
 
 Android version of the [HOC Living Faro Real Estate web app](https://github.com/Dpehect/HOC-living-Faro-Real-Estate-WEB-App).
 
+## Screenshots
+
+| Home | Listings | Detail |
+|------|----------|--------|
+| Hero, stats, featured properties | Filters (type / property / bedrooms) | Gallery, specs, description, CTA |
+
+Place PNG screenshots in `screenshots/`:
+- `home.png` — Home screen  
+- `listings.png` — Listings + filters  
+- `detail.png` — Property detail  
+
 ## Features
 
 - **Home screen** — Hero section, stats (listings / cities / for rent), featured properties, why-us section  
@@ -32,7 +43,7 @@ If Gradle wrapper binaries are missing, Android Studio will offer to create them
 ```
 app/src/main/java/com/hocliving/faro/
 ├── MainActivity.kt
-├── data/SampleData.kt          # Property models + sample listings
+├── data/SampleData.kt
 ├── navigation/AppNavHost.kt
 └── ui/
     ├── components/PropertyCard.kt
@@ -40,7 +51,7 @@ app/src/main/java/com/hocliving/faro/
     │   ├── HomeScreen.kt
     │   ├── ListingsScreen.kt
     │   └── DetailScreen.kt
-    └── theme/                  # Colors, Typography, Theme
+    └── theme/
 ```
 
 ## Notes
