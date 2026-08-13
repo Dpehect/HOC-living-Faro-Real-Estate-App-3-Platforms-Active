@@ -1,47 +1,33 @@
-# HOC Living — iOS App (SwiftUI)
+# HOC Living — iOS (SwiftUI)
 
-iOS version of the [HOC Living Real Estate web app](https://github.com/Dpehect/HOC-living-München-Real-Estate-WEB-App).
+Native iOS companion to the **HOC Living** Web app (Europe-wide real estate).
 
-## Screenshots
-
-| Home | Listings | Detail |
-|------|----------|--------|
-| Hero, stats, featured properties | Filters (type / property / bedrooms) | Gallery, specs, description, CTA |
-
-Place PNG screenshots in `screenshots/`:
-- `home.png` — Home screen  
-- `listings.png` — Listings + filters  
-- `detail.png` — Property detail  
-
-## Features
-
-- **Home** — Hero, stats, featured properties, “Why us”
-- **Listings** — Filters: Buy/Rent, Apartment/House, min bedrooms
-- **Detail** — Image pager, price, specs, description, policies, “Request a tour”
-- **Sample data** — 24 properties from the original web app (München)
+## Same as Web
+- Brand: **HOC Living** — Homes across Europe
+- Stats: 300,000 listings · 30 countries · 60k for rent
+- Country selector loads the **same** country JSON files as the Web deployment
+- Filters: Buy/Rent, Apartment/House, min bedrooms
+- Data source: `https://hoc-living-faro-real-estate-web-app.vercel.app/data/`
 
 ## Requirements
-
 - Xcode 15+
-- iOS 16.0+
-- Swift 5.9+
+- iOS 16+
 
-## How to run
-
-1. Unzip the archive.
-2. Open `HOCLiving.xcodeproj` in Xcode.
-3. Select an iPhone simulator (or device).
-4. Press **Run** (⌘R).
-
-If signing is required for a physical device, set your **Team** under Signing & Capabilities.
+## Run
+1. Open `HOCLiving.xcodeproj` in Xcode (create a new App project and replace sources if project file is missing)
+2. Add all files under `HOCLiving/` to the target
+3. Enable outbound network (App Transport Security allows HTTPS by default)
+4. Run on simulator or device
 
 ## Project structure
-
 ```
 HOCLiving/
 ├── HOCLivingApp.swift
 ├── ContentView.swift
-├── Data/SampleData.swift
+├── Data/
+│   ├── Models.swift
+│   ├── ListingsRepository.swift
+│   └── SampleData.swift
 ├── Theme/Theme.swift
 ├── Components/PropertyCardView.swift
 └── Views/
@@ -51,9 +37,6 @@ HOCLiving/
 ```
 
 ## Notes
-
-- Images load from remote URLs used by the web app (network required).
-- “Request a tour” is a UI placeholder.
-- MapKit can be added later for map search.
-
-Built as a native SwiftUI companion to the original React site.
+- Listings are fetched per country on demand (same as Web)
+- Offline fallback sample (Germany cities) if network fails
+- Old Faro project removed — only HOCLiving remains

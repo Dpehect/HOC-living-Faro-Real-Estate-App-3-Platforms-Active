@@ -44,7 +44,7 @@ struct PropertyCardView: View {
                     .font(.headline)
                     .lineLimit(1)
 
-                Text("\(property.address), \(property.city)")
+                Text(property.locationLine)
                     .font(.subheadline)
                     .foregroundStyle(AppTheme.textSecondary)
                     .lineLimit(1)

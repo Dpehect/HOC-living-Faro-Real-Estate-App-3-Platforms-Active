@@ -1,0 +1,77 @@
+import Foundation
+
+struct PostDetail: Identifiable, Codable, Hashable {
+    var id: String { desc.prefix(20) + String(size) }
+    let desc: String
+    let utilities: String
+    let pet: String
+    let income: String
+    let size: Int
+}
+
+struct Property: Identifiable, Codable, Hashable {
+    let id: Int
+    let title: String
+    let price: Int
+    let images: [String]
+    let address: String
+    let city: String
+    var country: String = ""
+    let bedroom: Int
+    let bathroom: Int
+    let latitude: Double
+    let longitude: Double
+    let type: String
+    let property: String
+    let postDetail: PostDetail
+
+    var isRent: Bool { type == "rent" }
+    var priceFormatted: String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = "EUR"
+        formatter.maximumFractionDigits = 0
+        let base = formatter.string(from: NSNumber(value: price)) ?? "€\(price)"
+        return isRent ? "\(base)/mo" : base
+    }
+    var locationLine: String {
+        let parts = [address, city, country].filter { !$0.isEmpty }
+        return parts.joined(separator: ", ")
+    }
+}
+
+struct CountryEntry: Codable {
+    let country: String
+    let file: String
+    let count: Int?
+}
+
+struct Manifest: Codable {
+    let total: Int?
+    let countries: [CountryEntry]
+}
+
+
+extension Property {
+    enum CodingKeys: String, CodingKey {
+        case id, title, price, images, address, city, country, bedroom, bathroom
+        case latitude, longitude, type, property, postDetail
+    }
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        id = try c.decode(Int.self, forKey: .id)
+        title = try c.decode(String.self, forKey: .title)
+        price = try c.decode(Int.self, forKey: .price)
+        images = try c.decode([String].self, forKey: .images)
+        address = try c.decode(String.self, forKey: .address)
+        city = try c.decode(String.self, forKey: .city)
+        country = try c.decodeIfPresent(String.self, forKey: .country) ?? ""
+        bedroom = try c.decode(Int.self, forKey: .bedroom)
+        bathroom = try c.decode(Int.self, forKey: .bathroom)
+        latitude = try c.decode(Double.self, forKey: .latitude)
+        longitude = try c.decode(Double.self, forKey: .longitude)
+        type = try c.decode(String.self, forKey: .type)
+        property = try c.decode(String.self, forKey: .property)
+        postDetail = try c.decode(PostDetail.self, forKey: .postDetail)
+    }
+}

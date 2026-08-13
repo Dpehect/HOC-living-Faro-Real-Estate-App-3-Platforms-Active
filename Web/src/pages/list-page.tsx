@@ -5,7 +5,7 @@ import Card from './components/list-page/Card';
 import { Filter, type ListingFilters } from './components/list-page/filter-section';
 import Map from './components/list-page/map/Map';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import SiteNavbar from '@/components/SiteNavbar';
 import SiteFooter from '@/components/SiteFooter';
 
@@ -44,16 +44,20 @@ function distanceInKm(a, b) {
 }
 
 function ListPage() {
+	const [searchParams] = useSearchParams();
 	const [isMapExpanded, setIsMapExpanded] = useState(false);
 	const [selectedLocation, setSelectedLocation] = useState(null);
-	const [filters, setFilters] = useState<ListingFilters>(defaultFilters);
+	const [filters, setFilters] = useState<ListingFilters>(() => ({
+		...defaultFilters,
+		query: searchParams.get('q') || searchParams.get('city') || '',
+	}));
 	const [page, setPage] = useState(1);
 	const [postsData, setPostsData] = useState<Listing[]>([]);
 	const [europeRegions, setEuropeRegions] = useState<
 		{ city: string; country: string; count: number; latitude: number; longitude: number }[]
 	>([]);
 	const [countries, setCountries] = useState<string[]>([]);
-	const [activeCountry, setActiveCountry] = useState('Germany');
+	const [activeCountry, setActiveCountry] = useState(() => searchParams.get('country') || 'Germany');
 	const [loading, setLoading] = useState(true);
 	const [loadError, setLoadError] = useState('');
 	const links = ['Buy or Rent', 'Sell or List', 'Home Value', 'Franchise'];
@@ -112,10 +116,21 @@ function ListPage() {
 	}, [activeCountry]);
 
 	const filteredPosts = useMemo(() => {
+		const q = filters.query.toLowerCase().trim();
+		// If query exactly matches a city name in current data, filter by city (map popup / autocomplete)
+		const exactCity =
+			q &&
+			postsData.some((p) => (p.city || '').toLowerCase() === q)
+				? q
+				: null;
+
 		return postsData.filter((post) => {
-			const searchable = `${post.title} ${post.address} ${post.city} ${post.country || ''}`.toLowerCase();
-			const q = filters.query.toLowerCase().trim();
-			if (q && !searchable.includes(q)) return false;
+			if (exactCity) {
+				if ((post.city || '').toLowerCase() !== exactCity) return false;
+			} else if (q) {
+				const searchable = `${post.title} ${post.address} ${post.city} ${post.country || ''}`.toLowerCase();
+				if (!searchable.includes(q)) return false;
+			}
 			if (filters.type && post.type !== filters.type) return false;
 			if (filters.property && post.property !== filters.property) return false;
 			if (filters.minPrice && post.price < Number(filters.minPrice)) return false;
@@ -127,11 +142,11 @@ function ListPage() {
 			}
 			return true;
 		});
-	}, [filters, selectedLocation]);
+	}, [filters, selectedLocation, postsData]);
 
 	useEffect(() => {
 		setPage(1);
-	}, [filters, selectedLocation]);
+	}, [filters, selectedLocation, postsData]);
 
 	const totalPages = Math.max(1, Math.ceil(filteredPosts.length / PAGE_SIZE));
 	const pageItems = filteredPosts.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);

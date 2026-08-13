@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1000000000000000000000B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000B /* Models.swift */; };
+		A1000000000000000000000C /* ListingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000C /* ListingsRepository.swift */; };
 		A10000000000000000000001 /* HOCLivingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* HOCLivingApp.swift */; };
 		A10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* ContentView.swift */; };
 		A10000000000000000000003 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* SampleData.swift */; };
@@ -29,6 +31,8 @@
 		A20000000000000000000008 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		A20000000000000000000009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2000000000000000000000A /* HOCLiving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HOCLiving.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000000000000000000000B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A2000000000000000000000C /* ListingsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				A20000000000000000000003 /* SampleData.swift */,
+				A2000000000000000000000B /* Models.swift */,
+				A2000000000000000000000C /* ListingsRepository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 				A10000000000000000000001 /* HOCLivingApp.swift in Sources */,
 				A10000000000000000000002 /* ContentView.swift in Sources */,
 				A10000000000000000000003 /* SampleData.swift in Sources */,
+				A1000000000000000000000B /* Models.swift in Sources */,
+				A1000000000000000000000C /* ListingsRepository.swift in Sources */,
 				A10000000000000000000004 /* Theme.swift in Sources */,
 				A10000000000000000000005 /* PropertyCardView.swift in Sources */,
 				A10000000000000000000006 /* HomeView.swift in Sources */,

@@ -19,6 +19,7 @@ import TestimonialSection from './sections/testimonial';
 import SiteFooter from '@/components/SiteFooter';
 import { Link, useNavigate } from 'react-router-dom';
 import SiteNavbar from '@/components/SiteNavbar';
+import EuropeSearch from '@/components/EuropeSearch';
 
 // Define animation variants
 const containerVariants = {
@@ -78,17 +79,8 @@ export default function App() {
 						<p className="text-gray-600 mb-6 text-center lg:text-left">
 							Search 300,000 live listings across 30 European countries
 						</p>
-						<motion.div
-							className="flex items-center bg-white shadow-md rounded-lg overflow-hidden"
-							variants={leftItemVariants}
-						>
-							<Input
-								placeholder="Search properties in your city"
-								className="flex-grow px-4 py-2"
-							/>
-							<Button className="bg-primary text-white px-4 py-2">
-								<MicroscopeIcon className="h-5 w-5" />
-							</Button>
+						<motion.div className="w-full" variants={leftItemVariants}>
+							<EuropeSearch />
 						</motion.div>
 						<motion.div
 							className="mt-8 grid grid-cols-3 gap-2 md:gap-8 text-center"

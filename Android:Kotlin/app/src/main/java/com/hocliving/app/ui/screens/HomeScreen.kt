@@ -9,10 +9,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Apartment
 import androidx.compose.material.icons.outlined.Home
-import androidx.compose.material.icons.outlined.LocationCity
+import androidx.compose.material.icons.outlined.Public
 import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -20,7 +20,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.hocliving.app.data.SampleData
+import com.hocliving.app.data.ListingsRepository
+import com.hocliving.app.data.Property
 import com.hocliving.app.ui.components.PropertyCard
 import com.hocliving.app.ui.theme.TealContainer
 import com.hocliving.app.ui.theme.TealPrimary
@@ -31,7 +32,20 @@ fun HomeScreen(
     onBrowseListings: () -> Unit,
     onPropertyClick: (Int) -> Unit
 ) {
-    val featured = SampleData.properties.take(6)
+    var featured by remember { mutableStateOf<List<Property>>(emptyList()) }
+    var loading by remember { mutableStateOf(true) }
+
+    LaunchedEffect(Unit) {
+        loading = true
+        try {
+            val list = ListingsRepository.loadCountry("Germany")
+            featured = list.take(6)
+        } catch (_: Exception) {
+            featured = ListingsRepository.fallbackSample().take(6)
+        } finally {
+            loading = false
+        }
+    }
 
     Scaffold(
         topBar = {
@@ -47,18 +61,19 @@ fun HomeScreen(
         ) {
             item {
                 Column(
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier
+                        .fillMaxWidth()
                         .background(TealContainer.copy(alpha = 0.4f))
                         .padding(20.dp)
                 ) {
                     Text(
-                        "Homes across München & Bayern, centered in München",
+                        "Homes across Europe",
                         style = MaterialTheme.typography.headlineMedium,
                         fontWeight = FontWeight.Bold
                     )
                     Spacer(Modifier.height(8.dp))
                     Text(
-                        "Search live listings — from München apartments to homes in Schwabing, Maxvorstadt and beyond.",
+                        "Search 300,000 live listings across 30 European countries",
                         style = MaterialTheme.typography.bodyLarge,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -89,9 +104,9 @@ fun HomeScreen(
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 20.dp),
                     horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    StatCard(Icons.Outlined.Home, "1,098", "Listings", Modifier.weight(1f))
-                    StatCard(Icons.Outlined.LocationCity, "539", "Cities", Modifier.weight(1f))
-                    StatCard(Icons.Outlined.ThumbUp, "482", "For rent", Modifier.weight(1f))
+                    StatCard(Icons.Outlined.Home, "300k", "Listings", Modifier.weight(1f))
+                    StatCard(Icons.Outlined.Public, "30", "Countries", Modifier.weight(1f))
+                    StatCard(Icons.Outlined.ThumbUp, "60k", "For rent", Modifier.weight(1f))
                 }
             }
             item {
@@ -104,19 +119,27 @@ fun HomeScreen(
                     TextButton(onClick = onBrowseListings) { Text("See all") }
                 }
             }
-            items(featured) { property ->
-                PropertyCard(
-                    property = property,
-                    onClick = { onPropertyClick(property.id) },
-                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
-                )
+            if (loading) {
+                item {
+                    Box(Modifier.fillMaxWidth().padding(32.dp), contentAlignment = Alignment.Center) {
+                        CircularProgressIndicator(color = TealPrimary)
+                    }
+                }
+            } else {
+                items(featured, key = { it.id }) { property ->
+                    PropertyCard(
+                        property = property,
+                        onClick = { onPropertyClick(property.id) },
+                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+                    )
+                }
             }
             item {
                 Column(Modifier.fillMaxWidth().padding(16.dp)) {
                     Text("Why HOC Living?", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.SemiBold)
                     Spacer(Modifier.height(12.dp))
-                    FeatureRow(Icons.Outlined.Apartment, "Local expertise", "Deep knowledge of München and surroundings market.")
-                    FeatureRow(Icons.Outlined.Home, "Verified listings", "Every property is carefully reviewed.")
+                    FeatureRow(Icons.Outlined.Public, "Europe-wide coverage", "30 countries · 300,000 live listings.")
+                    FeatureRow(Icons.Outlined.Apartment, "Verified listings", "Every property is carefully reviewed.")
                     FeatureRow(Icons.Outlined.ThumbUp, "End-to-end support", "From search to keys in hand.")
                 }
             }

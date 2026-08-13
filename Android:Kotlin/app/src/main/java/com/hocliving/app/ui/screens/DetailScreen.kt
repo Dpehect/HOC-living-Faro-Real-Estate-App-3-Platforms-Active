@@ -22,7 +22,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import com.hocliving.app.data.ListingsRepository
+import com.hocliving.app.data.Property
 import com.hocliving.app.data.SampleData
+import androidx.compose.runtime.*
 import com.hocliving.app.ui.theme.TealPrimary
 import java.text.NumberFormat
 import java.util.Locale
@@ -33,7 +36,28 @@ fun DetailScreen(
     propertyId: Int,
     onBack: () -> Unit
 ) {
-    val property = SampleData.properties.find { it.id == propertyId }
+    var property by remember { mutableStateOf<Property?>(null) }
+    var loading by remember { mutableStateOf(true) }
+
+    LaunchedEffect(propertyId) {
+        loading = true
+        // Search offline sample first, then try Germany cache (most common)
+        property = SampleData.properties.find { it.id == propertyId }
+        if (property == null) {
+            try {
+                val list = ListingsRepository.loadCountry("Germany")
+                property = list.find { it.id == propertyId }
+            } catch (_: Exception) { }
+        }
+        loading = false
+    }
+
+    if (loading) {
+        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            CircularProgressIndicator(color = TealPrimary)
+        }
+        return
+    }
 
     if (property == null) {
         Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -41,6 +65,7 @@ fun DetailScreen(
         }
         return
     }
+    val property = property!!
 
     val priceFormatted = NumberFormat.getCurrencyInstance(Locale("en", "PT")).apply {
         maximumFractionDigits = 0

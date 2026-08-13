@@ -29,7 +29,7 @@ fun PropertyCard(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val priceFormatted = NumberFormat.getCurrencyInstance(Locale("en", "PT")).apply {
+    val priceFormatted = NumberFormat.getCurrencyInstance(Locale("de", "DE")).apply {
         maximumFractionDigits = 0
     }.format(property.price)
 
@@ -71,7 +71,7 @@ fun PropertyCard(
                 Spacer(Modifier.height(4.dp))
                 Text(property.title, style = MaterialTheme.typography.titleMedium, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 Text(
-                    "${property.address}, ${property.city}",
+                    "${property.address}, ${property.city}${if (property.country.isNotBlank()) ", ${property.country}" else ""}",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1, overflow = TextOverflow.Ellipsis
