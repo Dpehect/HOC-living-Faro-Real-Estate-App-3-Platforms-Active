@@ -156,6 +156,48 @@ function VisiblePins({ items }) {
 	);
 }
 
+function MapEvents({ expanded, onExpand, onLocationSelect }) {
+	useMapEvents({
+		click(event) {
+			if (!onExpand && !onLocationSelect) return;
+			if (!expanded) {
+				onExpand?.();
+			} else {
+				onLocationSelect?.({
+					latitude: event.latlng.lat,
+					longitude: event.latlng.lng,
+				});
+			}
+		},
+	});
+	return null;
+}
+
+function MapControls({ expanded }) {
+	const map = useMap();
+
+	useEffect(() => {
+		const timer = window.setTimeout(() => map.invalidateSize(), 120);
+		return () => window.clearTimeout(timer);
+	}, [expanded, map]);
+
+	useEffect(() => {
+		if (expanded) {
+			map.scrollWheelZoom.enable();
+			map.dragging.enable();
+			map.doubleClickZoom.enable();
+		} else if (expanded === false) {
+			map.scrollWheelZoom.disable();
+			map.doubleClickZoom.disable();
+		} else {
+			map.scrollWheelZoom.enable();
+			map.dragging.enable();
+		}
+	}, [expanded, map]);
+
+	return null;
+}
+
 function Map({
 	items = [],
 	expanded,
