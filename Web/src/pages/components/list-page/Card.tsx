@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 export default function Card({ item }) {
 	return (
 		<Link to={`/details/${item.id}`}>
-			<div className="bg-white drop-shadow-md rounded-lg overflow-hidden">
+			<article className="h-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_16px_45px_-35px_rgba(17,24,39,.55)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-32px_rgba(17,24,39,.4)]">
 				<img
 					src={item.images[0]}
 					alt={item.title}
-					className="w-full h-48 object-cover"
+					className="h-44 w-full object-cover"
 				/>
 				<div className="p-4">
 					<h2 className="text-xl font-semibold text-gray-800 mb-2">
@@ -21,7 +21,7 @@ export default function Card({ item }) {
 						{item.address}, {item.city}
 					</p>
 					<p className="text-indigo-600 text-lg font-semibold mb-2">
-						$ {item.price}
+						€ {item.price.toLocaleString()}
 					</p>
 					<div className="flex justify-between items-center">
 						<div className="flex space-x-4">
@@ -38,7 +38,7 @@ export default function Card({ item }) {
 						</div>
 					</div>
 				</div>
-			</div>
+			</article>
 		</Link>
 	);
 }

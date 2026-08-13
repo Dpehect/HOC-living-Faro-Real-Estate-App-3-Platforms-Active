@@ -13,7 +13,7 @@ function Pin({ item }) {
 						{item.title}
 						{/* </Link> */}
 						<span>{item.bedroom} bedroom</span>
-						<b>$ {item.price}</b>
+						<b>€ {item.price.toLocaleString()}</b>
 					</div>
 				</div>
 			</Popup>
