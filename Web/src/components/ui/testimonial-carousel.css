@@ -19,7 +19,7 @@
 .testimonial-author div { display: flex; flex-direction: column; }
 .testimonial-author cite { color: var(--testimonial-ink); font-size: .95rem; font-style: normal; font-weight: 700; }
 .testimonial-author span { margin-top: .05rem; color: #665f70; font-size: .78rem; }
-.testimonial-arrow { position: absolute; top: calc(50% - 1.25rem); z-index: 40; display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border: 0; border-radius: 999px; background: transparent; color: var(--testimonial-purple); font-size: 1.15rem; transition: transform .2s ease, color .2s ease; }
+.testimonial-arrow { position: absolute; top: calc(50% - 1.25rem); z-index: 100; display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border: 0; border-radius: 999px; background: transparent; color: var(--testimonial-purple); font-size: 1.15rem; cursor: pointer; pointer-events: auto; transition: transform .2s ease, color .2s ease; }
 .testimonial-arrow:hover { transform: scale(1.08); background: #fff; }
 .testimonial-arrow--left { left: 1rem; }
 .testimonial-arrow--right { right: 1rem; }

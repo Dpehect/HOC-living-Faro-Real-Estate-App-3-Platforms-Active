@@ -40,7 +40,10 @@ export const TestimonialCarousel = ({ items, initialIndex = 0 }: { items: Testim
 					if (event.key === 'ArrowRight') { event.preventDefault(); goTo(activeIndex + 1); }
 					if (event.key === 'ArrowLeft') { event.preventDefault(); goTo(activeIndex - 1); }
 				}}
-				onPointerDown={event => { pointerStartX.current = event.clientX; event.currentTarget.setPointerCapture(event.pointerId); }}
+				onPointerDown={event => {
+					if ((event.target as HTMLElement).closest('button')) return;
+					pointerStartX.current = event.clientX;
+				}}
 				onPointerUp={event => {
 					if (pointerStartX.current === null) return;
 					const distance = event.clientX - pointerStartX.current;
@@ -76,8 +79,8 @@ export const TestimonialCarousel = ({ items, initialIndex = 0 }: { items: Testim
 						);
 					})}
 				</div>
-				<button className="testimonial-arrow testimonial-arrow--left" type="button" onClick={() => goTo(activeIndex - 1)} aria-label="Previous testimonial"><span aria-hidden="true">←</span></button>
-				<button className="testimonial-arrow testimonial-arrow--right" type="button" onClick={() => goTo(activeIndex + 1)} aria-label="Next testimonial"><span aria-hidden="true">→</span></button>
+				<button className="testimonial-arrow testimonial-arrow--left" type="button" onPointerDown={event => event.stopPropagation()} onClick={event => { event.stopPropagation(); goTo(activeIndex - 1); }} aria-label="Previous testimonial"><span aria-hidden="true">←</span></button>
+				<button className="testimonial-arrow testimonial-arrow--right" type="button" onPointerDown={event => event.stopPropagation()} onClick={event => { event.stopPropagation(); goTo(activeIndex + 1); }} aria-label="Next testimonial"><span aria-hidden="true">→</span></button>
 			</div>
 			<div className="testimonial-dots" role="tablist" aria-label="Choose a testimonial">
 				{items.map((item, index) => <button key={item.id} type="button" role="tab" aria-label={`Show testimonial from ${item.name}`} aria-selected={index === activeIndex} onClick={() => goTo(index)} />)}
