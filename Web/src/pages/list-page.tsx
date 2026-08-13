@@ -18,13 +18,15 @@ const defaultFilters: ListingFilters = {
 	radius: '5',
 };
 
+const PAGE_SIZE = 24;
+
 const containerVariants = {
 	hidden: { opacity: 1 },
-	visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
+	visible: { opacity: 1, transition: { staggerChildren: 0.04 } },
 };
 
 const cardVariants = {
-	hidden: { opacity: 0, y: 16 },
+	hidden: { opacity: 0, y: 12 },
 	visible: { opacity: 1, y: 0 },
 };
 
@@ -46,6 +48,7 @@ function ListPage() {
 	const [isMapExpanded, setIsMapExpanded] = useState(false);
 	const [selectedLocation, setSelectedLocation] = useState(null);
 	const [filters, setFilters] = useState<ListingFilters>(defaultFilters);
+	const [page, setPage] = useState(1);
 	const links = ['Buy or Rent', 'Sell or List', 'Home Value', 'Franchise'];
 
 	useEffect(() => {
@@ -76,8 +79,6 @@ function ListPage() {
 			if (filters.minPrice && post.price < Number(filters.minPrice)) return false;
 			if (filters.maxPrice && post.price > Number(filters.maxPrice)) return false;
 			if (filters.bedrooms && Number(post.bedroom || 0) < Number(filters.bedrooms)) return false;
-
-			// Harita pin filtresi sadece konum seçildiyse
 			if (selectedLocation) {
 				const dist = distanceInKm(selectedLocation, post);
 				if (dist > Number(filters.radius || 5)) return false;
@@ -86,26 +87,25 @@ function ListPage() {
 		});
 	}, [filters, selectedLocation]);
 
+	useEffect(() => {
+		setPage(1);
+	}, [filters, selectedLocation]);
+
+	const totalPages = Math.max(1, Math.ceil(filteredPosts.length / PAGE_SIZE));
+	const pageItems = filteredPosts.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+
 	const resetFilters = () => {
 		setFilters(defaultFilters);
 		setSelectedLocation(null);
+		setPage(1);
 	};
 
-	const handleCloseMap = () => {
-		setIsMapExpanded(false);
-	};
+	const handleCloseMap = () => setIsMapExpanded(false);
 
-	const handleLocationSelect = (location) => {
-		setSelectedLocation(location);
-	};
-
-	// Search'e yazınca map pin filtresini temizle — konum araması bozulmasın
 	const handleFilterChange = (next: ListingFilters) => {
 		const queryChanged = next.query !== filters.query;
 		setFilters(next);
-		if (queryChanged && next.query.trim()) {
-			setSelectedLocation(null);
-		}
+		if (queryChanged && next.query.trim()) setSelectedLocation(null);
 	};
 
 	return (
@@ -137,11 +137,7 @@ function ListPage() {
 						} absolute left-0 top-16 w-full flex-col gap-3 bg-white p-4 shadow-md md:static md:flex md:w-auto md:flex-row md:gap-6 md:p-0 md:shadow-none`}
 					>
 						{links.map((text) => (
-							<Link
-								to="/listings"
-								className="text-sm text-gray-600 transition hover:text-gray-950"
-								key={text}
-							>
+							<Link to="/listings" className="text-sm text-gray-600 transition hover:text-gray-950" key={text}>
 								{text}
 							</Link>
 						))}
@@ -168,19 +164,45 @@ function ListPage() {
 
 					<Suspense fallback={<p className="p-8 text-gray-500">Loading properties…</p>}>
 						{filteredPosts.length ? (
-							<motion.div
-								key={JSON.stringify(filters) + Boolean(selectedLocation)}
-								initial="hidden"
-								animate="visible"
-								variants={containerVariants}
-								className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
-							>
-								{filteredPosts.map((post) => (
-									<motion.div key={post.id} variants={cardVariants}>
-										<Card item={post} />
-									</motion.div>
-								))}
-							</motion.div>
+							<>
+								<motion.div
+									key={JSON.stringify(filters) + Boolean(selectedLocation) + page}
+									initial="hidden"
+									animate="visible"
+									variants={containerVariants}
+									className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
+								>
+									{pageItems.map((post) => (
+										<motion.div key={post.id} variants={cardVariants}>
+											<Card item={post} />
+										</motion.div>
+									))}
+								</motion.div>
+
+								{totalPages > 1 && (
+									<div className="mt-8 flex flex-wrap items-center justify-center gap-2">
+										<button
+											type="button"
+											disabled={page <= 1}
+											onClick={() => setPage((p) => Math.max(1, p - 1))}
+											className="rounded-xl border border-gray-200 bg-white px-4 py-2 text-sm font-semibold disabled:opacity-40"
+										>
+											Previous
+										</button>
+										<span className="px-3 text-sm text-gray-600">
+											Page {page} / {totalPages}
+										</span>
+										<button
+											type="button"
+											disabled={page >= totalPages}
+											onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+											className="rounded-xl border border-gray-200 bg-white px-4 py-2 text-sm font-semibold disabled:opacity-40"
+										>
+											Next
+										</button>
+									</div>
+								)}
+							</>
 						) : (
 							<div className="mt-6 rounded-2xl border border-dashed border-gray-300 bg-white px-6 py-16 text-center">
 								<h2 className="text-lg font-bold text-gray-900">No properties match these filters</h2>
@@ -207,7 +229,7 @@ function ListPage() {
 							onExpand={() => setIsMapExpanded(true)}
 							onClose={handleCloseMap}
 							selectedLocation={selectedLocation}
-							onLocationSelect={handleLocationSelect}
+							onLocationSelect={setSelectedLocation}
 							radiusKm={Number(filters.radius) || 5}
 						/>
 					</Suspense>

@@ -1,5 +1,5 @@
-import { Circle, CircleMarker, MapContainer, TileLayer, useMap, useMapEvents } from 'react-leaflet';
-import { useEffect } from 'react';
+import { Circle, CircleMarker, MapContainer, Marker, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
+import { useEffect, useMemo, useState } from 'react';
 import L from 'leaflet';
 import './map.css';
 import 'leaflet/dist/leaflet.css';
@@ -16,6 +16,8 @@ L.Icon.Default.mergeOptions({
 	iconRetinaUrl: markerIcon2x,
 	shadowUrl: markerShadow,
 });
+
+const MAX_MARKERS = 400; // tarayıcı performansı için limit
 
 function MapEvents({ expanded, onExpand, onLocationSelect }) {
 	useMapEvents({
@@ -37,13 +39,10 @@ function MapControls({ expanded }) {
 	const map = useMap();
 
 	useEffect(() => {
-		const timer = window.setTimeout(() => {
-			map.invalidateSize();
-		}, 120);
+		const timer = window.setTimeout(() => map.invalidateSize(), 120);
 		return () => window.clearTimeout(timer);
 	}, [expanded, map]);
 
-	// Mouse wheel zoom + dragging — expanded iken kesin aç
 	useEffect(() => {
 		if (expanded) {
 			map.scrollWheelZoom.enable();
@@ -58,6 +57,53 @@ function MapControls({ expanded }) {
 	}, [expanded, map]);
 
 	return null;
+}
+
+/** Sadece görünür alandaki pin'leri göster — 10k marker kilitlemesin */
+function VisiblePins({ items }) {
+	const map = useMap();
+	const [bounds, setBounds] = useState(null);
+	const [zoom, setZoom] = useState(map.getZoom());
+
+	useEffect(() => {
+		const update = () => {
+			setBounds(map.getBounds());
+			setZoom(map.getZoom());
+		};
+		update();
+		map.on('moveend', update);
+		map.on('zoomend', update);
+		return () => {
+			map.off('moveend', update);
+			map.off('zoomend', update);
+		};
+	}, [map]);
+
+	const visible = useMemo(() => {
+		if (!bounds || !items?.length) return [];
+		// çok uzaktayken (zoom düşük) daha az pin
+		const limit = zoom < 9 ? 80 : zoom < 11 ? 180 : MAX_MARKERS;
+		const inView = [];
+		for (let i = 0; i < items.length; i++) {
+			const item = items[i];
+			const lat = Number(item.latitude);
+			const lng = Number(item.longitude);
+			if (Number.isNaN(lat) || Number.isNaN(lng)) continue;
+			if (bounds.contains([lat, lng])) {
+				inView.push(item);
+				if (inView.length >= limit) break;
+			}
+		}
+		return inView;
+	}, [items, bounds, zoom]);
+
+	return (
+		<>
+			{visible.map((item) => (
+				<Pin item={item} key={item.id} />
+			))}
+		</>
+	);
 }
 
 function Map({
@@ -77,12 +123,12 @@ function Map({
 				{expanded && !selectedLocation ? (
 					<div>
 						<strong>Choose an area</strong>
-						<span>Click anywhere to filter nearby homes</span>
+						<span>Zoom in & click a pin to open a property</span>
 					</div>
 				) : !expanded ? (
 					<div>
 						<strong>Explore on the map</strong>
-						<span>Click to expand and choose a location</span>
+						<span>Click to expand — {items?.length?.toLocaleString?.() || 0} listings</span>
 					</div>
 				) : (
 					<div style={{ visibility: 'hidden', width: 1, height: 1 }} />
@@ -119,9 +165,8 @@ function Map({
 				/>
 				<MapControls expanded={expanded} />
 
-				{items.map((item) => (
-					<Pin item={item} key={item.id} />
-				))}
+				{/* Görünür alandaki taşınmaz pin'leri — tıklayınca popup */}
+				<VisiblePins items={items} />
 
 				{selectedLocation && (
 					<>
