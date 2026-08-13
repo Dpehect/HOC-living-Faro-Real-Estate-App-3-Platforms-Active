@@ -6,14 +6,14 @@ const FeaturesSection = () => {
 	return (
 		<section className="container mx-auto px-6 py-8">
 			<h2 className="text-3xl mx-auto w-full text-center font-bold text-gray-800 mb-8">
-				Why sell your house with HOC Living Faro?
+				Why sell your house with HOC Living?
 			</h2>
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 				<AnimatedCard
 					index={1}
 					imageSrc="https://purplebricks-web.imgix.net/marketing-global/uk/proposition-tiles/dedicated-local-experts-2021.jpg?w=768&auto=format&q=50&ar=407%3A226&fit=crop&ixlib=react-9.2.0"
 					heading="Local experts in every region"
-					details="Our agents know Faro, the wider Algarve, Lisbon, Porto and key Spanish markets. You get neighbourhood-level advice, not generic online estimates."
+					details="Our agents know München, the wider Bayern, Lisbon, Porto and key Spanish markets. You get neighbourhood-level advice, not generic online estimates."
 					buttonText="Meet your experts"
 					to="/experts"
 				/>

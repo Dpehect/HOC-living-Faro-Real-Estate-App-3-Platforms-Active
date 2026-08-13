@@ -12,11 +12,11 @@ export function Filter({ filters, onChange, onReset, resultCount, hasMapLocation
 	return (
 		<section className="rounded-2xl border border-gray-200 bg-white p-5 shadow-[0_16px_50px_-35px_rgba(17,24,39,.35)]">
 			<div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-				<div><p className="text-xs font-bold uppercase tracking-[.16em] text-indigo-600">Faro property search</p><h1 className="mt-1 text-2xl font-bold tracking-tight text-gray-900">Find your place in the Algarve</h1><p className="mt-1 text-sm text-gray-500">{resultCount} {resultCount === 1 ? 'property' : 'properties'} available{hasMapLocation ? ' near your map pin' : ''}</p></div>
+				<div><p className="text-xs font-bold uppercase tracking-[.16em] text-indigo-600">München property search</p><h1 className="mt-1 text-2xl font-bold tracking-tight text-gray-900">Find your place in München</h1><p className="mt-1 text-sm text-gray-500">{resultCount} {resultCount === 1 ? 'property' : 'properties'} available{hasMapLocation ? ' near your map pin' : ''}</p></div>
 				<button type="button" onClick={onReset} className="text-sm font-semibold text-gray-500 transition hover:text-indigo-600">Clear filters</button>
 			</div>
 			<div className="mt-5 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
-				<label className="xl:col-span-2"><span className="mb-1.5 block text-xs font-semibold text-gray-600">Location or keyword</span><input value={filters.query} onChange={event => update('query', event.target.value)} placeholder="Faro, Estoi, marina…" className={fieldClass} /></label>
+				<label className="xl:col-span-2"><span className="mb-1.5 block text-xs font-semibold text-gray-600">Location or keyword</span><input value={filters.query} onChange={event => update('query', event.target.value)} placeholder="Schwabing, Maxvorstadt, Bogenhausen…" className={fieldClass} /></label>
 				<label><span className="mb-1.5 block text-xs font-semibold text-gray-600">Min price (€)</span><input type="number" min="0" value={filters.minPrice} onChange={event => update('minPrice', event.target.value)} placeholder="No minimum" className={fieldClass} /></label>
 				<label><span className="mb-1.5 block text-xs font-semibold text-gray-600">Max price (€)</span><input type="number" min="0" value={filters.maxPrice} onChange={event => update('maxPrice', event.target.value)} placeholder="No maximum" className={fieldClass} /></label>
 			</div>

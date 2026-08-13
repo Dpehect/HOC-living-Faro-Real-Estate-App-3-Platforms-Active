@@ -1,4 +1,4 @@
-package com.hocliving.faro.ui.screens
+package com.hocliving.app.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -20,10 +20,10 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.hocliving.faro.data.SampleData
-import com.hocliving.faro.ui.components.PropertyCard
-import com.hocliving.faro.ui.theme.TealContainer
-import com.hocliving.faro.ui.theme.TealPrimary
+import com.hocliving.app.data.SampleData
+import com.hocliving.app.ui.components.PropertyCard
+import com.hocliving.app.ui.theme.TealContainer
+import com.hocliving.app.ui.theme.TealPrimary
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -36,7 +36,7 @@ fun HomeScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("HOC Living Faro", fontWeight = FontWeight.Bold, color = TealPrimary) },
+                title = { Text("HOC Living", fontWeight = FontWeight.Bold, color = TealPrimary) },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.background)
             )
         }
@@ -52,13 +52,13 @@ fun HomeScreen(
                         .padding(20.dp)
                 ) {
                     Text(
-                        "Homes across Portugal & Spain, starting in Faro",
+                        "Homes across München & Bayern, centered in München",
                         style = MaterialTheme.typography.headlineMedium,
                         fontWeight = FontWeight.Bold
                     )
                     Spacer(Modifier.height(8.dp))
                     Text(
-                        "Search live listings — from Algarve apartments to homes in Lisbon, Porto and beyond.",
+                        "Search live listings — from München apartments to homes in Schwabing, Maxvorstadt and beyond.",
                         style = MaterialTheme.typography.bodyLarge,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -113,9 +113,9 @@ fun HomeScreen(
             }
             item {
                 Column(Modifier.fillMaxWidth().padding(16.dp)) {
-                    Text("Why HOC Living Faro?", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.SemiBold)
+                    Text("Why HOC Living?", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.SemiBold)
                     Spacer(Modifier.height(12.dp))
-                    FeatureRow(Icons.Outlined.Apartment, "Local expertise", "Deep knowledge of Faro and Algarve market.")
+                    FeatureRow(Icons.Outlined.Apartment, "Local expertise", "Deep knowledge of München and surroundings market.")
                     FeatureRow(Icons.Outlined.Home, "Verified listings", "Every property is carefully reviewed.")
                     FeatureRow(Icons.Outlined.ThumbUp, "End-to-end support", "From search to keys in hand.")
                 }

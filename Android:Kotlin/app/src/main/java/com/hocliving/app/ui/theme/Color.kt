@@ -1,4 +1,4 @@
-package com.hocliving.faro.ui.theme
+package com.hocliving.app.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

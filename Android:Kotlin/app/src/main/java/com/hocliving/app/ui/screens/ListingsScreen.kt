@@ -1,4 +1,4 @@
-package com.hocliving.faro.ui.screens
+package com.hocliving.app.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -12,9 +12,9 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.hocliving.faro.data.SampleData
-import com.hocliving.faro.ui.components.PropertyCard
-import com.hocliving.faro.ui.theme.TealPrimary
+import com.hocliving.app.data.SampleData
+import com.hocliving.app.ui.components.PropertyCard
+import com.hocliving.app.ui.theme.TealPrimary
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

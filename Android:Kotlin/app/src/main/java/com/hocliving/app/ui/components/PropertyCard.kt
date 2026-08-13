@@ -1,4 +1,4 @@
-package com.hocliving.faro.ui.components
+package com.hocliving.app.ui.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -18,8 +18,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.hocliving.faro.data.Property
-import com.hocliving.faro.ui.theme.TealPrimary
+import com.hocliving.app.data.Property
+import com.hocliving.app.ui.theme.TealPrimary
 import java.text.NumberFormat
 import java.util.Locale
 

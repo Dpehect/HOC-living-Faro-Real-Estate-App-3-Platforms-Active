@@ -19,7 +19,7 @@ export default function SiteNavbar() {
 				<Link to="/" className="flex items-center" onClick={() => setIsNavOpen(false)}>
 					<BuildingIcon className="h-8 w-8 text-primary" />
 					<span className="ml-3 text-lg font-bold uppercase tracking-wider text-gray-900">
-						HOC Living Faro
+						HOC Living
 					</span>
 					<span className="ml-2 hidden text-xs uppercase tracking-widest text-gray-400 sm:inline">
 						Real Estate

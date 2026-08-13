@@ -8,8 +8,8 @@ export default function JoinPage() {
 
 	return (
 		<PageShell
-			title="Join HOC Living Faro"
-			subtitle="Create an account to save favourites, receive alerts and access exclusive listings across Portugal and Spain."
+			title="Join HOC Living"
+			subtitle="Create an account to save favourites, receive alerts and access exclusive listings across München and Bayern."
 		>
 			<div className="mx-auto max-w-lg rounded-3xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
 				{sent ? (

@@ -54,7 +54,7 @@ export function CaculatePriceSection() {
 						<span>€ {traditionalFee.toLocaleString()}</span>
 					</div>
 					<div className="flex justify-between">
-						<span>HOC Living Faro 3.5%</span>
+						<span>HOC Living 3.5%</span>
 						<span>€ {ourFee.toLocaleString()}</span>
 					</div>
 				</div>

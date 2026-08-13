@@ -29,7 +29,7 @@ export default function SellPage() {
 	return (
 		<PageShell
 			title="Sell or list your property"
-			subtitle="List with HOC Living Faro and reach serious buyers and tenants across Portugal and Spain."
+			subtitle="List with HOC Living and reach serious buyers and tenants across München and Bayern."
 		>
 			<div className="mb-8 grid gap-4 sm:grid-cols-3">
 				{[
@@ -66,7 +66,7 @@ export default function SellPage() {
 						<div ref={cityWrapRef} className="relative sm:col-span-2">
 							<label className="mb-1.5 block text-sm font-medium text-gray-700">Property city</label>
 							<Input
-								placeholder="Start typing — e.g. Faro, Lisbon, Marbella"
+								placeholder="Start typing — e.g. Schwabing, Maxvorstadt, Bogenhausen"
 								value={city}
 								onChange={(e) => {
 									setCity(e.target.value);

@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.hocliving.faro"
+    namespace = "com.hocliving.app"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.hocliving.faro"
+        applicationId = "com.hocliving.app"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

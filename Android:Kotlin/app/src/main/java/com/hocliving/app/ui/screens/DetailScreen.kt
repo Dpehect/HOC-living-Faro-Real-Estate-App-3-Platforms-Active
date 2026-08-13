@@ -1,4 +1,4 @@
-package com.hocliving.faro.ui.screens
+package com.hocliving.app.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -22,8 +22,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.hocliving.faro.data.SampleData
-import com.hocliving.faro.ui.theme.TealPrimary
+import com.hocliving.app.data.SampleData
+import com.hocliving.app.ui.theme.TealPrimary
 import java.text.NumberFormat
 import java.util.Locale
 

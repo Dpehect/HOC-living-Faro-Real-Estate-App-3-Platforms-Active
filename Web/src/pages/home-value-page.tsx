@@ -61,7 +61,7 @@ export default function HomeValuePage() {
 			'Barcelona',
 			'Marbella',
 			'Porto',
-			'Faro',
+			'München',
 			'Lagos',
 			'Albufeira',
 		].includes(city.trim())
@@ -112,7 +112,7 @@ export default function HomeValuePage() {
 						<div ref={cityWrapRef} className="relative">
 							<label className="mb-1.5 block text-sm font-medium text-gray-700">City / location</label>
 							<Input
-								placeholder="Start typing — e.g. Faro, Lisbon, Marbella"
+								placeholder="Start typing — e.g. Schwabing, Maxvorstadt, Bogenhausen"
 								value={city}
 								onChange={(e) => {
 									setCity(e.target.value);

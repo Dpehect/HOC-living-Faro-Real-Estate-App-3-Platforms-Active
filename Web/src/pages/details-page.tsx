@@ -370,7 +370,7 @@ function SinglePage() {
 								)}
 
 								<div className="mt-6 border-t border-gray-100 pt-5 text-center text-xs text-gray-400">
-									Listing #{post.id} · HOC Living Faro
+									Listing #{post.id} · HOC Living
 								</div>
 							</div>
 						</div>

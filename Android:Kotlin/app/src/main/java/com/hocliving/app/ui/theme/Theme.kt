@@ -1,4 +1,4 @@
-package com.hocliving.faro.ui.theme
+package com.hocliving.app.ui.theme
 
 import android.app.Activity
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -41,7 +41,7 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 @Composable
-fun HOCLivingFaroTheme(
+fun HOCLivingTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {

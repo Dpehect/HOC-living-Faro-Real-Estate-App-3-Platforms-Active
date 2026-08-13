@@ -1,4 +1,4 @@
-package com.hocliving.faro.navigation
+package com.hocliving.app.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
@@ -6,9 +6,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.hocliving.faro.ui.screens.DetailScreen
-import com.hocliving.faro.ui.screens.HomeScreen
-import com.hocliving.faro.ui.screens.ListingsScreen
+import com.hocliving.app.ui.screens.DetailScreen
+import com.hocliving.app.ui.screens.HomeScreen
+import com.hocliving.app.ui.screens.ListingsScreen
 
 sealed class Screen(val route: String) {
     data object Home : Screen("home")

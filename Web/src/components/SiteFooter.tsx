@@ -9,12 +9,12 @@ export default function SiteFooter() {
 					<div className="mb-4 flex items-center gap-2">
 						<BuildingIcon className="h-7 w-7 text-accent" />
 						<span className="text-sm font-bold uppercase tracking-wider text-white">
-							HOC Living Faro
+							HOC Living
 						</span>
 					</div>
 					<p className="text-sm leading-relaxed text-gray-400">
-						Premium real estate across Portugal & Spain. Homes, apartments and investment
-						opportunities in Faro, Algarve and beyond.
+						Premium real estate across München & Bayern. Homes, apartments and investment
+						opportunities in München, Bayern and beyond.
 					</p>
 				</div>
 
@@ -118,7 +118,7 @@ export default function SiteFooter() {
 				</div>
 			</div>
 			<div className="border-t border-gray-800 px-4 py-4 text-center text-xs text-gray-500">
-				© {new Date().getFullYear()} HOC Living Faro Real Estate. All rights reserved.
+				© {new Date().getFullYear()} HOC Living Real Estate. All rights reserved.
 			</div>
 		</footer>
 	);

@@ -2,15 +2,15 @@ import { Link } from 'react-router-dom';
 import PageShell from '@/components/PageShell';
 
 const posts = [
-	{ slug: 'algarve-market-2026', title: 'Algarve property market outlook 2026', date: '12 Mar 2026', excerpt: 'Demand remains strong in Faro, Lagos and inland villages as international buyers return.' },
-	{ slug: 'buying-guide-portugal', title: 'First-time buyer guide: Portugal', date: '28 Feb 2026', excerpt: 'From NIF numbers to notary day — the steps every overseas buyer should know.' },
-	{ slug: 'rental-yields-spain', title: 'Rental yields in southern Spain', date: '10 Feb 2026', excerpt: 'Where long-term and holiday lets perform best between Málaga, Seville and Alicante.' },
-	{ slug: 'energy-certificates', title: 'Energy certificates explained', date: '22 Jan 2026', excerpt: 'What SCE ratings mean for sale and rent listings in Portugal.' },
+	{ slug: 'muenchen-market-2026', title: 'München property market outlook 2026', date: '12 Mar 2026', excerpt: 'Demand remains strong in Schwabing, Maxvorstadt and surrounding districts as demand for quality housing continues.' },
+	{ slug: 'buying-guide-bayern', title: 'First-time buyer guide: Bayern', date: '28 Feb 2026', excerpt: 'From financing to notary day — the steps every buyer in Bayern should know.' },
+	{ slug: 'rental-yields-muenchen', title: 'Rental yields in greater München', date: '10 Feb 2026', excerpt: 'Where long-term lets perform best between the city centre, Schwabing and the suburbs.' },
+	{ slug: 'energy-certificates', title: 'Energy certificates explained', date: '22 Jan 2026', excerpt: 'What energy certificates mean for sale and rent listings in Germany.' },
 ];
 
 export default function BlogPage() {
 	return (
-		<PageShell title="Blog" subtitle="Market insights, buying guides and local tips from the HOC Living Faro team.">
+		<PageShell title="Blog" subtitle="Market insights, buying guides and local tips from the HOC Living team.">
 			<div className="grid gap-4 md:grid-cols-2">
 				{posts.map((p) => (
 					<article key={p.slug} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">

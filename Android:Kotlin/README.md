@@ -1,6 +1,6 @@
-# HOC Living Faro — Android App (Kotlin + Jetpack Compose)
+# HOC Living — Android App (Kotlin + Jetpack Compose)
 
-Android version of the [HOC Living Faro Real Estate web app](https://github.com/Dpehect/HOC-living-Faro-Real-Estate-WEB-App).
+Android version of the [HOC Living Real Estate web app](https://github.com/Dpehect/HOC-living-München-Real-Estate-WEB-App).
 
 ## Screenshots
 
@@ -18,7 +18,7 @@ Place PNG screenshots in `screenshots/`:
 - **Home screen** — Hero section, stats (listings / cities / for rent), featured properties, why-us section  
 - **Listings screen** — Filterable list (Buy/Rent, Apartment/House, min bedrooms)  
 - **Property detail** — Image pager, price, specs, description, utilities / pet / income policies, “Request a tour” CTA  
-- **Sample data** — 24 real properties from the original web app (Faro area)  
+- **Sample data** — 24 real properties from the original web app (München area)  
 - **Modern UI** — Material 3, teal brand colors, Coil image loading  
 
 ## Tech stack
@@ -32,7 +32,7 @@ Place PNG screenshots in `screenshots/`:
 ## How to open & run
 
 1. Open **Android Studio** (Hedgehog or newer recommended).  
-2. **File → Open** and select this project folder (`HOCLivingFaroAndroid`).  
+2. **File → Open** and select this project folder (`HOCLivingAndroid`).  
 3. Wait for Gradle sync.  
 4. Run on an emulator or physical device (API 26+).  
 
@@ -41,7 +41,7 @@ If Gradle wrapper binaries are missing, Android Studio will offer to create them
 ## Project structure
 
 ```
-app/src/main/java/com/hocliving/faro/
+app/src/main/java/com/hocliving/muenchen/
 ├── MainActivity.kt
 ├── data/SampleData.kt
 ├── navigation/AppNavHost.kt

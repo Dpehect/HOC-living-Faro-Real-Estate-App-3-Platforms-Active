@@ -34,7 +34,7 @@ const groups = [
 
 export default function SitemapPage() {
 	return (
-		<PageShell title="Sitemap" subtitle="Find every section of HOC Living Faro in one place.">
+		<PageShell title="Sitemap" subtitle="Find every section of HOC Living in one place.">
 			<div className="grid gap-6 sm:grid-cols-3">
 				{groups.map((g) => (
 					<div key={g.title} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">

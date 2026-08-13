@@ -5,7 +5,7 @@ const testimonials: Testimonial[] = [
 		id: 'ana-silva-seller',
 		name: 'Ana Silva',
 		image: 'https://randomuser.me/api/portraits/women/44.jpg',
-		text: 'We sold our apartment in Faro within six weeks. Clear communication and realistic pricing made the process straightforward.',
+		text: 'We sold our apartment in München within six weeks. Clear communication and realistic pricing made the process straightforward.',
 		type: 'Seller',
 	},
 	{
@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
 		id: 'carlos-ruiz-buyer',
 		name: 'Carlos Ruiz',
 		image: 'https://randomuser.me/api/portraits/men/54.jpg',
-		text: 'As a buyer from Seville looking in the Algarve, I needed bilingual support. HOC Living Faro handled both sides of the border.',
+		text: 'As a buyer from Seville looking in the Bayern, I needed bilingual support. HOC Living handled both sides of the border.',
 		type: 'Buyer',
 	},
 	{
@@ -42,7 +42,7 @@ export default function TestimonialSection() {
 	return (
 		<section className="testimonial-section" aria-labelledby="testimonial-heading">
 			<div className="testimonial-heading">
-				<p>Trusted across Portugal & Spain</p>
+				<p>Trusted across München & Bayern</p>
 				<h2 id="testimonial-heading">
 					Over <span>1,098</span> active listings · <span>539</span> cities
 				</h2>

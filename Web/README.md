@@ -1,8 +1,26 @@
-# React + Vite
+# HOC Living — Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite real estate web app for **München & Bayern**.
 
-Currently, two official plugins are available:
+**Brand:** HOC Living (no city in the product name)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
+
+- React 18 + TypeScript
+- Vite 5
+- Tailwind CSS
+- Leaflet (map search)
+- Framer Motion
+- React Router
+
+## Scripts
+
+```bash
+npm install
+npm run dev
+npm run build
+```
+
+## Deploy
+
+Configured for Vercel (`vercel.json`).

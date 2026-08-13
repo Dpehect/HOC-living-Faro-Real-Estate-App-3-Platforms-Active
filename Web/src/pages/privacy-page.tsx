@@ -18,7 +18,7 @@ export default function PrivacyPage() {
 				</section>
 				<section>
 					<h2 className="text-lg font-bold text-gray-900">Your rights</h2>
-					<p className="mt-2">Under GDPR you may request access, correction or deletion of your personal data. Contact privacy@hoclivingfaro.com.</p>
+					<p className="mt-2">Under GDPR you may request access, correction or deletion of your personal data. Contact privacy@hocliving.com.</p>
 				</section>
 				<section>
 					<h2 className="text-lg font-bold text-gray-900">Cookies</h2>

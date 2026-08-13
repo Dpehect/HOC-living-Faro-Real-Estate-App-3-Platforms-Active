@@ -73,10 +73,10 @@ export default function App() {
 				>
 					<motion.div className="lg:w-1/2 lg:mr-4" variants={leftItemVariants}>
 						<h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6 text-center lg:text-left">
-							Homes across Portugal & Spain, starting in Faro
+							Homes across München & Bayern
 						</h1>
 						<p className="text-gray-600 mb-6 text-center lg:text-left">
-							Search 1,098 live listings in 539 cities — from Algarve apartments to homes in Lisbon, Porto, Madrid and beyond.
+							Search 1,098 live listings in 539 cities — from Schwabing apartments to homes in Maxvorstadt, Bogenhausen and beyond.
 						</p>
 						<motion.div
 							className="flex items-center bg-white shadow-md rounded-lg overflow-hidden"

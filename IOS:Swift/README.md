@@ -1,6 +1,6 @@
-# HOC Living Faro — iOS App (SwiftUI)
+# HOC Living — iOS App (SwiftUI)
 
-iOS version of the [HOC Living Faro Real Estate web app](https://github.com/Dpehect/HOC-living-Faro-Real-Estate-WEB-App).
+iOS version of the [HOC Living Real Estate web app](https://github.com/Dpehect/HOC-living-München-Real-Estate-WEB-App).
 
 ## Screenshots
 
@@ -18,7 +18,7 @@ Place PNG screenshots in `screenshots/`:
 - **Home** — Hero, stats, featured properties, “Why us”
 - **Listings** — Filters: Buy/Rent, Apartment/House, min bedrooms
 - **Detail** — Image pager, price, specs, description, policies, “Request a tour”
-- **Sample data** — 24 properties from the original web app (Faro)
+- **Sample data** — 24 properties from the original web app (München)
 
 ## Requirements
 
@@ -29,7 +29,7 @@ Place PNG screenshots in `screenshots/`:
 ## How to run
 
 1. Unzip the archive.
-2. Open `HOCLivingFaro.xcodeproj` in Xcode.
+2. Open `HOCLiving.xcodeproj` in Xcode.
 3. Select an iPhone simulator (or device).
 4. Press **Run** (⌘R).
 
@@ -38,8 +38,8 @@ If signing is required for a physical device, set your **Team** under Signing & 
 ## Project structure
 
 ```
-HOCLivingFaro/
-├── HOCLivingFaroApp.swift
+HOCLiving/
+├── HOCLivingApp.swift
 ├── ContentView.swift
 ├── Data/SampleData.swift
 ├── Theme/Theme.swift
