@@ -49,6 +49,9 @@ function ListPage() {
 	const [filters, setFilters] = useState<ListingFilters>(defaultFilters);
 	const [page, setPage] = useState(1);
 	const [postsData, setPostsData] = useState<Listing[]>([]);
+	const [europeRegions, setEuropeRegions] = useState<
+		{ city: string; country: string; count: number; latitude: number; longitude: number }[]
+	>([]);
 	const [countries, setCountries] = useState<string[]>([]);
 	const [activeCountry, setActiveCountry] = useState('Germany');
 	const [loading, setLoading] = useState(true);
@@ -76,6 +79,13 @@ function ListPage() {
 
 	useEffect(() => {
 		listCountryNames().then(setCountries).catch(() => setCountries(['Germany']));
+	}, []);
+
+	useEffect(() => {
+		fetch('/data/cities.json')
+			.then((r) => r.json())
+			.then((data) => setEuropeRegions(Array.isArray(data) ? data : []))
+			.catch(() => setEuropeRegions([]));
 	}, []);
 
 	useEffect(() => {
@@ -173,7 +183,7 @@ function ListPage() {
 								<option key={c} value={c}>{c}</option>
 							))}
 						</select>
-						<span className="text-xs text-gray-500">10,000 listings per country · Europe-wide catalog</span>
+						<span className="text-xs text-gray-500">1,000+ listings per city · Europe-wide catalog</span>
 					</div>
 
 					<div className="block">
@@ -251,6 +261,7 @@ function ListPage() {
 				<div className="h-[620px] xl:sticky xl:top-6">
 					<Suspense fallback={<p>Loading map…</p>}>
 						<Map
+							regions={europeRegions}
 							items={postsData}
 							expanded={isMapExpanded}
 							onExpand={() => setIsMapExpanded(true)}
