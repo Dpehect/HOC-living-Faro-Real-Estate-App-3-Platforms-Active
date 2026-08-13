@@ -1,231 +1,364 @@
-import {
-	Back,
-	Bath,
-	Bed,
-	BuildingIcon,
-	Bus,
-	Hotel,
-	Income,
-	Pet,
-	Pin,
-	School,
-	Utility,
-} from '@/icons/landing-page-icons';
-import Slider from './components/details-page/slider/Slider';
-import Map from './components/list-page/map/Map';
-import { Input } from '@/components/ui/input';
-import { format } from 'date-fns';
-import { Calendar as CalendarIcon } from 'lucide-react';
-
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { Calendar } from '@/components/ui/calendar';
-import {
-	Popover,
-	PopoverContent,
-	PopoverTrigger,
-} from '@/components/ui/popover';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { format } from 'date-fns';
+import { Calendar as CalendarIcon, ChevronLeft, ChevronRight, MapPin, Bed, Bath, Ruler, PawPrint, Zap, Wallet } from 'lucide-react';
+import { BuildingIcon } from '@/icons/landing-page-icons';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Calendar } from '@/components/ui/calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { cn } from '@/lib/utils';
+import Map from './components/list-page/map/Map';
 import posts from './postsData.json';
 
-const fadeIn = {
-	hidden: { opacity: 0, y: 20 },
-	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
-
-const staggerContainer = {
-	hidden: {},
-	visible: {
-		transition: {
-			staggerChildren: 0.3,
-		},
-	},
+const fadeUp = {
+	hidden: { opacity: 0, y: 24 },
+	visible: (i = 0) => ({
+		opacity: 1,
+		y: 0,
+		transition: { duration: 0.45, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] },
+	}),
 };
 
 function SinglePage() {
 	const { id } = useParams();
-	const post = posts.find(e => e.id.toString() === id);
+	const post = posts.find((e) => String(e.id) === String(id));
 	const [date, setDate] = useState<Date>();
+	const [activeImage, setActiveImage] = useState(0);
+	const [formSent, setFormSent] = useState(false);
+
+	const images = useMemo(() => post?.images?.filter(Boolean) || [], [post]);
+	const detail = post?.postDetail || {};
+
+	if (!post) {
+		return (
+			<div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-[#f7f8fb] px-4">
+				<h1 className="text-2xl font-bold text-gray-900">Property not found</h1>
+				<p className="text-gray-500">This listing may have been removed.</p>
+				<Link
+					to="/listings"
+					className="rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700"
+				>
+					Back to listings
+				</Link>
+			</div>
+		);
+	}
+
+	const isRent = post.type === 'rent';
+	const priceLabel = isRent
+		? `€ ${Number(post.price).toLocaleString()} / month`
+		: `€ ${Number(post.price).toLocaleString()}`;
+
+	const nextImage = () => setActiveImage((i) => (i + 1) % images.length);
+	const prevImage = () => setActiveImage((i) => (i - 1 + images.length) % images.length);
 
 	return (
-		<div className="flex flex-col lg:flex-row h-screen">
-			<motion.div
-				className="lg:flex-3 "
-				initial="hidden"
-				animate="visible"
-				variants={staggerContainer}
-			>
-				<div className="p-4 md:p-6 lg:p-10">
-					<Link to="/listings">
-						<motion.div
-							className="underline flex items-center  gap-2 text-primary mb-4"
-							variants={fadeIn}
-						>
-							<Back />
-							Go back
-						</motion.div>
+		<div className="min-h-screen bg-[#f7f8fb]">
+			{/* Top nav */}
+			<nav className="sticky top-0 z-40 border-b border-gray-200/80 bg-white/90 backdrop-blur-md">
+				<div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-3 md:px-8">
+					<Link to="/" className="flex items-center gap-2">
+						<BuildingIcon className="h-7 w-7 text-primary" />
+						<span className="text-sm font-bold uppercase tracking-wider text-gray-900">
+							HOC Living Faro
+						</span>
 					</Link>
-					<motion.div variants={fadeIn}>
-						<Slider images={post.images} />
-					</motion.div>
-					<motion.div className="mt-8" variants={fadeIn}>
-						<div className="flex flex-col lg:flex-row justify-between mb-6">
-							<div className="mb-4 lg:mb-0">
-								<motion.h1 className="text-2xl font-semibold" variants={fadeIn}>
-									{post.title}
-								</motion.h1>
-								<motion.div
-									className="flex items-center text-gray-500 mt-2"
-									variants={fadeIn}
+					<Link
+						to="/listings"
+						className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-700 transition hover:border-indigo-300 hover:text-indigo-700"
+					>
+						<ChevronLeft className="h-4 w-4" />
+						All listings
+					</Link>
+				</div>
+			</nav>
+
+			<main className="mx-auto max-w-[1400px] px-4 py-6 md:px-8 md:py-10">
+				<div className="grid grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1fr)_380px]">
+					{/* LEFT */}
+					<div className="min-w-0 space-y-6">
+						{/* Gallery */}
+						<motion.div
+							className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-[0_20px_60px_-40px_rgba(17,24,39,.5)]"
+							initial="hidden"
+							animate="visible"
+							variants={fadeUp}
+							custom={0}
+						>
+							<div className="relative aspect-[16/10] bg-gray-100">
+								<AnimatePresence mode="wait">
+									<motion.img
+										key={activeImage}
+										src={images[activeImage] || images[0]}
+										alt={post.title}
+										className="h-full w-full object-cover"
+										initial={{ opacity: 0.4, scale: 1.02 }}
+										animate={{ opacity: 1, scale: 1 }}
+										exit={{ opacity: 0 }}
+										transition={{ duration: 0.35 }}
+									/>
+								</AnimatePresence>
+
+								{images.length > 1 && (
+									<>
+										<button
+											type="button"
+											onClick={prevImage}
+											className="absolute left-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-gray-800 shadow-lg backdrop-blur transition hover:bg-white"
+											aria-label="Previous image"
+										>
+											<ChevronLeft className="h-5 w-5" />
+										</button>
+										<button
+											type="button"
+											onClick={nextImage}
+											className="absolute right-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-gray-800 shadow-lg backdrop-blur transition hover:bg-white"
+											aria-label="Next image"
+										>
+											<ChevronRight className="h-5 w-5" />
+										</button>
+										<div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-1.5">
+											{images.map((_, i) => (
+												<button
+													key={i}
+													type="button"
+													onClick={() => setActiveImage(i)}
+													className={cn(
+														'h-1.5 rounded-full transition-all',
+														i === activeImage ? 'w-6 bg-white' : 'w-1.5 bg-white/50 hover:bg-white/80'
+													)}
+												/>
+											))}
+										</div>
+									</>
+								)}
+
+								<div className="absolute left-4 top-4 flex flex-wrap gap-2">
+									<span className="rounded-full bg-indigo-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow">
+										{isRent ? 'For rent' : 'For sale'}
+									</span>
+									{post.property && (
+										<span className="rounded-full bg-white/95 px-3 py-1 text-xs font-semibold capitalize text-gray-800 shadow">
+											{post.property}
+										</span>
+									)}
+								</div>
+							</div>
+
+							{images.length > 1 && (
+								<div className="flex gap-2 overflow-x-auto p-3">
+									{images.map((src, i) => (
+										<button
+											key={i}
+											type="button"
+											onClick={() => setActiveImage(i)}
+											className={cn(
+												'h-16 w-24 flex-shrink-0 overflow-hidden rounded-xl border-2 transition',
+												i === activeImage ? 'border-indigo-600' : 'border-transparent opacity-70 hover:opacity-100'
+											)}
+										>
+											<img src={src} alt="" className="h-full w-full object-cover" />
+										</button>
+									))}
+								</div>
+							)}
+						</motion.div>
+
+						{/* Title + meta */}
+						<motion.div initial="hidden" animate="visible" variants={fadeUp} custom={1}>
+							<h1 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">
+								{post.title}
+							</h1>
+							<p className="mt-2 flex items-center gap-1.5 text-gray-500">
+								<MapPin className="h-4 w-4 text-indigo-500" />
+								{post.address}
+								{post.city ? `, ${post.city}` : ''}
+							</p>
+							<p className="mt-4 text-3xl font-bold text-indigo-600">{priceLabel}</p>
+						</motion.div>
+
+						{/* Stats */}
+						<motion.div
+							className="grid grid-cols-2 gap-3 sm:grid-cols-4"
+							initial="hidden"
+							animate="visible"
+							variants={fadeUp}
+							custom={2}
+						>
+							{[
+								{ icon: Bed, label: 'Bedrooms', value: post.bedroom ?? '—' },
+								{ icon: Bath, label: 'Bathrooms', value: post.bathroom ?? '—' },
+								{ icon: Ruler, label: 'Size', value: detail.size ? `${detail.size} sqft` : '—' },
+								{
+									icon: BuildingIcon,
+									label: 'Type',
+									value: post.property || '—',
+								},
+							].map(({ icon: Icon, label, value }) => (
+								<div
+									key={label}
+									className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm"
 								>
-									<Pin />
-									<span>{post.address}</span>
-								</motion.div>
-								<motion.div
-									className="mt-4 py-2 rounded-md text-lg"
-									variants={fadeIn}
-								>
-									{post.postDetail.desc}
-								</motion.div>
-								<motion.div
-									className="drop-shadow-sm rounded-lg bg-bgColor p-4"
-									variants={fadeIn}
-								>
-									<div className="flex flex-col">
-										<div className="mb-2">Available for sale</div>
-										<h1 className="text-4xl">$ {post.price}</h1>
-										<hr className="mt-2 bg-black" />
+									<div className="mb-2 flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+										<Icon className="h-4 w-4" />
+									</div>
+									<p className="text-xs font-medium uppercase tracking-wide text-gray-400">{label}</p>
+									<p className="mt-0.5 text-lg font-bold capitalize text-gray-900">{value}</p>
+								</div>
+							))}
+						</motion.div>
+
+						{/* Description */}
+						<motion.section
+							className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+							initial="hidden"
+							animate="visible"
+							variants={fadeUp}
+							custom={3}
+						>
+							<h2 className="text-lg font-bold text-gray-900">About this property</h2>
+							<p className="mt-3 leading-relaxed text-gray-600">
+								{detail.desc ||
+									`Beautiful ${post.property || 'property'} located in ${post.city}. Contact us to schedule a viewing.`}
+							</p>
+						</motion.section>
+
+						{/* Policies */}
+						<motion.section
+							className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+							initial="hidden"
+							animate="visible"
+							variants={fadeUp}
+							custom={4}
+						>
+							<h2 className="text-lg font-bold text-gray-900">Policies & details</h2>
+							<div className="mt-4 grid gap-4 sm:grid-cols-3">
+								{[
+									{ icon: Zap, title: 'Utilities', value: detail.utilities || 'Not specified' },
+									{ icon: PawPrint, title: 'Pets', value: detail.pet || 'Not specified' },
+									{ icon: Wallet, title: 'Income', value: detail.income || 'N/A' },
+								].map(({ icon: Icon, title, value }) => (
+									<div key={title} className="flex gap-3 rounded-xl bg-gray-50 p-3">
+										<div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white text-indigo-600 shadow-sm">
+											<Icon className="h-4 w-4" />
+										</div>
 										<div>
-											Please fill the following form so one of our agents will
-											be contacting you as soon as possible
-										</div>
-										<div className="flex flex-col md:flex-row gap-4 mb-4 mt-4">
-											<Input placeholder="Name" />
-											<Input placeholder="Email address" />
-										</div>
-										<div className="flex flex-col md:flex-row gap-4">
-											<Input placeholder="Number" />
-											<Popover>
-												<PopoverTrigger asChild>
-													<Button
-														variant={'outline'}
-														className={cn(
-															'w-full md:w-[280px] justify-start text-left font-normal',
-															!date && 'text-muted-foreground'
-														)}
-													>
-														<CalendarIcon className="mr-2 h-4 w-4" />
-														{date ? (
-															format(date, 'PPP')
-														) : (
-															<span>Pick a date</span>
-														)}
-													</Button>
-												</PopoverTrigger>
-												<PopoverContent className="w-auto p-0">
-													<Calendar
-														mode="single"
-														selected={date}
-														onSelect={setDate}
-														initialFocus
-													/>
-												</PopoverContent>
-											</Popover>
+											<p className="text-sm font-semibold text-gray-900">{title}</p>
+											<p className="text-sm text-gray-500">{value}</p>
 										</div>
 									</div>
-									<Button className="mt-4 text-white">Request a tour</Button>
-								</motion.div>
+								))}
 							</div>
-						</div>
-					</motion.div>
-				</div>
-			</motion.div>
-			<motion.div
-				className="lg:flex-2 bg-gray-50 w-full lg:w-[400px] "
-				initial="hidden"
-				animate="visible"
-				variants={staggerContainer}
-			>
-				<div className="p-4 md:p-6 lg:p-10">
-					<p className="text-xl font-bold mb-4">General</p>
-					<motion.div variants={fadeIn} className="space-y-6 mb-6">
-						<div className="flex items-center space-x-4">
-							<Utility />
-							<div>
-								<span className="font-semibold">Utilities</span>
-								<p className="text-gray-500">{post.postDetail.utilities}</p>
-							</div>
-						</div>
-						<div className="flex items-center space-x-4">
-							<Pet />
-							<div>
-								<span className="font-semibold">Pet Policy</span>
-								<p className="text-gray-500">{post.postDetail.pet}</p>
-							</div>
-						</div>
-						<div className="flex items-center space-x-4">
-							<Income />
-							<div>
-								<span className="font-semibold">Income Policy</span>
-								<p className="text-gray-500">{post.postDetail.income}</p>
-							</div>
-						</div>
-					</motion.div>
-					<p className="text-xl font-bold mb-4">Sizes</p>
-					<motion.div
-						variants={fadeIn}
-						className="flex gap-2 mb-6 justify-between"
-					>
-						<div className="flex flex-col items-center bg-white p-2 rounded-md shadow">
-							<BuildingIcon />
-							<span>{post.postDetail.size} sqft</span>
-						</div>
-						<div className="flex flex-col items-center bg-white p-2 rounded-md shadow">
-							<Bath />
-							<span>{post.bedroom} beds</span>
-						</div>
-						<div className="flex flex-col items-center bg-white p-2 rounded-md shadow">
-							<Bed />
-							<span>{post.bathroom} bathrooms</span>
-						</div>
-					</motion.div>
-					<p className="text-xl font-bold mb-4">Nearby Places</p>
-					<motion.div
-						variants={fadeIn}
-						className="flex flex-col space-y-6 mb-6"
-					>
-						<div className="flex items-center space-x-4">
-							<School />
-							<div>
-								<div className="font-semibold">School</div>
-								<p className="text-gray-500">{post.postDetail.school}m away</p>
-							</div>
-						</div>
-						<div className="flex items-center space-x-4">
-							<Bus />
-							<div>
-								<div className="font-semibold">Bus Stop</div>
-								<p className="text-gray-500">{post.postDetail.bus}m away</p>
-							</div>
-						</div>
-						<div className="flex items-center space-x-4">
-							<Hotel />
-							<div>
-								<div className="font-semibold">Restaurant</div>
-								<p className="text-gray-500">
-									{post.postDetail.restaurant}m away
+						</motion.section>
+
+						{/* Map */}
+						<motion.section
+							className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
+							initial="hidden"
+							animate="visible"
+							variants={fadeUp}
+							custom={5}
+						>
+							<div className="border-b border-gray-100 px-6 py-4">
+								<h2 className="text-lg font-bold text-gray-900">Location</h2>
+								<p className="text-sm text-gray-500">
+									{post.address}
+									{post.city ? `, ${post.city}` : ''}
 								</p>
 							</div>
+							<div className="h-[320px]">
+								<Map items={[post]} simple />
+							</div>
+						</motion.section>
+					</div>
+
+					{/* RIGHT — sticky contact card */}
+					<motion.aside
+						className="xl:sticky xl:top-24 xl:self-start"
+						initial="hidden"
+						animate="visible"
+						variants={fadeUp}
+						custom={2}
+					>
+						<div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-[0_24px_60px_-35px_rgba(79,70,229,.35)]">
+							<div className="bg-gradient-to-br from-indigo-600 to-violet-600 px-6 py-5 text-white">
+								<p className="text-xs font-semibold uppercase tracking-[0.15em] text-indigo-100">
+									{isRent ? 'Monthly rent' : 'Sale price'}
+								</p>
+								<p className="mt-1 text-3xl font-bold">{priceLabel}</p>
+							</div>
+
+							<div className="p-6">
+								{formSent ? (
+									<div className="rounded-2xl bg-emerald-50 px-4 py-8 text-center">
+										<p className="text-lg font-bold text-emerald-800">Request sent!</p>
+										<p className="mt-2 text-sm text-emerald-700">
+											An agent will contact you shortly.
+										</p>
+										<button
+											type="button"
+											onClick={() => setFormSent(false)}
+											className="mt-4 text-sm font-semibold text-indigo-600 hover:underline"
+										>
+											Send another request
+										</button>
+									</div>
+								) : (
+									<form
+										className="space-y-3"
+										onSubmit={(e) => {
+											e.preventDefault();
+											setFormSent(true);
+										}}
+									>
+										<p className="text-sm text-gray-500">
+											Fill the form and one of our agents will contact you as soon as possible.
+										</p>
+										<Input placeholder="Full name" required className="h-11 rounded-xl" />
+										<Input
+											type="email"
+											placeholder="Email address"
+											required
+											className="h-11 rounded-xl"
+										/>
+										<Input type="tel" placeholder="Phone number" className="h-11 rounded-xl" />
+										<Popover>
+											<PopoverTrigger asChild>
+												<Button
+													type="button"
+													variant="outline"
+													className={cn(
+														'h-11 w-full justify-start rounded-xl text-left font-normal',
+														!date && 'text-muted-foreground'
+													)}
+												>
+													<CalendarIcon className="mr-2 h-4 w-4" />
+													{date ? format(date, 'PPP') : 'Preferred tour date'}
+												</Button>
+											</PopoverTrigger>
+											<PopoverContent className="w-auto p-0" align="start">
+												<Calendar mode="single" selected={date} onSelect={setDate} initialFocus />
+											</PopoverContent>
+										</Popover>
+										<Button
+											type="submit"
+											className="h-12 w-full rounded-xl bg-indigo-600 text-base font-semibold text-white hover:bg-indigo-700"
+										>
+											Request a tour
+										</Button>
+									</form>
+								)}
+
+								<div className="mt-6 border-t border-gray-100 pt-5 text-center text-xs text-gray-400">
+									Listing #{post.id} · HOC Living Faro
+								</div>
+							</div>
 						</div>
-					</motion.div>
-					<p className="text-xl font-bold mb-4">Location</p>
-					<motion.div className="w-full h-56 mb-6" variants={fadeIn}>
-						<Map items={[post]} />
-					</motion.div>
+					</motion.aside>
 				</div>
-			</motion.div>
+			</main>
 		</div>
 	);
 }

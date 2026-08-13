@@ -1,4 +1,4 @@
-import { Circle, CircleMarker, MapContainer, Marker, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
+import { Circle, CircleMarker, MapContainer, TileLayer, useMap, useMapEvents } from 'react-leaflet';
 import { useEffect, useMemo, useState } from 'react';
 import L from 'leaflet';
 import './map.css';
@@ -17,15 +17,16 @@ L.Icon.Default.mergeOptions({
 	shadowUrl: markerShadow,
 });
 
-const MAX_MARKERS = 400; // tarayıcı performansı için limit
+const MAX_MARKERS = 400;
 
 function MapEvents({ expanded, onExpand, onLocationSelect }) {
 	useMapEvents({
 		click(event) {
+			if (!onExpand && !onLocationSelect) return;
 			if (!expanded) {
-				onExpand();
+				onExpand?.();
 			} else {
-				onLocationSelect({
+				onLocationSelect?.({
 					latitude: event.latlng.lat,
 					longitude: event.latlng.lng,
 				});
@@ -48,18 +49,18 @@ function MapControls({ expanded }) {
 			map.scrollWheelZoom.enable();
 			map.dragging.enable();
 			map.doubleClickZoom.enable();
-			map.boxZoom.enable();
-			map.keyboard.enable();
-		} else {
+		} else if (expanded === false) {
 			map.scrollWheelZoom.disable();
 			map.doubleClickZoom.disable();
+		} else {
+			map.scrollWheelZoom.enable();
+			map.dragging.enable();
 		}
 	}, [expanded, map]);
 
 	return null;
 }
 
-/** Sadece görünür alandaki pin'leri göster — 10k marker kilitlemesin */
 function VisiblePins({ items }) {
 	const map = useMap();
 	const [bounds, setBounds] = useState(null);
@@ -80,8 +81,8 @@ function VisiblePins({ items }) {
 	}, [map]);
 
 	const visible = useMemo(() => {
-		if (!bounds || !items?.length) return [];
-		// çok uzaktayken (zoom düşük) daha az pin
+		if (!items?.length) return [];
+		if (!bounds) return items.slice(0, Math.min(items.length, 50));
 		const limit = zoom < 9 ? 80 : zoom < 11 ? 180 : MAX_MARKERS;
 		const inView = [];
 		for (let i = 0; i < items.length; i++) {
@@ -107,50 +108,71 @@ function VisiblePins({ items }) {
 }
 
 function Map({
-	items,
+	items = [],
 	expanded,
 	onExpand,
 	onClose,
 	selectedLocation,
 	onLocationSelect,
 	radiusKm = 5,
+	simple = false,
 }) {
 	const radiusMeters = Number(radiusKm) * 1000;
+	const isSimple = simple || expanded === undefined;
+
+	const center = useMemo(() => {
+		if (items.length === 1) {
+			return [Number(items[0].latitude), Number(items[0].longitude)];
+		}
+		return [37.0194, -7.9304];
+	}, [items]);
 
 	return (
-		<div className={expanded ? 'map-shell map-shell--expanded' : 'map-shell'}>
-			<div className="map-toolbar">
-				{expanded && !selectedLocation ? (
-					<div>
-						<strong>Choose an area</strong>
-						<span>Zoom in & click a pin to open a property</span>
-					</div>
-				) : !expanded ? (
-					<div>
-						<strong>Explore on the map</strong>
-						<span>Click to expand — {items?.length?.toLocaleString?.() || 0} listings</span>
-					</div>
-				) : (
-					<div style={{ visibility: 'hidden', width: 1, height: 1 }} />
-				)}
+		<div
+			className={
+				expanded
+					? 'map-shell map-shell--expanded'
+					: isSimple
+						? 'map-shell map-shell--simple'
+						: 'map-shell'
+			}
+		>
+			{!isSimple && (
+				<div className="map-toolbar">
+					{expanded && !selectedLocation ? (
+						<div>
+							<strong>Choose an area</strong>
+							<span>Zoom in & click a pin to open a property</span>
+						</div>
+					) : !expanded ? (
+						<div>
+							<strong>Explore on the map</strong>
+							<span>
+								Click to expand — {items?.length?.toLocaleString?.() || 0} listings
+							</span>
+						</div>
+					) : (
+						<div style={{ visibility: 'hidden', width: 1, height: 1 }} />
+					)}
 
-				{expanded ? (
-					<button type="button" onClick={onClose}>
-						Close map
-					</button>
-				) : (
-					<button type="button" onClick={onExpand}>
-						Expand
-					</button>
-				)}
-			</div>
+					{expanded ? (
+						<button type="button" onClick={onClose}>
+							Close map
+						</button>
+					) : (
+						<button type="button" onClick={onExpand}>
+							Expand
+						</button>
+					)}
+				</div>
+			)}
 
 			<MapContainer
-				center={[37.0194, -7.9304]}
-				zoom={12}
-				scrollWheelZoom={false}
+				center={center}
+				zoom={items.length === 1 ? 14 : 12}
+				scrollWheelZoom={isSimple || !!expanded}
 				dragging={true}
-				doubleClickZoom={false}
+				doubleClickZoom={isSimple || !!expanded}
 				zoomControl={true}
 				className="map"
 			>
@@ -158,14 +180,14 @@ function Map({
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 				/>
-				<MapEvents
-					expanded={expanded}
-					onExpand={onExpand}
-					onLocationSelect={onLocationSelect}
-				/>
+				{!isSimple && (
+					<MapEvents
+						expanded={expanded}
+						onExpand={onExpand}
+						onLocationSelect={onLocationSelect}
+					/>
+				)}
 				<MapControls expanded={expanded} />
-
-				{/* Görünür alandaki taşınmaz pin'leri — tıklayınca popup */}
 				<VisiblePins items={items} />
 
 				{selectedLocation && (
@@ -195,7 +217,7 @@ function Map({
 				)}
 			</MapContainer>
 
-			{expanded && selectedLocation && (
+			{!isSimple && expanded && selectedLocation && (
 				<div className="map-selection">
 					Showing homes within {radiusKm} km of selected area
 				</div>

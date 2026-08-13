@@ -1,4 +1,5 @@
 import { Marker, Popup } from 'react-leaflet';
+import { Link } from 'react-router-dom';
 import './pin.css';
 
 function Pin({ item }) {
@@ -24,6 +25,13 @@ function Pin({ item }) {
 							{item.property ? ` · ${item.property}` : ''}
 						</span>
 						<b>{price}</b>
+						<Link
+							to={`/details/${item.id}`}
+							className="mt-2 inline-flex items-center justify-center rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-indigo-700"
+							onClick={(e) => e.stopPropagation()}
+						>
+							View details →
+						</Link>
 					</div>
 				</div>
 			</Popup>

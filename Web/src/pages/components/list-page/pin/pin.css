@@ -1,36 +1,43 @@
 .popupContainer {
-  display: flex;
-  gap: 12px;
-  min-width: 180px;
+	display: flex;
+	gap: 12px;
+	min-width: 200px;
+	max-width: 260px;
 }
 
 .popupContainer img {
-  width: 64px;
-  height: 48px;
-  object-fit: cover;
-  border-radius: 6px;
-  flex-shrink: 0;
+	width: 72px;
+	height: 56px;
+	object-fit: cover;
+	border-radius: 8px;
+	flex-shrink: 0;
 }
 
 .popupContainer .textContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 2px;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	justify-content: center;
 }
 
-.popupContainer .title {
-  font-weight: 600;
-  font-size: 0.85rem;
-  line-height: 1.2;
+.popupContainer .textContainer strong {
+	font-size: 13px;
+	line-height: 1.25;
+	color: #111827;
 }
 
-.popupContainer span {
-  font-size: 0.75rem;
-  color: #6b7280;
+.popupContainer .textContainer span {
+	font-size: 11px;
+	color: #6b7280;
 }
 
-.popupContainer b {
-  font-size: 0.85rem;
-  color: #111827;
+.popupContainer .textContainer b {
+	font-size: 13px;
+	color: #4f46e5;
+	margin-top: 2px;
+}
+
+.popupContainer .textContainer a {
+	margin-top: 6px;
+	text-decoration: none;
 }
