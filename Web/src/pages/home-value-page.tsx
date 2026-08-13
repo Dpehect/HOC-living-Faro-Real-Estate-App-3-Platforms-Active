@@ -27,7 +27,6 @@ export default function HomeValuePage() {
 	const [propertyType, setPropertyType] = useState('');
 	const [bedrooms, setBedrooms] = useState<number | ''>('');
 	const [size, setSize] = useState<number | ''>('');
-	const [email, setEmail] = useState('');
 	const [result, setResult] = useState<string | null>(null);
 	const cityWrapRef = useRef<HTMLDivElement>(null);
 
@@ -54,10 +53,18 @@ export default function HomeValuePage() {
 			condo: 260000,
 			land: 120000,
 		};
-		let base = baseByType[propertyType] || 250000;
-		const cityBoost = ['Lisbon', 'Cascais', 'Madrid', 'Barcelona', 'Marbella', 'Porto', 'Faro', 'Lagos', 'Albufeira'].includes(
-			city.trim()
-		)
+		const base = baseByType[propertyType] || 250000;
+		const cityBoost = [
+			'Lisbon',
+			'Cascais',
+			'Madrid',
+			'Barcelona',
+			'Marbella',
+			'Porto',
+			'Faro',
+			'Lagos',
+			'Albufeira',
+		].includes(city.trim())
 			? 1.25
 			: 1;
 		const bedFactor = 1 + (Number(bedrooms) || 2) * 0.08;
@@ -71,7 +78,7 @@ export default function HomeValuePage() {
 	return (
 		<PageShell
 			title="Home value"
-			subtitle="Get a free indicative valuation. Start typing a city for suggestions — you don’t need exact size or bathroom counts."
+			subtitle="Get a free indicative valuation. Start typing a city for suggestions — size is optional if you are unsure."
 		>
 			<div className="mx-auto max-w-xl rounded-3xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
 				{result ? (
@@ -102,7 +109,6 @@ export default function HomeValuePage() {
 							estimate();
 						}}
 					>
-						{/* City autocomplete */}
 						<div ref={cityWrapRef} className="relative">
 							<label className="mb-1.5 block text-sm font-medium text-gray-700">City / location</label>
 							<Input
@@ -136,11 +142,10 @@ export default function HomeValuePage() {
 								</ul>
 							)}
 							<p className="mt-1 text-xs text-gray-400">
-								{ (citiesList as string[]).length } cities available — click a suggestion or keep typing
+								{(citiesList as string[]).length} cities — click a suggestion or keep typing
 							</p>
 						</div>
 
-						{/* Property type chips */}
 						<div>
 							<label className="mb-1.5 block text-sm font-medium text-gray-700">Property type</label>
 							<div className="flex flex-wrap gap-2">
@@ -161,7 +166,6 @@ export default function HomeValuePage() {
 							</div>
 						</div>
 
-						{/* Bedrooms chips */}
 						<div>
 							<label className="mb-1.5 block text-sm font-medium text-gray-700">
 								Bedrooms <span className="font-normal text-gray-400">(optional)</span>
@@ -184,17 +188,16 @@ export default function HomeValuePage() {
 								<button
 									type="button"
 									onClick={() => setBedrooms('')}
-									className="rounded-xl border border-gray-200 px-3 text-xs text-gray-500 hover:border-primary/40"
+									className="rounded-xl border border-gray-200 px-3 text-xs text-gray-500"
 								>
 									Skip
 								</button>
 							</div>
 						</div>
 
-						{/* Size presets */}
 						<div>
 							<label className="mb-1.5 block text-sm font-medium text-gray-700">
-								Approximate size <span className="font-normal text-gray-400">(if unsure, pick a range)</span>
+								Approximate size <span className="font-normal text-gray-400">(optional)</span>
 							</label>
 							<div className="flex flex-wrap gap-2">
 								{SIZE_PRESETS.map((s) => (
@@ -212,28 +215,13 @@ export default function HomeValuePage() {
 									</button>
 								))}
 							</div>
-							<div className="mt-2 flex items-center gap-2">
-								<Input
-									type="number"
-									min={0}
-									placeholder="Or type sqft"
-									value={size === '' ? '' : size}
-									onChange={(e) => setSize(e.target.value ? Number(e.target.value) : '')}
-									className="h-10 max-w-[160px] rounded-xl"
-								/>
-								<span className="text-xs text-gray-400">sqft (optional)</span>
-							</div>
-						</div>
-
-						<div>
-							<label className="mb-1.5 block text-sm font-medium text-gray-700">Email for the report</label>
 							<Input
-								type="email"
-								placeholder="you@email.com"
-								required
-								value={email}
-								onChange={(e) => setEmail(e.target.value)}
-								className="h-11 rounded-xl"
+								type="number"
+								min={0}
+								placeholder="Or type sqft"
+								value={size === '' ? '' : size}
+								onChange={(e) => setSize(e.target.value ? Number(e.target.value) : '')}
+								className="mt-2 h-10 max-w-[160px] rounded-xl"
 							/>
 						</div>
 
