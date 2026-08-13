@@ -1,19 +1,25 @@
 import { Marker, Popup } from 'react-leaflet';
 import './pin.css';
-// import { Link } from "react-router-dom";
 
 function Pin({ item }) {
+	const lat = Number(item.latitude);
+	const lng = Number(item.longitude);
+
+	if (Number.isNaN(lat) || Number.isNaN(lng)) return null;
+
 	return (
-		<Marker position={[item.latitude, item.longitude]}>
+		<Marker position={[lat, lng]}>
 			<Popup>
 				<div className="popupContainer">
-					<img src={item.images[0]} alt="" />
+					{item.images?.[0] && (
+						<img src={item.images[0]} alt={item.title || ''} />
+					)}
 					<div className="textContainer">
-						{/* <Link to={`/${item.id}`}> */}
-						{item.title}
-						{/* </Link> */}
-						<span>{item.bedroom} bedroom</span>
-						<b>€ {item.price.toLocaleString()}</b>
+						<span className="title">{item.title}</span>
+						{item.bedroom != null && (
+							<span>{item.bedroom} bedroom</span>
+						)}
+						<b>€ {Number(item.price).toLocaleString()}</b>
 					</div>
 				</div>
 			</Popup>
